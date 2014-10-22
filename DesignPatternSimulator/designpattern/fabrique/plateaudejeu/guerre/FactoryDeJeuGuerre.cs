@@ -45,17 +45,19 @@ namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre
             int ligne = 0;
             int saut = largeur;
 
+            /*
             for (int j = 0; j < largeur; j++)
             {
-                for (int i = 1; i < saut; i++)
+                for (int i = 1; i < saut - 1; i++)
                 {
                     environnement.Add(new Acces(zones.ElementAt(ligne + i - 1), zones.ElementAt(ligne + i)));
                     environnement.Add(new Acces(zones.ElementAt(ligne + i - 1), zones.ElementAt(saut + i - 1)));
                 }
 
-                ligne += largeur;
+                ligne += 1;
                 saut += largeur;
             }
+            */
 
             return environnement;
         }

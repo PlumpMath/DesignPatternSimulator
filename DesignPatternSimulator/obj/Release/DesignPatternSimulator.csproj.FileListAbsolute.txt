@@ -1,0 +1,8 @@
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Release\DesignPatternSimulator.exe.config
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Release\DesignPatternSimulator.exe
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Release\DesignPatternSimulator.pdb
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Release\DesignPatternSimulator.Form1.resources
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Release\DesignPatternSimulator.Properties.Resources.resources
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Release\DesignPatternSimulator.csproj.GenerateResource.Cache
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Release\DesignPatternSimulator.exe
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Release\DesignPatternSimulator.pdb

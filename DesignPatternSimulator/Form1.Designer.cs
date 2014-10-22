@@ -28,12 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.launcher = new System.Windows.Forms.Button();
+            this.consoleBox = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // launcher
+            // 
+            this.launcher.AccessibleName = "";
+            this.launcher.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.launcher.Location = new System.Drawing.Point(83, 13);
+            this.launcher.Name = "launcher";
+            this.launcher.Size = new System.Drawing.Size(119, 23);
+            this.launcher.TabIndex = 0;
+            this.launcher.Text = "Launch";
+            this.launcher.UseVisualStyleBackColor = true;
+            this.launcher.Click += new System.EventHandler(this.launcher_Click);
+            // 
+            // consoleBox
+            // 
+            this.consoleBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.consoleBox.Location = new System.Drawing.Point(13, 59);
+            this.consoleBox.Name = "consoleBox";
+            this.consoleBox.Size = new System.Drawing.Size(259, 191);
+            this.consoleBox.TabIndex = 1;
+            this.consoleBox.Text = "";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.consoleBox);
+            this.Controls.Add(this.launcher);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button launcher;
+        private System.Windows.Forms.RichTextBox consoleBox;
     }
 }
 

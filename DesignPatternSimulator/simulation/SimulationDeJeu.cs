@@ -13,7 +13,6 @@ using DesignPatternSimulator.designpattern.observateur.parent;
 using DesignPatternSimulator.designpattern.strategie.comportement.guerre.son;
 using DesignPatternSimulator.designpattern.strategie.comportement.guerre.son.parent;
 using DesignPatternSimulator.designpattern.strategie.personnage;
-using DesignPatternSimulator.designpattern.factory.personnage.guerre;
 
 namespace DesignPatternSimulator.designpattern.strategie.main
 {
@@ -28,15 +27,14 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 		}
 	
 		public void CreatePersonnagesDuJeu(FactoryPersonnage caserne) {
-		
-			if(caserne.GetType().AssemblyQualifiedName.Equals("FactoryPersonnageMoyenAge")) {
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage.Archer, etatMajor, "mehdi"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage.Archer, etatMajor, "legolas"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage.Chevalier, etatMajor, "aragorn"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage.Chevalier, etatMajor, "frodon"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage.Fantassin, etatMajor, "york"));
-				lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage.Fantassin, etatMajor, "naruto"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage.Princesse, null, "fiona"));
+			if(caserne.GetType().Name.Equals("FactoryPersonnageMoyenAge")) {
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Archer, etatMajor, "mehdi"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Archer, etatMajor, "legolas"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Chevalier, etatMajor, "aragorn"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Chevalier, etatMajor, "frodon"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Fantassin, etatMajor, "york"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Fantassin, etatMajor, "naruto"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Princesse, null, "fiona"));
 			
 				lesPersonnes.ElementAt(0).setComportementSon(new EmettreSonCrier());
 				lesPersonnes.ElementAt(1).setComportementSon(new EmettreSonAuSecour());
@@ -47,7 +45,7 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 				usa.CreerPlateauDeJeu(new FactoryDeJeuGuerre());
 			}
 			/*
-			if(caserne.GetType().AssemblyQualifiedName.Equals("FactoryPersonnageGuerreDuGolf")) {
+			if(caserne.GetType().Name.Equals("FactoryPersonnageGuerreDuGolf")) {
 				lesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.Soldat, etatMajor, "mehdi"));		
 				lesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.Soldat, etatMajor, "legolas"));
 				lesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.Soldat, etatMajor, "aragorn"));
@@ -86,28 +84,47 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 				p.Afficher();
 			}
 		}
-	
-		public void AfficherLesUploads() {
+
+        public string AfficherLesUploads()
+        {
+            string text = "";
 			foreach(Personnage p in lesPersonnes) {
 				//System.out.println(p.getEtat());
+                Console.WriteLine(p.getEtat());
+                text += p.getEtat();
+                text += "\n";
 			}
+            return text;
 		}
-	
-		public void AfficherLesUploadsObservateur() {
+
+        //public void AfficherLesUploadsObservateur()
+		public string AfficherLesUploadsObservateur()
+        {
+            string text = "";
 			foreach(ObservateurAbstrait o in etatMajor.lesObservateurs) {
-				//System.out.println(((Personnage)o).getEtat());
+                //System.out.println(((Personnage)o).getEtat());
+                Console.WriteLine(((Personnage)o).getEtat());
+                text += ((Personnage)o).getEtat();
+                text += "\n";
 			}
+            return text;
 		}
 	
 		public void changeEtat(eMode mode) {
 			etatMajor.setEMode(mode);
 			etatMajor.Update();
 		}
-	
-		public void showAllPersonnage() {
+
+        public string showAllPersonnage()
+        {
+            string text = "";
 			foreach(Personnage p in lesPersonnes) {
-				//System.out.println(p.toString());
+                //System.out.println(p.toString());
+                Console.WriteLine(p.ToString());
+                text += p.ToString();
+                text += "\n";
 			}
+            return text;
 		}
 	}
 }

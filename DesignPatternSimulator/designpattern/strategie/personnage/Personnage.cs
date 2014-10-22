@@ -32,10 +32,10 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 			this.nom = sonNom;
 			if(o != null) {
 				//if(o.getClass().tostring().equals("ComportementDeCombat")) {
-				if(o.GetType().AssemblyQualifiedName.Equals("ComportementDeCombat")) {
+				if(o.GetType().Name.Equals("ComportementDeCombat")) {
 					comportementCombat = (ComportementDeCombat)o;
 				}
-                else if (o.GetType().AssemblyQualifiedName.Equals("ComportementEmettreSon"))
+                else if (o.GetType().Name.Equals("ComportementEmettreSon"))
                 {
 					comportementSon = (ComportementEmettreSon)o;
 				}

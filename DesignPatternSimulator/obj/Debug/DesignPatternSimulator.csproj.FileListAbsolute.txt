@@ -6,3 +6,4 @@ C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\DesignPatternSimulator.pdb
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.exe
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.pdb
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Form1.resources

@@ -53,6 +53,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,7 +138,7 @@
     <Compile Include="designpattern\strategie\comportement\guerre\son\EmettreSonCrier.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\son\EmettreSonEtendard.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\son\EmettreSonMotiver.cs" />
-    <Content Include="simulation\Application.java" />
+    <Compile Include="simulation\Application.cs" />
     <Compile Include="simulation\SimulationDeJeu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

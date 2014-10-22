@@ -7,7 +7,8 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage
 	
 		public FactoryPersonnage() {}
 
-		public abstract Personnage CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage type, Organisation org, string nom);
+        //public abstract Personnage CreatePersonnage(eTypePersonnage type, Organisation org, string nom);
+        public abstract Personnage CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage type, Organisation org, string nom);
 
     }
 }

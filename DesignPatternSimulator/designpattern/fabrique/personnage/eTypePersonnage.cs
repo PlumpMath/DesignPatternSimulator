@@ -1,4 +1,4 @@
-namespace DesignPatternSimulator.designpattern.factory.personnage
+namespace DesignPatternSimulator.designpattern.fabrique.personnage
 {
     public enum eTypePersonnage {
 

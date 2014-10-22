@@ -1,4 +1,4 @@
-using DesignPatternSimulator.designpattern.factory.personnage;
+using DesignPatternSimulator.designpattern.fabrique.personnage;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.strategie.personnage;
 
@@ -12,7 +12,7 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.guerre
 
         }
 
-        public override Personnage CreatePersonnage(DesignPatternSimulator.designpattern.factory.personnage.eTypePersonnage type, Organisation org, string nom)
+        public override Personnage CreatePersonnage(eTypePersonnage type, Organisation org, string nom)
         {
 
             //if (com.designpattern.factory.personnage.moyenage.eTypePersonnage.valueOf(type.toString()) != null)
