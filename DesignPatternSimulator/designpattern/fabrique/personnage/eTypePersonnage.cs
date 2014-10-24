@@ -10,22 +10,22 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage
 	    Chef,
 	    Soldat,
 	    Marine
-    /*	
-	    public enum eTytpePersonnageMoyenAge {
-		    Indefini,
-		    Archer,
-		    Chevalier,
-		    Fantassin,
-		    Princesse,
-	    }
-	
-	    public enum eTypePersonnageGuerreDuGolf {
-
-		    Indefini,
-		    Chef,
-		    Soldat,
-		    Marine;
-	    }
-    */
     }
 }
+/*	
+    public enum eTytpePersonnageMoyenAge {
+        Indefini,
+        Archer,
+        Chevalier,
+        Fantassin,
+        Princesse,
+    }
+	
+    public enum eTypePersonnageGuerreDuGolf {
+
+        Indefini,
+        Chef,
+        Soldat,
+        Marine;
+    }
+*/

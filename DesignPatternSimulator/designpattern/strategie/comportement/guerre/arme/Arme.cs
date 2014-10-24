@@ -2,16 +2,13 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.arm
 {
     public abstract class Arme
     {
-        private string name;
-        private int impact;
+        public string Name { get; set; }
+        public int Impact { get; set; }
 
         public Arme(string nom, int imp)
         {
-            this.name = nom;
-            this.impact = imp;
+            this.Name = nom;
+            this.Impact = imp;
         }
-
-        public abstract string getName();
-        public abstract int getImpact();
     }
 }
