@@ -79,7 +79,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="designpattern\strategie\comportement\guerre\arme\Arme.cs" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="designpattern\environnement\style\parent\AbstractAcces.cs" />
     <Compile Include="designpattern\environnement\style\parent\AbstractZone.cs" />
@@ -140,6 +142,15 @@
     <Compile Include="designpattern\strategie\comportement\guerre\son\EmettreSonMotiver.cs" />
     <Compile Include="simulation\Application.cs" />
     <Compile Include="simulation\SimulationDeJeu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="designpattern\strategie\comportement\guerre\arme\blanche\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\parent\ArmeAFeu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\Colt45.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
