@@ -4,8 +4,8 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.arm
     public abstract class ArmeAFeu : Arme
     {
 
-        private int nbOfBulllet;
-        private int nbOfRecharge;
+        public int nbOfBulllet { get; set; }
+        public int nbOfRecharge { get; set; }
 
         public ArmeAFeu(string nom, int imp, int nbBullet, int nbRecharge)
             : base(nom, imp)
@@ -13,7 +13,25 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.arm
             this.nbOfBulllet = nbBullet;
             this.nbOfRecharge = nbRecharge;
         }
-        public abstract int getNumberOfRecharge();
-        public abstract int getNumberOfBullet();
+
+        public override int getNumberOfRecharge()
+        {
+            this.nbOfRecharge;
+        }
+
+        public override int getNumberOfBullet()
+        {
+            this.nbOfBulllet;
+        }
+
+        public override string getName()
+        {
+            return base.getName();
+        }
+
+        public override int getImpact()
+        {
+            return base.getImpact();
+        }
     }
 }
