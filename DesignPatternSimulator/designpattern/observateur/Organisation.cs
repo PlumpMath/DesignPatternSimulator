@@ -13,12 +13,12 @@ namespace DesignPatternSimulator.designpattern.observateur
             this.etatFonctionnement = eMode.NON_DEFINI;
         }
 
-        public eMode getEMode()
+        public eMode GetEMode()
         {
             return this.etatFonctionnement;
         }
 
-        public void setEMode(eMode etat)
+        public void SetEMode(eMode etat)
         {
             this.etatFonctionnement = etat;
             this.Update();

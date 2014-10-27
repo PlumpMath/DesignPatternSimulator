@@ -20,8 +20,8 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 			return "on est des tubes, on est pas des pots \nMais on a tout ce qu'il nous faut..";
 		}
 
-		public override void update() {
-			base.update();
+		public override void Update() {
+			base.Update();
 		}
 
 	}

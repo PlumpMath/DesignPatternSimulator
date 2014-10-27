@@ -28,9 +28,9 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
             return "je suis plus fort que l'elf, Legolas";
         }
 
-        public override void update()
+        public override void Update()
         {
-            base.update();
+            base.Update();
         }
 
     }

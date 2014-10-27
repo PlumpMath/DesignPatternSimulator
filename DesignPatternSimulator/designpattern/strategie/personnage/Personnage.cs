@@ -24,7 +24,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 			}
 		}
 
-		public override void update() {
+		public override void Update() {
 			etatFonctionnement = etatMajor.etatFonctionnement;
 		}
 
@@ -78,31 +78,31 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 			return "je marche";
 		}
 	
-		public string getNom() {
+		public string GetNom() {
 			return nom;
 		}
 
-		public void setNom(string nom) {
+		public void SetNom(string nom) {
 			this.nom = nom;
 		}
 
-		public ComportementDeCombat getComportementCombat() {
+		public ComportementDeCombat GetComportementCombat() {
 			return comportementCombat;
 		}
 
-		public void setComportementCombat(ComportementDeCombat comportementCombat) {
+		public void SetComportementCombat(ComportementDeCombat comportementCombat) {
 			this.comportementCombat = comportementCombat;
 		}
 
-		public ComportementEmettreSon getComportementSon() {
+		public ComportementEmettreSon GetComportementSon() {
 			return comportementSon;
 		}
 
-		public void setComportementSon(ComportementEmettreSon comportementSon) {
+		public void SetComportementSon(ComportementEmettreSon comportementSon) {
 			this.comportementSon = comportementSon;
 		}
 	
-		public string getEtat() {
+		public string GetEtat() {
 			if(etatMajor != null)
 				return etatMajor.etatFonctionnement.ToString();
 			return etatFonctionnement.ToString();

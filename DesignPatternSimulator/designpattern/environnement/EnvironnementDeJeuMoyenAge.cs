@@ -22,7 +22,7 @@ namespace DesignPatternSimulator.designpattern.environnement
 		
 			//int sizeCarre = Integer.valueOf(casesWinterfell.get(casesWinterfell.size()).secondZoneName().split(":")[1]);
 		
-			winterfell.setZonesAcces(casesWinterfell);
+			winterfell.SetZonesAcces(casesWinterfell);
 			return winterfell;
 		}
 
