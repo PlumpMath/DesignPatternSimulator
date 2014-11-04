@@ -1,32 +1,42 @@
 using DesignPatternSimulator.designpattern.strategie.comportement.guerre.arme.afeu.parent;
 namespace com.designpattern.strategie.comportement.guerre.arme.afeu
 {
-    public class Pistolet : ArmeAFeu
+    public class Colt45 : ArmeAFeu
     {
-        public Pistolet(string nom, int imp, int nbBullet, int nbRecharge)
+
+        private string nameOfGun;
+        private int nbOfRecharge;
+        private int nbOfBullet;
+        private int impact;
+
+        public Colt45(string nom, int imp, int nbBullet, int nbRecharge)
             : base(nom, imp, nbBullet, nbRecharge)
         {
+            nameOfGun = nom;
+            impact = imp;
+            nbOfRecharge = nbRecharge;
+            nbOfBullet = nbBullet;
 
         }
 
         public override int getNumberOfRecharge()
         {
-            return base.getNumberOfRecharge();
+            return this.nbOfRecharge;
         }
 
         public override int getNumberOfBullet()
         {
-            return base.getNumberOfBullet();
+            return this.nbOfBullet;
         }
 
         public override string getName()
         {
-            return base.getName();
+            return this.nameOfGun;
         }
 
         public override int getImpact()
         {
-            return base.getImpact();
+            return this.impact;
         }
 
     }

@@ -61,10 +61,6 @@
   <ItemGroup>
     <Compile Include="designpattern\environnement\parent\EnvironnementDeJeu.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\arme\blanche\Couteau.cs" />
-    <Compile Include="designpattern\strategie\comportement\guerre\pointdevie\AbstractPointDeVie.cs" />
-    <Compile Include="designpattern\strategie\comportement\guerre\protection\Armure.cs" />
-    <Compile Include="designpattern\strategie\comportement\guerre\protection\GiletPareBalle.cs" />
-    <Compile Include="designpattern\strategie\comportement\guerre\protection\parent\AbstractProtection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,7 +164,7 @@
     <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\parent\ArmeAFeu.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\Pistolet.cs" />
+    <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\Colt45.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
