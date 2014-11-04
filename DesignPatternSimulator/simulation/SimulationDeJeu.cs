@@ -110,12 +110,12 @@ namespace DesignPatternSimulator.designpattern.strategie.main
             return text;
 		}
 	
-		public void changeEtat(eMode mode) {
+		public void ChangeEtat(eMode mode) {
 			etatMajor.SetEMode(mode);
 			etatMajor.Update();
 		}
 
-        public string showAllPersonnage()
+        public string ShowAllPersonnage()
         {
             string text = "";
 			foreach(Personnage p in lesPersonnes) {

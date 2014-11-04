@@ -34,18 +34,18 @@ namespace DesignPatternSimulator
             //sdj.CreatePersonnagesDuJeu(new FactoryPersonnageGuerreDuGolf());
             //sdj.FaireCrierToutLeMonde();
             Console.WriteLine("--------");
-            consoleBox.Text += sdj.showAllPersonnage();
+            consoleBox.Text += sdj.ShowAllPersonnage();
             consoleBox.Text += "\n";
             Console.WriteLine("--------");
             //sdj.PartirAuCombat();
             consoleBox.Text += sdj.AfficherLesUploads();
             consoleBox.Text += "\n";
             Console.WriteLine("--------");
-            sdj.changeEtat(eMode.EN_GUERRE);
+            sdj.ChangeEtat(eMode.EN_GUERRE);
             consoleBox.Text += sdj.AfficherLesUploadsObservateur();
             consoleBox.Text += "\n";
             Console.WriteLine("--------");
-            sdj.changeEtat(eMode.EN_PAIX);
+            sdj.ChangeEtat(eMode.EN_PAIX);
             consoleBox.Text += sdj.AfficherLesUploadsObservateur();
             consoleBox.Text += "\n";
         }

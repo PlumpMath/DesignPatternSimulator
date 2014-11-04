@@ -20,15 +20,15 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 			//sdj.CreatePersonnagesDuJeu(new FactoryPersonnageGuerreDuGolf());
 			//sdj.FaireCrierToutLeMonde();
 			Console.WriteLine("--------");
-			sdj.showAllPersonnage();
+			sdj.ShowAllPersonnage();
 			Console.WriteLine("--------");
 			//sdj.PartirAuCombat();
 			sdj.AfficherLesUploads();
 			Console.WriteLine("--------");
-			sdj.changeEtat(eMode.EN_GUERRE);
+			sdj.ChangeEtat(eMode.EN_GUERRE);
 			sdj.AfficherLesUploadsObservateur();
             Console.WriteLine("--------");
-            sdj.changeEtat(eMode.EN_PAIX);
+            sdj.ChangeEtat(eMode.EN_PAIX);
 			sdj.AfficherLesUploadsObservateur();
 		
 		}
