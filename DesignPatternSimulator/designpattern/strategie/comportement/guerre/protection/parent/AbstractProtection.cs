@@ -8,6 +8,6 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.pro
 {
     public abstract class AbstractProtection
     {
-        public abstract int GetResistance();
+        public abstract int getResistance();
     }
 }

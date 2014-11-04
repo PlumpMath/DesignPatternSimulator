@@ -16,7 +16,7 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.pro
             this.resistance = r;
         }
 
-        public override int GetResistance()
+        public int getResistance()
         {
             return resistance;
         }

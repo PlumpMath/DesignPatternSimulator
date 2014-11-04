@@ -5,7 +5,7 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.com
     public class ComportementDeArcher : ComportementDeCombat
     {
 
-        public override string Combattre()
+        public override string combattre()
         {
             return "je me bats avec un arc";
         }

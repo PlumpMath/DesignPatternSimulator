@@ -27,7 +27,7 @@ namespace DesignPatternSimulator.designpattern.observateur.parent
 
         public void Update() {
 		foreach(ObservateurAbstrait observateur in lesObservateurs) {
-			observateur.Update();
+			observateur.update();
 		}
 	}
 

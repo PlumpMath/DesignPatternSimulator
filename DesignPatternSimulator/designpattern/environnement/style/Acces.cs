@@ -23,12 +23,12 @@ namespace DesignPatternSimulator.designpattern.environnement.style
             return new Acces(aZone1, aZone2);
         }
 
-        public string FirstZoneName()
+        public string firstZoneName()
         {
             return zone1.getName();
         }
 
-        public string SecondZoneName()
+        public string secondZoneName()
         {
             return zone2.getName();
         }

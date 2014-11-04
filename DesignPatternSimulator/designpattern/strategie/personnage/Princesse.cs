@@ -20,7 +20,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 			return "quelle est belle ma demarche !";
 		}
 
-		public override void Update() {
+		public override void update() {
 		}
 
 	}

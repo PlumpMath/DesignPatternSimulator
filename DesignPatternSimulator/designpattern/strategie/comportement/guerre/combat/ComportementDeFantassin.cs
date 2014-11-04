@@ -4,7 +4,7 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.com
     public class ComportementDeFantassin : ComportementDeCombat
     {
 
-        public override string Combattre()
+        public override string combattre()
         {
             return "je me bats avec une hache";
         }

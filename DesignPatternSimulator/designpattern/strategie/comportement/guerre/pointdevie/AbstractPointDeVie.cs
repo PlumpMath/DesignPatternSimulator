@@ -8,6 +8,6 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.poi
 {
     public abstract class AbstractPointDeVie
     {
-        public abstract int GetPointDeVie();
+        public abstract int getPointDeVie();
     }
 }

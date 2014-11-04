@@ -23,9 +23,9 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
             return "je galope, je galope";
         }
 
-        public override void Update()
+        public override void update()
         {
-            base.Update();
+            base.update();
         }
 
     }

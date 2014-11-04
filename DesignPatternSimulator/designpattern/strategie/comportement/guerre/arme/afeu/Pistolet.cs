@@ -11,22 +11,22 @@ namespace com.designpattern.strategie.comportement.guerre.arme.afeu
 
         public override int getNumberOfRecharge()
         {
-            return base.GetNumberOfRecharge();
+            return base.getNumberOfRecharge();
         }
 
         public override int getNumberOfBullet()
         {
-            return base.GetNumberOfBullet();
+            return base.getNumberOfBullet();
         }
 
         public override string getName()
         {
-            return base.GetName();
+            return base.getName();
         }
 
         public override int getImpact()
         {
-            return base.GetImpact();
+            return base.getImpact();
         }
 
     }

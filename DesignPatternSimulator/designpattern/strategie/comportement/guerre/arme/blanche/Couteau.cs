@@ -14,7 +14,7 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.arm
 
         }
 
-        public string GetNameOfWeapon()
+        public string getNameOfWeapon()
         {
             return base.Name;
         }

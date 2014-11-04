@@ -3,7 +3,7 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.com
 {
 	public class ComportementDeChevalier : ComportementDeCombat {
 
-		public override string Combattre() {
+		public override string combattre() {
 			return "je me bats à cheval";
 		}
 

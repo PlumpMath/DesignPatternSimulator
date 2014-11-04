@@ -36,10 +36,10 @@ namespace DesignPatternSimulator.designpattern.strategie.main
                 lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Fantassin, etatMajor, "naruto"));
                 lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Princesse, null, "fiona"));
 			
-				lesPersonnes.ElementAt(0).SetComportementSon(new EmettreSonCrier());
-				lesPersonnes.ElementAt(1).SetComportementSon(new EmettreSonAuSecour());
-				lesPersonnes.ElementAt(2).SetComportementSon(new EmettreSonEtendard());
-				lesPersonnes.ElementAt(3).SetComportementSon(new EmettreSonCrier());
+				lesPersonnes.ElementAt(0).setComportementSon(new EmettreSonCrier());
+				lesPersonnes.ElementAt(1).setComportementSon(new EmettreSonAuSecour());
+				lesPersonnes.ElementAt(2).setComportementSon(new EmettreSonEtendard());
+				lesPersonnes.ElementAt(3).setComportementSon(new EmettreSonCrier());
 			
 				EnvironnementDeJeuMoyenAge usa = new EnvironnementDeJeuMoyenAge();
 				usa.CreerPlateauDeJeu(new FactoryDeJeuGuerre());
@@ -90,8 +90,8 @@ namespace DesignPatternSimulator.designpattern.strategie.main
             string text = "";
 			foreach(Personnage p in lesPersonnes) {
 				//System.out.println(p.getEtat());
-                Console.WriteLine(p.GetEtat());
-                text += p.GetEtat();
+                Console.WriteLine(p.getEtat());
+                text += p.getEtat();
                 text += "\n";
 			}
             return text;
@@ -103,19 +103,19 @@ namespace DesignPatternSimulator.designpattern.strategie.main
             string text = "";
 			foreach(ObservateurAbstrait o in etatMajor.lesObservateurs) {
                 //System.out.println(((Personnage)o).getEtat());
-                Console.WriteLine(((Personnage)o).GetEtat());
-                text += ((Personnage)o).GetEtat();
+                Console.WriteLine(((Personnage)o).getEtat());
+                text += ((Personnage)o).getEtat();
                 text += "\n";
 			}
             return text;
 		}
 	
-		public void ChangeEtat(eMode mode) {
-			etatMajor.SetEMode(mode);
+		public void changeEtat(eMode mode) {
+			etatMajor.setEMode(mode);
 			etatMajor.Update();
 		}
 
-        public string ShowAllPersonnage()
+        public string showAllPersonnage()
         {
             string text = "";
 			foreach(Personnage p in lesPersonnes) {

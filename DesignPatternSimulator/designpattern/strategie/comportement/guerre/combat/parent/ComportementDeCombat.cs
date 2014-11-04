@@ -2,6 +2,6 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.com
 {
 	public abstract class ComportementDeCombat {
 
-		public abstract string Combattre();
+		public abstract string combattre();
 	}
 }

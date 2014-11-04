@@ -24,12 +24,12 @@ namespace DesignPatternSimulator.designpattern.environnement
 			return new Acces(null, null);
 		}
 
-        public override void SetZonesAcces(List<Acces> acces)
+        public override void setZonesAcces(List<Acces> acces)
         {
 			accesZones = acces;
 		}
 
-		public override List<Acces> GetZonesAcces() {
+		public override List<Acces> getZonesAcces() {
 			return accesZones;
 		}
 

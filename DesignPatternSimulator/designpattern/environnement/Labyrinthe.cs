@@ -19,12 +19,12 @@ namespace DesignPatternSimulator.designpattern.environnement
 			return new Adjacent(null, null);
 		}
 
-		public override void SetZonesAcces(List<Acces> acces) {
+		public override void setZonesAcces(List<Acces> acces) {
 			// TODO Auto-generated method stub
 		
 		}
 
-		public override List<Acces> GetZonesAcces() {
+		public override List<Acces> getZonesAcces() {
 			// TODO Auto-generated method stub
 			return null;
 		}
