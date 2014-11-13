@@ -16,6 +16,7 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.arm
 
         }
 
+        /*
         public override int getNumberOfRecharge()
         {
 
@@ -29,13 +30,13 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.arm
 
         public override string getName()
         {
-            return base.getName();
+            return base.GetName();
         }
 
         public override int getImpact()
         {
-            return base.getImpact();
+            return base.GetImpact();
         }
-
+        */
     }
 }

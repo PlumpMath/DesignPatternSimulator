@@ -4,31 +4,34 @@ namespace com.designpattern.strategie.comportement.guerre.arme.afeu
     public class Colt45 : ArmeAFeu
     {
 
+        /*
         private string nameOfGun;
         private int nbOfRecharge;
         private int nbOfBullet;
-        private int impact;
+        private int impact; */
 
         public Colt45(string nom, int imp, int nbBullet, int nbRecharge)
             : base(nom, imp, nbBullet, nbRecharge)
         {
+            /*
             nameOfGun = nom;
             impact = imp;
             nbOfRecharge = nbRecharge;
             nbOfBullet = nbBullet;
-
+            */
         }
-
-        public override int getNumberOfRecharge()
+/*
+        public override int GetNumberOfRecharge()
         {
             return this.nbOfRecharge;
         }
 
-        public override int getNumberOfBullet()
+        public override int GetNumberOfBullet()
         {
             return this.nbOfBullet;
         }
 
+        
         public override string getName()
         {
             return this.nameOfGun;
@@ -38,6 +41,7 @@ namespace com.designpattern.strategie.comportement.guerre.arme.afeu
         {
             return this.impact;
         }
+         * */
 
     }
 }

@@ -15,24 +15,15 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.guerre.arm
              this.nbOfBulllet = nbBullet;
              this.nbOfRecharge = nbRecharge;
          }
-        public override int getNumberOfRecharge()
+
+        public string GetName()
         {
-            this.nbOfRecharge;
+            return base.Name;
         }
 
-        public override int getNumberOfBullet()
+        public int GetImpact()
         {
-            this.nbOfBulllet;
-        }
-
-        public override string getName()
-        {
-            return base.getName();
-        }
-
-        public override int getImpact()
-        {
-            return base.getImpact();
+            return base.Impact;
         }
 }
 }
