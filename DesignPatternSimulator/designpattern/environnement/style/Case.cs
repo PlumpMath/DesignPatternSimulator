@@ -13,7 +13,7 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 	
 		public Case() {}
 	
-		public Case(string nom) {
+		public Case(string nom, int x, int y) {
 			name  = nom;
 		}
 
@@ -21,8 +21,8 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 			return new Case();
 		}
 
-		public override AbstractZone CreerZone(string s) {
-			return new Case(s);
+		public override AbstractZone CreerZone(string s, int x, int y) {
+			return new Case(s, x, y);
 		}
 
 	}

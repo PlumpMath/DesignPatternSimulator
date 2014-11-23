@@ -19,9 +19,9 @@ namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre
 
         }
 
-        public override AbstractZone CreateZone(string nom)
+        public override AbstractZone CreateZone(string nom, int x, int y)
         {
-            return new Zone(nom);
+            return new Zone(nom, x, y);
         }
 
         public override AbstractAcces CreateAcces(Zone z1, Zone z2)
@@ -29,6 +29,24 @@ namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre
             return new Acces(z1, z2);
         }
 
+        public List<Zone> CreateCarre(int longeur, int largeur)
+        {
+            List<Acces> environnement = new List<Acces>();
+            List<Zone> zones = null;
+
+            for (int i = 0; i < largeur; i++)
+            {
+                for (int j = 0; j < longeur; j++)
+                {
+                    zones = new List<Zone>();
+                    zones.Add(new Zone(i + ":" + j, i, j));
+                }
+            }
+
+            return zones;
+        }
+
+        /*
         public List<Acces> CreateCarre(int longeur, int largeur)
         {
             List<Acces> environnement = new List<Acces>();
@@ -39,27 +57,12 @@ namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre
                 for (int j = 0; j < longeur; j++)
                 {
                     zones = new List<Zone>();
-                    zones.Add(new Zone(i + ":" + j));
+                    zones.Add(new Zone(i + ":" + j, i, j));
                 }
             }
-            int ligne = 0;
-            int saut = largeur;
-
-            /*
-            for (int j = 0; j < largeur; j++)
-            {
-                for (int i = 1; i < saut - 1; i++)
-                {
-                    environnement.Add(new Acces(zones.ElementAt(ligne + i - 1), zones.ElementAt(ligne + i)));
-                    environnement.Add(new Acces(zones.ElementAt(ligne + i - 1), zones.ElementAt(saut + i - 1)));
-                }
-
-                ligne += 1;
-                saut += largeur;
-            }
-            */
 
             return environnement;
         }
+         */
     }
 }

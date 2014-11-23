@@ -18,8 +18,9 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 {
 	public class SimulationDeJeu {
 
-		private List<Personnage> lesPersonnes;
-		public Organisation etatMajor;
+		public List<Personnage> lesPersonnes {get;set;}
+        public Organisation etatMajor { get; set; }
+        public EnvironnementDeJeuMoyenAge usa { get; set; }
 	
 		public SimulationDeJeu() {
 			lesPersonnes = new List<Personnage>();
@@ -41,7 +42,7 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 				lesPersonnes.ElementAt(2).setComportementSon(new EmettreSonEtendard());
 				lesPersonnes.ElementAt(3).setComportementSon(new EmettreSonCrier());
 			
-				EnvironnementDeJeuMoyenAge usa = new EnvironnementDeJeuMoyenAge();
+				usa = new EnvironnementDeJeuMoyenAge();
 				usa.CreerPlateauDeJeu(new FactoryDeJeuGuerre());
 			}
 			/*

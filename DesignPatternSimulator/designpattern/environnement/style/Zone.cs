@@ -13,7 +13,7 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 	
 	    public Zone() {}
 	
-	    public Zone(string nom) {
+	    public Zone(string nom, int x, int y) {
 		    name = nom;
 	    }
 	
@@ -21,8 +21,8 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 		    return new Zone();
 	    }
 
-	    public override AbstractZone CreerZone(string s) {
-		    return new Zone(s);
+	    public override AbstractZone CreerZone(string s, int x, int y) {
+		    return new Zone(s, x, y);
 	    }
 
 	    public string getName() {

@@ -15,8 +15,10 @@ namespace DesignPatternSimulator.designpattern.environnement.parent
 
         public abstract AbstractZone CreerZone();
         public abstract AbstractAcces CreerAcces();
-        public abstract void setZonesAcces(List<Acces> acces);
-        public abstract List<Acces> getZonesAcces();
+        //public abstract void setZonesAcces(List<Acces> acces);
+        public abstract void setZonesAcces(List<Zone> acces);
+        //public abstract List<Acces> getZonesAcces();
+        public abstract List<Zone> getZonesAcces();
 
     }
 }

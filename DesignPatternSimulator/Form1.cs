@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.strategie.main;
+using DesignPatternSimulator.designpattern.environnement.style;
 
 namespace DesignPatternSimulator
 {
@@ -48,6 +49,8 @@ namespace DesignPatternSimulator
             sdj.ChangeEtat(eMode.EN_PAIX);
             consoleBox.Text += sdj.AfficherLesUploadsObservateur();
             consoleBox.Text += "\n";
+
+            List<Zone> lesZones = sdj.usa.getPlateauDeJeu().getZonesAcces();
 
             //var f2 = new Form2();
             //this.Hide();
