@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using DesignPatternSimulator.designpattern.environnement;
 using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.environnement.parent;
-using DesignPatternSimulator.designpattern.fabrique.personnage;
 using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre;
 using DesignPatternSimulator.designpattern.observateur;
@@ -48,7 +47,10 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 		//public FabriqueManager(AbstractFabriqueDeJeu jeu, FactoryPersonnage persos)
         {
             EspaceDeJeu = monde;
+            monde.CreerPlateauDeJeu(new FactoryDeJeuGuerre());
             LesPersonnages = persos;
+
+            carre = new TableLayoutPanel();
 
 			LesPersonnes = new List<Personnage>();
 			EtatMajor = new Organisation();
@@ -253,6 +255,22 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             // Padding (pixels)within each cell (left, top, right, bottom)
             carre.Padding = new Padding(1, 1, 1, 1);
             carre.Dock = DockStyle.Fill;
+
+
+            TextBox text = new TextBox();
+            text.Enabled = false;
+            TextBox text2 = new TextBox();
+            text2.Enabled = false;
+            text.Text = "début";
+            carre.Controls.Add(text, 2, 1);
+            text2.Text = "fin";
+            carre.Controls.Add(text2, 0, 3);
+
+            //Panel zone = tlp.GetControlFromPosition(5, 9) as Panel;
+            PictureBox pic = new PictureBox();
+            pic.ImageLocation = "C:\\Users\\Mamadou\\GitHub\\DesignPatternSimulator\\DesignPatternSimulator\\designpattern\\strategie\\personnage\\pictures\\eliwood_critique45.png";
+            pic.SizeMode = PictureBoxSizeMode.StretchImage;
+            carre.Controls.Add(pic, 0, 3);
 
             return carre;
         }

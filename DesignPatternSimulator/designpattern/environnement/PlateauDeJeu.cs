@@ -15,6 +15,8 @@ namespace DesignPatternSimulator.designpattern.environnement
         //private List<Acces> accesZones = null;
         private List<AbstractZone> accesZones = null;
 
+        public PlateauDeJeu() { }    
+
         public override AbstractZone CreerZone()
         {
             return new Zone();

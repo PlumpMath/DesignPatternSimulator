@@ -14,6 +14,9 @@ using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.strategie.main;
 using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
+using DesignPatternSimulator.simulation.fabriquemanager;
+using DesignPatternSimulator.designpattern.environnement;
+using DesignPatternSimulator.designpattern.fabrique.personnage;
 
 namespace DesignPatternSimulator
 {
@@ -58,43 +61,17 @@ namespace DesignPatternSimulator
             //f2.ShowDialog();
 
             this.Controls.Clear();
+            EnvironnementDeJeuMoyenAge env = new EnvironnementDeJeuMoyenAge();
+            FactoryPersonnage per = new FactoryPersonnageMoyenAge();
+            FabriqueManager fm = new FabriqueManager(env, per);
 
+            TableLayoutPanel pan = fm.InitTableLayout(10, 10);
+            /*
             TableLayoutPanel pan = new TableLayoutPanel();
             pan.Dock = DockStyle.Fill;
 
-
-
-            /*
-            pan.ColumnCount = 5;
-            pan.RowCount = 5;
-            pan.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-
-            TableLayoutColumnStyleCollection styles = pan.ColumnStyles;
-            foreach (ColumnStyle style in styles)
-            {
-                style.SizeType = SizeType.Percent;
-                style.Width = 20;
-            }
-
-            TableLayoutRowStyleCollection rowstyles = pan.RowStyles;
-            foreach (RowStyle style in rowstyles)
-            {
-                style.SizeType = SizeType.Percent;
-                style.Height = 20;
-            }
-            */
-
             // Create TableLayoutPanel
             TableLayoutPanel tlp = new TableLayoutPanel();
-            
-            /*tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            
-            //tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
-            //tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
-            */
 
             // Grid has two columns
             tlp.ColumnCount = 10;
@@ -134,22 +111,6 @@ namespace DesignPatternSimulator
                 }
             }
 
-            /*
-            for (int i = 0; i < tlp.RowCount; i++)
-            {
-                tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percent));
-            }
-
-            percent = 100 / tlp.ColumnCount;
-            for (int j = 0; j < tlp.ColumnCount; j++ )
-            {
-                tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percent));
-            }
-            */
-
-            //tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));
-            //tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));
-
             // Set the BorderStyle to Inset
             tlp.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
 
@@ -173,11 +134,13 @@ namespace DesignPatternSimulator
             text2.Text = "fin";
             tlp.Controls.Add(text2, 0, 3);
             
-            //Panel zone = tlp.GetControlFromPosition(5, 9) as Panel;
             PictureBox pic = new PictureBox();
             pic.ImageLocation = "C:\\Users\\Mamadou\\GitHub\\DesignPatternSimulator\\DesignPatternSimulator\\designpattern\\strategie\\personnage\\pictures\\eliwood_critique45.png";
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
             tlp.Controls.Add(pic, 0, 3);
+            */
+
+            this.Controls.Add(pan);
         }
     }
 }

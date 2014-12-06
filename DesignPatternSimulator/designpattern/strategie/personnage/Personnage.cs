@@ -15,6 +15,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 		private Organisation etatMajor = null;
 		private eMode etatFonctionnement = eMode.NON_DEFINI;
 
+        public string PictureLocation { get; set; }
         public AbstractZone Emplacement { get; set; }
 
 		public Personnage (Organisation unitedStateOfAmerica, string sonNom) {
