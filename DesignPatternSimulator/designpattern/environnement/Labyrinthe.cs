@@ -11,20 +11,36 @@ namespace DesignPatternSimulator.designpattern.environnement
 {
 	public class Labyrinthe : AbstractPlateauDeJeu {
 
+        List<AbstractZone> accesZones;
+
 		public override AbstractZone CreerZone() {
 			return new Case();
-		}
+        }
+
+        public override AbstractZone CreerZone(int i, int j)
+        {
+            return new Case(i, j);
+        }
+
+        public override void AjouterZone(AbstractZone z)
+        {
+            accesZones.Add(z);
+        }
 
 		public override AbstractAcces CreerAcces() {
 			return new Adjacent(null, null);
 		}
-
-		public override void setZonesAcces(List<Acces> acces) {
+        
+		//public override void setZonesAcces(List<Acces> acces) {
+        public override void setZonesAcces(List<AbstractZone> acces)
+        {
 			// TODO Auto-generated method stub
 		
 		}
-
-		public override List<Acces> getZonesAcces() {
+        
+		//public override List<Acces> getZonesAcces() {
+        public override List<AbstractZone> getZonesAcces()
+        {
 			// TODO Auto-generated method stub
 			return null;
 		}

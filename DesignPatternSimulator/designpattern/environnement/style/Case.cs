@@ -10,8 +10,12 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 	public class Case : AbstractZone {
 	
 		private string name;
-	
-		public Case() {}
+
+        public Case() { }
+
+        public Case(int x, int y)
+        {
+        }
 	
 		public Case(string nom, int x, int y) {
 			name  = nom;

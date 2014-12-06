@@ -10,5 +10,7 @@ namespace DesignPatternSimulator.designpattern.environnement.parent
     public abstract class EnvironnementDeJeu
     {
 	    public abstract AbstractPlateauDeJeu CreerPlateauDeJeu(AbstractFabriqueDeJeu fabrique);
+
+        public abstract AbstractPlateauDeJeu GetPlateauDeJeu();
     }
 }

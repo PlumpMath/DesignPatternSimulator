@@ -14,11 +14,13 @@ namespace DesignPatternSimulator.designpattern.environnement.parent
     {
 
         public abstract AbstractZone CreerZone();
+        public abstract AbstractZone CreerZone(int i, int j);
+        public abstract void AjouterZone(AbstractZone zone);
         public abstract AbstractAcces CreerAcces();
         //public abstract void setZonesAcces(List<Acces> acces);
-        public abstract void setZonesAcces(List<Zone> acces);
+        public abstract void setZonesAcces(List<AbstractZone> acces);
         //public abstract List<Acces> getZonesAcces();
-        public abstract List<Zone> getZonesAcces();
+        public abstract List<AbstractZone> getZonesAcces();
 
     }
 }

@@ -1,4 +1,5 @@
 using DesignPatternSimulator.designpattern.environnement.style;
+using DesignPatternSimulator.designpattern.environnement.style.parent;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.observateur.parent;
 using DesignPatternSimulator.designpattern.strategie.comportement.guerre.combat.parent;
@@ -14,7 +15,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 		private Organisation etatMajor = null;
 		private eMode etatFonctionnement = eMode.NON_DEFINI;
 
-        public Zone Emplacement { get; set; }
+        public AbstractZone Emplacement { get; set; }
 
 		public Personnage (Organisation unitedStateOfAmerica, string sonNom) {
 			this.nom = sonNom;

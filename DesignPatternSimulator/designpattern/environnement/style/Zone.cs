@@ -10,12 +10,32 @@ namespace DesignPatternSimulator.designpattern.environnement.style
     public class Zone : AbstractZone {
 
 	    private string name;
-	
-	    public Zone() {}
+        private int x;
+        private int y;
+
+        public Zone()
+        {
+            this.x = 0;
+            this.y = 0;
+        }
+
+        public Zone(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
 	
 	    public Zone(string nom, int x, int y) {
 		    name = nom;
+            this.x = x;
+            this.y = y;
 	    }
+
+        public Zone(Position p)
+        {
+            this.x = p.getPositionX();
+            this.y = p.getPositionY();
+        }
 	
 	    public override AbstractZone CreerZone() {
 		    return new Zone();

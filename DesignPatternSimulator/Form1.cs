@@ -13,6 +13,7 @@ using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.strategie.main;
 using DesignPatternSimulator.designpattern.environnement.style;
+using DesignPatternSimulator.designpattern.environnement.style.parent;
 
 namespace DesignPatternSimulator
 {
@@ -50,7 +51,7 @@ namespace DesignPatternSimulator
             consoleBox.Text += sdj.AfficherLesUploadsObservateur();
             consoleBox.Text += "\n";
 
-            List<Zone> lesZones = sdj.usa.getPlateauDeJeu().getZonesAcces();
+            List<AbstractZone> lesZones = sdj.usa.GetPlateauDeJeu().getZonesAcces();
 
             //var f2 = new Form2();
             //this.Hide();
@@ -101,9 +102,40 @@ namespace DesignPatternSimulator
             // Grid has two rows
             tlp.RowCount = 10;
 
-            float percent = 100 / tlp.RowCount;
-            Console.WriteLine(percent);
-            for (int i = 0; i < tlp.ColumnCount; i++)
+            float percentRow = 100 / tlp.RowCount;
+            float percentColumn = 100 / tlp.ColumnCount;
+
+            int maxCount = 0;
+            if(tlp.RowCount == tlp.ColumnCount)
+            {
+                maxCount = tlp.RowCount;
+            }
+            else
+            {
+                if (tlp.RowCount > tlp.ColumnCount)
+                {
+                    maxCount = tlp.RowCount;
+                }
+                else
+                {
+                    maxCount = tlp.ColumnCount;
+                }
+            }
+
+            for (int i = 0; i < maxCount; i++)
+            {
+                if(tlp.RowCount <= maxCount)
+                {
+                    tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percentRow));
+                }
+                if(tlp.ColumnCount <= maxCount)
+                {
+                    tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percentColumn));
+                }
+            }
+
+            /*
+            for (int i = 0; i < tlp.RowCount; i++)
             {
                 tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percent));
             }
@@ -113,6 +145,7 @@ namespace DesignPatternSimulator
             {
                 tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percent));
             }
+            */
 
             //tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));
             //tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));
@@ -139,6 +172,12 @@ namespace DesignPatternSimulator
             tlp.Controls.Add(text, 2, 1);
             text2.Text = "fin";
             tlp.Controls.Add(text2, 0, 3);
+            
+            //Panel zone = tlp.GetControlFromPosition(5, 9) as Panel;
+            PictureBox pic = new PictureBox();
+            pic.ImageLocation = "C:\\Users\\Mamadou\\GitHub\\DesignPatternSimulator\\DesignPatternSimulator\\designpattern\\strategie\\personnage\\pictures\\eliwood_critique45.png";
+            pic.SizeMode = PictureBoxSizeMode.StretchImage;
+            tlp.Controls.Add(pic, 0, 3);
         }
     }
 }

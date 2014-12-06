@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="designpattern\environnement\parent\EnvironnementDeJeu.cs" />
+    <Compile Include="designpattern\environnement\style\Position.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\parent\Pistolet.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\arme\blanche\Couteau.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\pointdevie\AbstractPointDeVie.cs" />
@@ -170,9 +171,13 @@
     <Compile Include="designpattern\strategie\comportement\guerre\son\EmettreSonEtendard.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\son\EmettreSonMotiver.cs" />
     <Compile Include="simulation\Application.cs" />
+    <Compile Include="simulation\fabriquemanager\FabriqueManager.cs" />
     <Compile Include="simulation\SimulationDeJeu.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="designpattern\strategie\personnage\pictures\combattant_ennemie_distance_critique1.png" />
+    <Content Include="designpattern\strategie\personnage\pictures\eliwood_critique45.png" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\parent\ArmeAFeu.cs" />
   </ItemGroup>

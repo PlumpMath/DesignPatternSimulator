@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DesignPatternSimulator.designpattern.environnement;
+using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.environnement.parent;
 using DesignPatternSimulator.designpattern.fabrique.personnage;
 using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
@@ -17,12 +18,14 @@ using DesignPatternSimulator.designpattern.strategie.comportement.guerre.son;
 using DesignPatternSimulator.designpattern.strategie.comportement.guerre.son.parent;
 using DesignPatternSimulator.designpattern.strategie.personnage;
 using System.Windows.Forms;
+using DesignPatternSimulator.designpattern.environnement.style.parent;
 
 namespace DesignPatternSimulator.simulation.fabriquemanager
 {
     class FabriqueManager
     {
-        AbstractFabriqueDeJeu EspaceDeJeu;
+        //AbstractFabriqueDeJeu EspaceDeJeu;
+        EnvironnementDeJeu EspaceDeJeu;
         FactoryPersonnage LesPersonnages;
 
         public List<Personnage> LesPersonnes {get;set;}
@@ -32,23 +35,26 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
         TableLayoutPanel carre;
         int longueur;
         int largeur;
+
+        
 	
         public FabriqueManager()
         {
             LesPersonnes = new List<Personnage>();
             EtatMajor = new Organisation();
         }
-
-		public FabriqueManager(AbstractFabriqueDeJeu jeu, FactoryPersonnage persos)
+        
+		public FabriqueManager(EnvironnementDeJeu monde, FactoryPersonnage persos)
+		//public FabriqueManager(AbstractFabriqueDeJeu jeu, FactoryPersonnage persos)
         {
-            EspaceDeJeu = jeu;
+            EspaceDeJeu = monde;
             LesPersonnages = persos;
 
 			LesPersonnes = new List<Personnage>();
 			EtatMajor = new Organisation();
 		}
 
-        public void CreatePersonnagesDuJeu(FactoryPersonnage caserne)
+        /*public void CreatePersonnagesDuJeu(FactoryPersonnage caserne)
         {
             if (caserne.GetType().Name.Equals("FactoryPersonnageMoyenAge"))
             {
@@ -67,8 +73,9 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 
                 Organisme = new EnvironnementDeJeuMoyenAge();
                 Organisme.CreerPlateauDeJeu(new FactoryDeJeuGuerre());
+                
             }
-        }
+        }*/
 	
 		public void CreatePersonnagesDuJeu(FactoryPersonnage caserne)
         {
@@ -177,7 +184,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             carre.ColumnCount = l;
             carre.RowCount = h;
 
-            float percent = 100 / carre.RowCount;
+            /*float percent = 100 / carre.RowCount;
             for (int i = 0; i < carre.ColumnCount; i++)
             {
                 carre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percent));
@@ -187,21 +194,106 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             for (int j = 0; j < carre.ColumnCount; j++)
             {
                 carre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percent));
+            }*/
+
+
+            float percentRow = 100 / carre.RowCount;
+            float percentColumn = 100 / carre.ColumnCount;
+            int maxCount = 0;
+            if (carre.RowCount == carre.ColumnCount)
+            {
+                maxCount = carre.RowCount;
             }
+            else
+            {
+                if (carre.RowCount > carre.ColumnCount)
+                {
+                    maxCount = carre.RowCount;
+                }
+                else
+                {
+                    maxCount = carre.ColumnCount;
+                }
+            }
+
+            
+            for (int i = 0; i < maxCount; i++)
+            {
+                if (carre.RowCount <= maxCount)
+                {
+                    carre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percentRow));
+                }
+                if (carre.ColumnCount <= maxCount)
+                {
+                    carre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percentColumn));
+                }
+            }
+            for (int i = 0 ; i < 20 ; i++) {
+                for (int j = 0 ; j < 20; j++) {
+                    AbstractZone zon;
+                
+                    /*if ((i == 8 && j == 6) || (i == 8 && j == 14)) {
+                        zon = EspaceDeJeu.CreateZone(i, j);
+                        //z = creerZone(CaseTypes.fort, new Position(i, j));
+                    } else {
+                        zon = EspaceDeJeu.CreateZone(i,j)
+                        //z = creerZone(CaseTypes.plaine, new Position(i, j));
+                    }*/
+
+                    zon = EspaceDeJeu.GetPlateauDeJeu().CreerZone(i, j);
+                    EspaceDeJeu.GetPlateauDeJeu().AjouterZone(zon);
+                }
+            }
+            
 
             // Set the BorderStyle to Inset
             carre.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
-
             // If grid is full add extra cells by adding column
             carre.GrowStyle = TableLayoutPanelGrowStyle.AddColumns;
-
             // Padding (pixels)within each cell (left, top, right, bottom)
             carre.Padding = new Padding(1, 1, 1, 1);
-
             carre.Dock = DockStyle.Fill;
 
             return carre;
         }
-	}
+
+
+
+
+/*
+    {
+    for (int i = 0 ; i < 20 ; i++) {
+            for (int j = 0 ; j < 20; j++) {
+                AbstractZone z;
+                /*
+                if ((i == 8 && j == 6) || (i == 8 && j == 14)) {
+                    z = creerZone(CaseTypes.fort, new Position(i, j));
+                } else {
+                    z = creerZone(CaseTypes.plaine, new Position(i, j));
+                }
+                *//*
+                z = creerZone(CaseTypes.plaine, new Position(i, j));
+                plateauDeJeu.ajouterZone(z);
+            }
+        }
+        for (ZoneAbstract zone : plateauDeJeu.getZones()) {
+            Case c1 = (Case) zone;
+            for (ZoneAbstract zone2 : plateauDeJeu.getZones()) {
+                Case c2 = (Case) zone2;
+                if (c2.getPosition().equals(new Position(c1.getPosition().getPositionX()+1, c1.getPosition().getPositionY())) ||
+                        c2.getPosition().equals(new Position(c1.getPosition().getPositionX()-1, c1.getPosition().getPositionY())) ||
+                        c2.getPosition().equals(new Position(c1.getPosition().getPositionX(), c1.getPosition().getPositionY()+1)) ||
+                        c2.getPosition().equals(new Position(c1.getPosition().getPositionX(), c1.getPosition().getPositionY()-1))) {
+                    AccessAbstract acces = creerAcces(zone, zone2);
+                    plateauDeJeu.ajouterAcces(acces);
+                    AccessAbstract acces2 = creerAcces(zone2, zone);
+                    plateauDeJeu.ajouterAcces(acces2);
+                }
+            }
+        }
+    }
+*/
+
+    }
     
 }

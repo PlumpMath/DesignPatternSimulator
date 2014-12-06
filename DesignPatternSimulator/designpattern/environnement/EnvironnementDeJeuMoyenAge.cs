@@ -9,6 +9,7 @@ using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre;
 using DesignPatternSimulator.designpattern.strategie.personnage;
+using DesignPatternSimulator.designpattern.environnement.style.parent;
 
 namespace DesignPatternSimulator.designpattern.environnement
 {
@@ -21,7 +22,7 @@ namespace DesignPatternSimulator.designpattern.environnement
 			FactoryDeJeuGuerre factory = new FactoryDeJeuGuerre();
 
             //List<Acces> casesWinterfell = new List<Acces>();
-            List<Zone> casesWinterfell = new List<Zone>();
+            List<AbstractZone> casesWinterfell = new List<AbstractZone>();
 			casesWinterfell = factory.CreateCarre(10, 10);
 		
 			//int sizeCarre = Integer.valueOf(casesWinterfell.get(casesWinterfell.size()).secondZoneName().split(":")[1]);
@@ -32,7 +33,7 @@ namespace DesignPatternSimulator.designpattern.environnement
 			return plateau;
 		}
 
-        public AbstractPlateauDeJeu getPlateauDeJeu()
+        public override AbstractPlateauDeJeu GetPlateauDeJeu()
         {
             return plateau;
         }
@@ -40,11 +41,11 @@ namespace DesignPatternSimulator.designpattern.environnement
 
         public void PlacerLesPions(List<Personnage> lesPerso)
         {
-            List<Zone> zones = plateau.getZonesAcces();
+            List<AbstractZone> zones = plateau.getZonesAcces();
 
             int size = lesPerso.Count;
             int i = 0;
-            Zone zone;
+            AbstractZone zone;
 
             for (int j = 0; j < zones.Count && j < size; j++ )
             {

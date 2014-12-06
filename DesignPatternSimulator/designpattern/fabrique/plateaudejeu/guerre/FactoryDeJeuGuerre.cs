@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu;
+using DesignPatternSimulator.designpattern.environnement.parent;
 
 namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre
 {
@@ -19,6 +20,16 @@ namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre
 
         }
 
+        public override EnvironnementDeJeu CreateEnvironnementDeJeu(EnvironnementDeJeu world)
+        {
+            return null;
+        }
+
+        public override AbstractZone CreateZone(int x, int y)
+        {
+            return new Zone(x, y);
+        }
+
         public override AbstractZone CreateZone(string nom, int x, int y)
         {
             return new Zone(nom, x, y);
@@ -29,16 +40,16 @@ namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre
             return new Acces(z1, z2);
         }
 
-        public List<Zone> CreateCarre(int longeur, int largeur)
+        public List<AbstractZone> CreateCarre(int longeur, int largeur)
         {
             List<Acces> environnement = new List<Acces>();
-            List<Zone> zones = null;
+            List<AbstractZone> zones = null;
 
             for (int i = 0; i < largeur; i++)
             {
                 for (int j = 0; j < longeur; j++)
                 {
-                    zones = new List<Zone>();
+                    zones = new List<AbstractZone>();
                     zones.Add(new Zone(i + ":" + j, i, j));
                 }
             }
