@@ -9,6 +9,36 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 {
 	public abstract class Personnage : ObservateurAbstrait {
 
+
+        //*[0] Rating in his position
+        protected int rate;
+        //*[1] Speed
+        protected int speed;
+        //*[2] Power
+        protected int power;
+        //*[3] Jump Strength
+        protected int jumpStrength;
+        //*[4] Shot Strength
+        protected int shotStrength;
+        //*[5] Passing Accuracy
+        protected int passAccuracy;
+        //*[6] Long Pass Accuracy
+        protected int longPassAccuracy;
+        //*[7] Shot Accuracy
+        protected int shotAccuracy;
+        //*[8] Stamina
+        protected int stamina;
+        //*[9] Risk of injury/Sturdiness
+        protected int riskInjury;
+        //*[10] Goalkeeping
+        protected int goalKeeping;
+        //*[11] Defending
+        protected int defending;
+        //*[12] Left/Right Foot (0 is right, 1 is left, 2 is both
+        protected int foot;
+
+
+
 		private string nom;
 		public ComportementDeCombat comportementCombat = null;
 		public ComportementEmettreSon comportementSon = null;

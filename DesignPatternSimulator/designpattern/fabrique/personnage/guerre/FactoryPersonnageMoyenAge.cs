@@ -37,5 +37,10 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.guerre
             return null;
         }
 
+
+        public override Personnage CreatePersonnage(football.eTypePersonnageF type, Organisation org, string nom)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
