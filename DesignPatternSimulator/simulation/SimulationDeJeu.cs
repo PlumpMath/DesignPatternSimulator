@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using DesignPatternSimulator.designpattern.environnement;
 using DesignPatternSimulator.designpattern.fabrique.personnage;
-using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
+//using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.observateur.parent;
@@ -28,14 +28,14 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 		}
 	
 		public void CreatePersonnagesDuJeu(FactoryPersonnage caserne) {
-			if(caserne.GetType().Name.Equals("FactoryPersonnageMoyenAge")) {
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Archer, etatMajor, "mehdi"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Archer, etatMajor, "legolas"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Chevalier, etatMajor, "aragorn"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Chevalier, etatMajor, "frodon"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Fantassin, etatMajor, "york"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Fantassin, etatMajor, "naruto"));
-                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.guerre.eTypePersonnage.Princesse, null, "fiona"));
+			//if(caserne.GetType().Name.Equals("FactoryPersonnageMoyenAge")) {
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Archer, etatMajor, "mehdi"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Archer, etatMajor, "legolas"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Chevalier, etatMajor, "aragorn"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Chevalier, etatMajor, "frodon"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Fantassin, etatMajor, "york"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Fantassin, etatMajor, "naruto"));
+                lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Princesse, null, "fiona"));
 			
 				lesPersonnes.ElementAt(0).setComportementSon(new EmettreSonCrier());
 				lesPersonnes.ElementAt(1).setComportementSon(new EmettreSonAuSecour());
@@ -44,7 +44,7 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 			
 				usa = new EnvironnementDeJeuMoyenAge();
 				usa.CreerPlateauDeJeu(new FactoryDeJeuGuerre());
-			}
+			//}
 			/*
 			if(caserne.GetType().Name.Equals("FactoryPersonnageGuerreDuGolf")) {
 				lesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.Soldat, etatMajor, "mehdi"));		

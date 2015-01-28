@@ -15,17 +15,17 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.football
 
         }
 
-        public override strategie.personnage.Personnage CreatePersonnage(football.eTypePersonnageF type, observateur.Organisation org, string nom)
+        public override strategie.personnage.Personnage CreatePersonnage(eTypePersonnage type, observateur.Organisation org, string nom)
         {
             switch (type)
             {
-                case eTypePersonnageF.attaquant:
+                case eTypePersonnage.attaquant:
                     return new Attaquant(org,nom);
-                case eTypePersonnageF.defenseur:
+                case eTypePersonnage.defenseur:
                     return new Defenseur(org, nom);
-                case eTypePersonnageF.gardien:
+                case eTypePersonnage.gardien:
                     return new Gardien(org, nom);
-                case eTypePersonnageF.milieu:
+                case eTypePersonnage.milieu:
                     return new Milieu(org, nom);
                 default:
                     break;
@@ -35,9 +35,6 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.football
 
         }
 
-        public override Personnage CreatePersonnage(guerre.eTypePersonnage type, observateur.Organisation org, string nom)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

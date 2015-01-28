@@ -61,8 +61,12 @@
   <ItemGroup>
     <Compile Include="designpattern\environnement\parent\EnvironnementDeJeu.cs" />
     <Compile Include="designpattern\environnement\style\Position.cs" />
-    <Compile Include="designpattern\fabrique\personnage\football\eTypePersonnage.cs" />
+    <Compile Include="designpattern\fabrique\personnage\dame\FactoryPersonnageDame.cs" />
     <Compile Include="designpattern\fabrique\personnage\football\FactoryPersonnageFootball.cs" />
+    <Compile Include="designpattern\fabrique\plateaudejeu\dame\FactoryDame.cs" />
+    <Compile Include="designpattern\fabrique\plateaudejeu\football\FactoryDeRencontre.cs" />
+    <Compile Include="designpattern\strategie\comportement\football\EtatAttaque.cs" />
+    <Compile Include="designpattern\strategie\comportement\football\EtatDefense.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\parent\Pistolet.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\arme\blanche\Couteau.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\pointdevie\AbstractPointDeVie.cs" />
@@ -70,8 +74,11 @@
     <Compile Include="designpattern\strategie\comportement\guerre\protection\parent\AbstractProtection.cs" />
     <Compile Include="designpattern\strategie\personnage\Attaquant.cs" />
     <Compile Include="designpattern\strategie\personnage\Defenseur.cs" />
+    <Compile Include="designpattern\strategie\personnage\Equipe.cs" />
     <Compile Include="designpattern\strategie\personnage\Gardien.cs" />
     <Compile Include="designpattern\strategie\personnage\Milieu.cs" />
+    <Compile Include="designpattern\strategie\personnage\PionBlanc.cs" />
+    <Compile Include="designpattern\strategie\personnage\PionNoir.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +224,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="designpattern\strategie\comportement\dame\deplacement\" />
+    <Folder Include="designpattern\strategie\comportement\dame\status\" />
     <Folder Include="Views\Football\" />
     <Folder Include="Views\Guerre\" />
     <Folder Include="Views\Labyrinthe\" />

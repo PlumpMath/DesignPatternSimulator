@@ -1,4 +1,5 @@
 using DesignPatternSimulator.designpattern.fabrique.personnage;
+using DesignPatternSimulator.designpattern.fabrique.personnage.football;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.strategie.personnage;
 
@@ -12,22 +13,22 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.guerre
 
         }
 
-        public override Personnage CreatePersonnage(eTypePersonnage type, Organisation org, string nom)
+        public override Personnage CreatePersonnage(personnage.eTypePersonnage type, Organisation org, string nom)
         {
 
             //if (com.designpattern.factory.personnage.moyenage.eTypePersonnage.valueOf(type.toString()) != null)
             //{
                 switch (type)
                 {
-                    case eTypePersonnage.Indefini:
+                    case personnage.eTypePersonnage.Indefini:
                         return null;
-                    case eTypePersonnage.Archer:
+                    case personnage.eTypePersonnage.Archer:
                         return new Archer(org, nom);
-                    case eTypePersonnage.Chevalier:
+                    case personnage.eTypePersonnage.Chevalier:
                         return new Chevalier(org, nom);
-                    case eTypePersonnage.Fantassin:
+                    case personnage.eTypePersonnage.Fantassin:
                         return new Fantassin(org, nom);
-                    case eTypePersonnage.Princesse:
+                    case personnage.eTypePersonnage.Princesse:
                         return new Princesse(null, nom);
                     default:
                         break;
@@ -38,9 +39,8 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.guerre
         }
 
 
-        public override Personnage CreatePersonnage(football.eTypePersonnageF type, Organisation org, string nom)
-        {
-            throw new System.NotImplementedException();
-        }
+
+
+    
     }
 }

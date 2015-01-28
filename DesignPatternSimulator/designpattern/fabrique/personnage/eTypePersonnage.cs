@@ -9,7 +9,13 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage
 	    Princesse,
 	    Chef,
 	    Soldat,
-	    Marine
+	    Marine,
+        attaquant,
+        defenseur,
+        milieu,
+        gardien,
+        PionNoir,
+        PionBlanc
     }
 }
 /*	
