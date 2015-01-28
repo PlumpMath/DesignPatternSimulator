@@ -22,6 +22,8 @@ namespace DesignPatternSimulator
 {
     public partial class Form1 : Form
     {
+        private FabriqueManager fm;
+        private TableLayoutPanel pan;
         public Form1()
         {
             InitializeComponent();
@@ -63,9 +65,9 @@ namespace DesignPatternSimulator
             this.Controls.Clear();
             EnvironnementDeJeuMoyenAge env = new EnvironnementDeJeuMoyenAge();
             FactoryPersonnage per = new FactoryPersonnageMoyenAge();
-            FabriqueManager fm = new FabriqueManager(env, per);
+            fm = new FabriqueManager(env, per);
 
-            TableLayoutPanel pan = fm.InitTableLayout(10, 10);
+            pan = fm.InitTableLayout(10, 10);
             /*
             TableLayoutPanel pan = new TableLayoutPanel();
             pan.Dock = DockStyle.Fill;
@@ -139,8 +141,21 @@ namespace DesignPatternSimulator
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
             tlp.Controls.Add(pic, 0, 3);
             */
+            deplacerPerso();
 
             this.Controls.Add(pan);
+        }
+
+        public void deplacerPerso()
+        {
+            /*
+            DateTime ta_variable = DateTime.Now;
+            int x = ta_variable.Millisecond;
+
+            while (x < x+ 0) // X en milliseconde il me semble
+            { }*/
+            pan = fm.deplacerPersonnage(pan);
+            this.Refresh();
         }
     }
 }

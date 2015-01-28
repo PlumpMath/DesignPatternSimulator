@@ -112,6 +112,11 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 				return etatMajor.etatFonctionnement.ToString();
 			return etatFonctionnement.ToString();
 		}
-	
-	}
+
+
+        internal AbstractZone GetEmplacement()
+        {
+            return this.Emplacement;
+        }
+    }
 }

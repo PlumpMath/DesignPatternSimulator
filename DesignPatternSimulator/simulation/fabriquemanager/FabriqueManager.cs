@@ -31,7 +31,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
         public Organisation EtatMajor { get; set; }
         public EnvironnementDeJeu Organisme { get; set; }
 
-        TableLayoutPanel carre;
+        CustomTableLayoutPanel carre;
         int longueur;
         int largeur;
 
@@ -50,7 +50,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             monde.CreerPlateauDeJeu(new FactoryDeJeuGuerre());
             LesPersonnages = persos;
 
-            carre = new TableLayoutPanel();
+            carre = new CustomTableLayoutPanel();
 
 			LesPersonnes = new List<Personnage>();
 			EtatMajor = new Organisation();
@@ -181,7 +181,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             return text;
 		}
 
-        public TableLayoutPanel InitTableLayout(int h, int l)
+        public CustomTableLayoutPanel InitTableLayout(int h, int l)
         {
             carre.ColumnCount = l;
             carre.RowCount = h;
@@ -274,6 +274,16 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 
             return carre;
         }
+
+        public TableLayoutPanel deplacerPersonnage(TableLayoutPanel pan)
+        {
+            //carre.Controls.Add(pic, 0, 3);
+            Control c = pan.GetControlFromPosition(0, 3);
+            pan.SetCellPosition(c, new TableLayoutPanelCellPosition(2, 3));
+            Console.Out.WriteLine("marche");
+
+            return pan;
+        } 
 
 
 
