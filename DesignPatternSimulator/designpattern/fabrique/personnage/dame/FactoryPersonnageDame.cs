@@ -15,8 +15,6 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.guerre
         public override Personnage CreatePersonnage(personnage.eTypePersonnage type, Organisation org, string nom)
         {
 
-            //if (com.designpattern.factory.personnage.moyenage.eTypePersonnage.valueOf(type.toString()) != null)
-            //{
                 switch (type)
                 {
                     case personnage.eTypePersonnage.PionBlanc:
@@ -27,7 +25,7 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.guerre
                     default:
                         break;
                 }
-            //}
+         
 
             return null;
         }

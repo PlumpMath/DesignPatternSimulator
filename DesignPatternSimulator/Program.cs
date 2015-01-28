@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DesignPatternSimulator.Views;
+using DesignPatternSimulator.Views.Damier;
 
 namespace DesignPatternSimulator
 {
@@ -18,6 +19,7 @@ namespace DesignPatternSimulator
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SelectorSimulation());
+            //Application.Run(new Damier());
         }
     }
 }

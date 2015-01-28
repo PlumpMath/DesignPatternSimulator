@@ -18,20 +18,3 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage
         PionBlanc
     }
 }
-/*	
-    public enum eTytpePersonnageMoyenAge {
-        Indefini,
-        Archer,
-        Chevalier,
-        Fantassin,
-        Princesse,
-    }
-	
-    public enum eTypePersonnageGuerreDuGolf {
-
-        Indefini,
-        Chef,
-        Soldat,
-        Marine;
-    }
-*/

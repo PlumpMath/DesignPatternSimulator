@@ -27,5 +27,19 @@ namespace DesignPatternSimulator.Views
                 
             //}
         }
+
+        private void nouvellePartieToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Damier.Damier fm = new Damier.Damier();
+            fm.MdiParent = this;
+            fm.Show();
+        }
+
+        private void nouvellePartieToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Form1 fm = new Form1();
+            fm.MdiParent = this;
+            fm.Show();
+        }
     }
 }

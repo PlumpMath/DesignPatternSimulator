@@ -29,41 +29,28 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.simulationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fermerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.footballToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labyrintheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guerreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nouvellePartieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chargerPartieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nouvellePartieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.chargerPartieToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.nouvellePartieToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.chargerPartieToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.simulationsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouvellePartieToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.chargerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guerreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouvellePartieToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.chargerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.simulationsToolStripMenuItem,
+            this.simulationsToolStripMenuItem1,
             this.quitterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(876, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // simulationsToolStripMenuItem
-            // 
-            this.simulationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.footballToolStripMenuItem,
-            this.labyrintheToolStripMenuItem,
-            this.guerreToolStripMenuItem});
-            this.simulationsToolStripMenuItem.Name = "simulationsToolStripMenuItem";
-            this.simulationsToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.simulationsToolStripMenuItem.Text = "Simulations";
             // 
             // quitterToolStripMenuItem
             // 
@@ -80,68 +67,58 @@
             this.fermerToolStripMenuItem.Text = "Fermer";
             this.fermerToolStripMenuItem.Click += new System.EventHandler(this.fermerToolStripMenuItem_Click);
             // 
-            // footballToolStripMenuItem
+            // simulationsToolStripMenuItem1
             // 
-            this.footballToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouvellePartieToolStripMenuItem,
-            this.chargerPartieToolStripMenuItem});
-            this.footballToolStripMenuItem.Name = "footballToolStripMenuItem";
-            this.footballToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.footballToolStripMenuItem.Text = "Football";
+            this.simulationsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dameToolStripMenuItem,
+            this.guerreToolStripMenuItem1});
+            this.simulationsToolStripMenuItem1.Name = "simulationsToolStripMenuItem1";
+            this.simulationsToolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
+            this.simulationsToolStripMenuItem1.Text = "Simulations";
             // 
-            // labyrintheToolStripMenuItem
+            // dameToolStripMenuItem
             // 
-            this.labyrintheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouvellePartieToolStripMenuItem1,
-            this.chargerPartieToolStripMenuItem1});
-            this.labyrintheToolStripMenuItem.Name = "labyrintheToolStripMenuItem";
-            this.labyrintheToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.labyrintheToolStripMenuItem.Text = "Labyrinthe";
+            this.dameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouvellePartieToolStripMenuItem3,
+            this.chargerToolStripMenuItem});
+            this.dameToolStripMenuItem.Name = "dameToolStripMenuItem";
+            this.dameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dameToolStripMenuItem.Text = "Dame";
             // 
-            // guerreToolStripMenuItem
+            // nouvellePartieToolStripMenuItem3
             // 
-            this.guerreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouvellePartieToolStripMenuItem2,
-            this.chargerPartieToolStripMenuItem2});
-            this.guerreToolStripMenuItem.Name = "guerreToolStripMenuItem";
-            this.guerreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.guerreToolStripMenuItem.Text = "Guerre";
+            this.nouvellePartieToolStripMenuItem3.Name = "nouvellePartieToolStripMenuItem3";
+            this.nouvellePartieToolStripMenuItem3.Size = new System.Drawing.Size(154, 22);
+            this.nouvellePartieToolStripMenuItem3.Text = "Nouvelle Partie";
+            this.nouvellePartieToolStripMenuItem3.Click += new System.EventHandler(this.nouvellePartieToolStripMenuItem3_Click);
             // 
-            // nouvellePartieToolStripMenuItem
+            // chargerToolStripMenuItem
             // 
-            this.nouvellePartieToolStripMenuItem.Name = "nouvellePartieToolStripMenuItem";
-            this.nouvellePartieToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.nouvellePartieToolStripMenuItem.Text = "Nouvelle Partie";
+            this.chargerToolStripMenuItem.Name = "chargerToolStripMenuItem";
+            this.chargerToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.chargerToolStripMenuItem.Text = "Charger";
             // 
-            // chargerPartieToolStripMenuItem
+            // guerreToolStripMenuItem1
             // 
-            this.chargerPartieToolStripMenuItem.Name = "chargerPartieToolStripMenuItem";
-            this.chargerPartieToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.chargerPartieToolStripMenuItem.Text = "Charger Partie";
+            this.guerreToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouvellePartieToolStripMenuItem4,
+            this.chargerToolStripMenuItem1});
+            this.guerreToolStripMenuItem1.Name = "guerreToolStripMenuItem1";
+            this.guerreToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.guerreToolStripMenuItem1.Text = "Guerre";
             // 
-            // nouvellePartieToolStripMenuItem1
+            // nouvellePartieToolStripMenuItem4
             // 
-            this.nouvellePartieToolStripMenuItem1.Name = "nouvellePartieToolStripMenuItem1";
-            this.nouvellePartieToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
-            this.nouvellePartieToolStripMenuItem1.Text = "Nouvelle Partie";
+            this.nouvellePartieToolStripMenuItem4.Name = "nouvellePartieToolStripMenuItem4";
+            this.nouvellePartieToolStripMenuItem4.Size = new System.Drawing.Size(154, 22);
+            this.nouvellePartieToolStripMenuItem4.Text = "Nouvelle Partie";
+            this.nouvellePartieToolStripMenuItem4.Click += new System.EventHandler(this.nouvellePartieToolStripMenuItem4_Click);
             // 
-            // chargerPartieToolStripMenuItem1
+            // chargerToolStripMenuItem1
             // 
-            this.chargerPartieToolStripMenuItem1.Name = "chargerPartieToolStripMenuItem1";
-            this.chargerPartieToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
-            this.chargerPartieToolStripMenuItem1.Text = "Charger Partie";
-            // 
-            // nouvellePartieToolStripMenuItem2
-            // 
-            this.nouvellePartieToolStripMenuItem2.Name = "nouvellePartieToolStripMenuItem2";
-            this.nouvellePartieToolStripMenuItem2.Size = new System.Drawing.Size(154, 22);
-            this.nouvellePartieToolStripMenuItem2.Text = "Nouvelle Partie";
-            // 
-            // chargerPartieToolStripMenuItem2
-            // 
-            this.chargerPartieToolStripMenuItem2.Name = "chargerPartieToolStripMenuItem2";
-            this.chargerPartieToolStripMenuItem2.Size = new System.Drawing.Size(154, 22);
-            this.chargerPartieToolStripMenuItem2.Text = "Charger Partie";
+            this.chargerToolStripMenuItem1.Name = "chargerToolStripMenuItem1";
+            this.chargerToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.chargerToolStripMenuItem1.Text = "Charger";
             // 
             // SelectorSimulation
             // 
@@ -163,17 +140,14 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem simulationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem footballToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chargerPartieToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem labyrintheToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem chargerPartieToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem guerreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem chargerPartieToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fermerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem simulationsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem chargerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guerreToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem chargerToolStripMenuItem1;
     }
 }

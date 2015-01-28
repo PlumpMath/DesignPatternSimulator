@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="designpattern\environnement\EnvironnementDame.cs" />
     <Compile Include="designpattern\environnement\parent\EnvironnementDeJeu.cs" />
     <Compile Include="designpattern\environnement\style\Position.cs" />
     <Compile Include="designpattern\fabrique\personnage\dame\FactoryPersonnageDame.cs" />
@@ -93,6 +94,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="simulation\fabriquemanager\FabriqueManagerDame.cs" />
+    <Compile Include="simulation\SimulationJeuDame.cs" />
+    <Compile Include="Views\Damier\Damier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Damier\Damier.Designer.cs">
+      <DependentUpon>Damier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SelectorSimulation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Damier\Damier.resx">
+      <DependentUpon>Damier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\SelectorSimulation.resx">
       <DependentUpon>SelectorSimulation.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,7 +238,6 @@
   <ItemGroup>
     <Folder Include="designpattern\strategie\comportement\dame\deplacement\" />
     <Folder Include="designpattern\strategie\comportement\dame\status\" />
-    <Folder Include="Views\Football\" />
     <Folder Include="Views\Guerre\" />
     <Folder Include="Views\Labyrinthe\" />
   </ItemGroup>
