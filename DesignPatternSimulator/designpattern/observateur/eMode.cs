@@ -6,7 +6,8 @@ namespace DesignPatternSimulator.designpattern.observateur
         NON_DEFINI,
         EN_PAIX,
         EN_GUERRE,
-        EN_REMPLI
+        EN_REMPLI,
+        AVANCER
 
     }
 }
