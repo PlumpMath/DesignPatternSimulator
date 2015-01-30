@@ -13,25 +13,21 @@ namespace DesignPatternSimulator.designpattern.environnement
 	public class PlateauDeJeu : AbstractPlateauDeJeu {
 
         //private List<Acces> accesZones = null;
-        private List<AbstractZone> accesZones = null;
+        private List<AbstractZone> accesZones = new List<AbstractZone>();
 
         public PlateauDeJeu() { }    
-
         public override AbstractZone CreerZone()
         {
             return new Zone();
         }
-
         public override AbstractZone CreerZone(int i, int j)
         {
 			return new Zone(i, j);
 		}
-
         public override void AjouterZone(AbstractZone z)
         {
             accesZones.Add(z);
         }
-
         public override AbstractAcces CreerAcces()
         {
 			return new Acces(null, null);
@@ -49,9 +45,24 @@ namespace DesignPatternSimulator.designpattern.environnement
 		}
         */
 
+        //récupérer les zones du plateau
 		public override List<AbstractZone> getZonesAcces() {
-			return accesZones;
+            return accesZones;
 		}
+
+        public IEnumerable<AbstractZone> setZoneFree(IEnumerable<AbstractZone> acces) {
+            //accesZones = acces;
+            IEnumerable<AbstractZone> t = accesZones;
+            t = acces;
+            return t;
+
+        }
+
+        public IEnumerable<AbstractZone> getZoneFree()
+        {
+            IEnumerable<AbstractZone> t = accesZones;
+            return t;
+        }
 
         /*
         public override List<Acces> getZonesAcces()

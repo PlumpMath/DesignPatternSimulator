@@ -1,4 +1,5 @@
 ﻿using DesignPatternSimulator.designpattern.environnement.parent;
+using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu.dame;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DesignPatternSimulator.designpattern.environnement
 {
@@ -17,18 +19,14 @@ namespace DesignPatternSimulator.designpattern.environnement
 
         public override AbstractPlateauDeJeu CreerPlateauDeJeu(AbstractFabriqueDeJeu fabrique)
         {
-            PlateauDeJeu winterfell = new PlateauDeJeu();
+            PlateauDeJeu damier = new PlateauDeJeu();
             FactoryDame factory = new FactoryDame();
 
-            //List<Acces> casesWinterfell = new List<Acces>();
-            List<AbstractZone> casesWinterfell = new List<AbstractZone>();
-            casesWinterfell = factory.CreateCarre(10, 10);
+            IEnumerable<AbstractZone> caseDamier = new List<ZonePion>();
+            caseDamier = factory.CreateCarre(10, 10);
+            damier.setZoneFree(caseDamier);
 
-            //int sizeCarre = Integer.valueOf(casesWinterfell.get(casesWinterfell.size()).secondZoneName().split(":")[1]);
-
-            winterfell.setZonesAcces(casesWinterfell);
-
-            plateau = winterfell;
+            plateau = damier;
             return plateau;
         }
 
@@ -38,21 +36,47 @@ namespace DesignPatternSimulator.designpattern.environnement
         }
 
 
-        public void PlacerLesPions(List<Personnage> lesPerso)
+        public void PlacerLesPions(List<Personnage> perso, TableLayoutPanel pa)
         {
-            List<AbstractZone> zones = plateau.getZonesAcces();
 
-            int size = lesPerso.Count;
-            int i = 0;
-            AbstractZone zone;
+        }
 
-            for (int j = 0; j < zones.Count && j < size; j++)
+        //méthode reussie
+        public void PlacerLesPions(List<Personnage> perso, PlateauDeJeu damier)
+        {
+            var listezone = damier.getZoneFree();// damier.getZonesAcces();
+            foreach (ZonePion z in listezone)
             {
-                zone = zones.ElementAt(j);
-                lesPerso.ElementAt(i).Emplacement = zone;
-                i++;
+                foreach (var p in perso)
+                {
+
+                    if (p.GetType().Equals("PionBlanc"))
+                    {
+                        if (z.Y < 4 && (z.Y % 2 != 0) && (z.X % 2 == 0))
+                        {
+                            p.Emplacement = z;
+                        }
+                        else if (z.Y < 4 && (z.Y % 2 == 0) && (z.X % 2 != 0))
+                        {
+                            p.Emplacement = z;
+                        }
+                    }
+                    else if (p.GetType().Equals("PionNoir"))
+                    {
+                        if (z.Y > 5 && (z.Y % 2 == 0) && (z.X % 2 != 0))
+                        {
+                            p.Emplacement = z;
+                        }
+                        else if (z.Y > 5 && (z.Y % 2 != 0) && (z.X % 2 == 0))
+                        {
+                            p.Emplacement = z;
+                        }
+                    }
+                }
             }
         }
+
+
 
     }
 }

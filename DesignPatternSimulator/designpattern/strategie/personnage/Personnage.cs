@@ -63,6 +63,20 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 			etatFonctionnement = etatMajor.etatFonctionnement;
 		}
 
+
+        //Constructeur de personnages avec assignation à une zone
+        public Personnage(Organisation organisation, string nom, AbstractZone zone)
+        {
+            this.nom = nom;
+            this.etatMajor = organisation;
+            this.Emplacement = zone;
+
+            if (etatMajor != null)
+            {
+                etatMajor.Attach(this);
+            }
+        }
+
 		public Personnage (Organisation unitedStateOfAmerica, string sonNom, object o) {
 			this.nom = sonNom;
 			if(o != null) {

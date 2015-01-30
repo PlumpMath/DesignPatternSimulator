@@ -7,7 +7,6 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage
 {
 	public abstract class FactoryPersonnage {
 	
-		public FactoryPersonnage() {}
 
         //public abstract Personnage CreatePersonnage(eTypePersonnage type, Organisation org, string nom);
         public abstract Personnage CreatePersonnage(eTypePersonnage type, Organisation org, string nom);

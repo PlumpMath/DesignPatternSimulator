@@ -48,7 +48,7 @@ namespace DesignPatternSimulator.Views.Damier
             consoleBox.Text += "\n";
             Console.WriteLine("--------");
 
-            List<AbstractZone> lesZones = sdj.usa.GetPlateauDeJeu().getZonesAcces();
+            //List<AbstractZone> lesZones = sdj.usa.GetPlateauDeJeu().getZonesAcces();
 
             //var f2 = new Form2();
             //this.Hide();

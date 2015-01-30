@@ -17,19 +17,19 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.football
 
         public override strategie.personnage.Personnage CreatePersonnage(eTypePersonnage type, observateur.Organisation org, string nom)
         {
-            switch (type)
-            {
-                case eTypePersonnage.attaquant:
-                    return new Attaquant(org,nom);
-                case eTypePersonnage.defenseur:
-                    return new Defenseur(org, nom);
-                case eTypePersonnage.gardien:
-                    return new Gardien(org, nom);
-                case eTypePersonnage.milieu:
-                    return new Milieu(org, nom);
-                default:
-                    break;
-            }
+            //switch (type)
+            //{
+            //    case eTypePersonnage.attaquant:
+            //        return new Attaquant(org,nom);
+            //    case eTypePersonnage.defenseur:
+            //        return new Defenseur(org, nom);
+            //    case eTypePersonnage.gardien:
+            //        return new Gardien(org, nom);
+            //    case eTypePersonnage.milieu:
+            //        return new Milieu(org, nom);
+            //    default:
+            //        break;
+            //}
 
             return null;
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
+using System.Drawing;
 
 namespace DesignPatternSimulator.designpattern.environnement.style
 {
@@ -12,6 +13,7 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 	    private string name;
         private int x;
         private int y;
+        private Color color;
 
         public Zone()
         {

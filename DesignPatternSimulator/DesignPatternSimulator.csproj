@@ -63,10 +63,18 @@
     <Compile Include="designpattern\environnement\parent\EnvironnementDeJeu.cs" />
     <Compile Include="designpattern\environnement\style\Position.cs" />
     <Compile Include="designpattern\environnement\style\rocher.cs" />
+    <Compile Include="designpattern\environnement\style\ZonePion.cs" />
     <Compile Include="designpattern\fabrique\personnage\dame\FactoryPersonnageDame.cs" />
     <Compile Include="designpattern\fabrique\personnage\football\FactoryPersonnageFootball.cs" />
     <Compile Include="designpattern\fabrique\plateaudejeu\dame\FactoryDame.cs" />
+    <Compile Include="designpattern\fabrique\plateaudejeu\dame\FactoryZone.cs" />
     <Compile Include="designpattern\fabrique\plateaudejeu\football\FactoryDeRencontre.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\deplacement\Avancer.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\deplacement\AvancerAbstract.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\StatusAbstrait.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\status\PionDouble.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\status\PionNonDouble.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\status\typeEtat.cs" />
     <Compile Include="designpattern\strategie\comportement\football\EtatAttaque.cs" />
     <Compile Include="designpattern\strategie\comportement\football\EtatDefense.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\parent\Pistolet.cs" />
@@ -74,11 +82,6 @@
     <Compile Include="designpattern\strategie\comportement\guerre\pointdevie\AbstractPointDeVie.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\protection\Armure.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\protection\parent\AbstractProtection.cs" />
-    <Compile Include="designpattern\strategie\personnage\Attaquant.cs" />
-    <Compile Include="designpattern\strategie\personnage\Defenseur.cs" />
-    <Compile Include="designpattern\strategie\personnage\Equipe.cs" />
-    <Compile Include="designpattern\strategie\personnage\Gardien.cs" />
-    <Compile Include="designpattern\strategie\personnage\Milieu.cs" />
     <Compile Include="designpattern\strategie\personnage\PionBlanc.cs" />
     <Compile Include="designpattern\strategie\personnage\PionNoir.cs" />
     <Compile Include="Form1.cs">
@@ -102,6 +105,24 @@
     </Compile>
     <Compile Include="Views\Damier\Damier.Designer.cs">
       <DependentUpon>Damier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Damier\Painter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Damier\Painter.Designer.cs">
+      <DependentUpon>Painter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Damier\TestDamier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Damier\TestDamier.Designer.cs">
+      <DependentUpon>TestDamier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Damier\WinsdowDamier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Damier\WinsdowDamier.Designer.cs">
+      <DependentUpon>WinsdowDamier.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectorSimulation.cs">
       <SubType>Form</SubType>
@@ -127,6 +148,15 @@
     </Compile>
     <EmbeddedResource Include="Views\Damier\Damier.resx">
       <DependentUpon>Damier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Damier\Painter.resx">
+      <DependentUpon>Painter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Damier\TestDamier.resx">
+      <DependentUpon>TestDamier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Damier\WinsdowDamier.resx">
+      <DependentUpon>WinsdowDamier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SelectorSimulation.resx">
       <DependentUpon>SelectorSimulation.cs</DependentUpon>
@@ -214,8 +244,10 @@
     <Compile Include="simulation\SimulationDeJeu.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="designpattern\strategie\personnage\pictures\black.png" />
     <Content Include="designpattern\strategie\personnage\pictures\combattant_ennemie_distance_critique1.png" />
     <Content Include="designpattern\strategie\personnage\pictures\eliwood_critique45.png" />
+    <Content Include="designpattern\strategie\personnage\pictures\white.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="designpattern\strategie\comportement\guerre\arme\afeu\parent\ArmeAFeu.cs" />
@@ -241,8 +273,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="designpattern\strategie\comportement\dame\deplacement\" />
-    <Folder Include="designpattern\strategie\comportement\dame\status\" />
     <Folder Include="Views\Guerre\" />
     <Folder Include="Views\Labyrinthe\" />
   </ItemGroup>
