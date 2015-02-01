@@ -1,4 +1,5 @@
 ﻿using DesignPatternSimulator.designpattern.environnement.style;
+using DesignPatternSimulator.designpattern.strategie.comportement.dame.status;
 using DesignPatternSimulator.designpattern.strategie.personnage;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace DesignPatternSimulator.designpattern.strategie.comportement.dame.deplacement
 {
-    class Avancer : AvancerAbstract
+    public class Avancer : AvancerAbstract
     {
         private Position pos;
 
         private ZonePion position;
+
+
 
         public override ZonePion Avance(int i)
         {
@@ -36,17 +39,31 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.dame.depla
 
         public override void Recule(Pion pion, int i)
         {
-            pion.Position = Recule(i);
+            pion.Position.Occupe = false;
+            pion.Position = this.Recule(i);
+            pion.Position.Occupe = true;
         }
 
         public override void Avance(Pion pion, int i)
         {
-            pion.Position = Avance(i);
+            pion.Position.Occupe = false;
+            pion.Position = this.Avance(i);
+            pion.Position.Occupe = true;
         }
 
         public override void Sauter(Pion pionA, Pion pionB)
         {
-            throw new NotImplementedException();
+            if (pionA.StatusCourant == new PionNonDouble())
+            {
+
+            }
+        }
+
+        public override void ZoneVersZone(Pion pion, ZonePion zonePi)
+        {
+            pion.Position.Occupe = false;
+            pion.Position = zonePi;
+            zonePi.Occupe = true;
         }
     }
 }

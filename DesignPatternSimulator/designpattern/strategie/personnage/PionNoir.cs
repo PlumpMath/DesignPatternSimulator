@@ -5,6 +5,7 @@ using DesignPatternSimulator.designpattern.strategie.comportement.dame.deplaceme
 using DesignPatternSimulator.designpattern.strategie.comportement.dame.status;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,9 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 {
     public class PionNoir : Pion
     {
-        private AvancerAbstract avancer;
-        
+        public AvancerAbstract avancer;
+        private Color color;
+        public Color Color { get { return color; } set { color = value; } }
         private ZonePion position;
         public ZonePion Position {
             get { return position; }
@@ -34,7 +36,8 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
         public PionNoir(Organisation org, String nom, ZonePion zone)
             : base(org, nom)
         {
-            Position = zone;
+            position = zone;
+            color = Color.Black;
         }
 
         public PionNoir(Organisation org, String nom)
@@ -42,28 +45,29 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
         {
         }
 
-        public void Avancer(int x)
+        new  public void Avancer(int x)
         {
-            if (StatusCourant. == new PionNonDouble() && x > 1)
+            if (StatusCourant == new PionNonDouble() && x > 1)
             {
                 x = 1;
                 avancer.Avance(this, x);
             }
-            else if (statusCourant == new PionDouble())
+            else if (StatusCourant == new PionDouble())
             {
                 avancer.Avance(this, x);
             }
         }
 
 
-        public void Reculer(int x)
+        new public void Reculer(int x)
         {
             if (StatusCourant == new PionNonDouble() && x > 1)
             {
+
                 x = 1;
                 avancer.Recule(this, x);
             }
-            else if (statusCourant == new PionDouble())
+            else if (StatusCourant == new PionDouble())
             {
                 avancer.Recule(this, x);
             }

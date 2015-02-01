@@ -5,6 +5,7 @@ using DesignPatternSimulator.designpattern.strategie.comportement.dame.deplaceme
 using DesignPatternSimulator.designpattern.strategie.comportement.dame.status;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,9 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 {
     public class PionBlanc : Pion
     {
-        private AvancerAbstract avancer;
+        public Avancer avancer;
+        private Color couleur;
+        public Color Couleur { get { return couleur; } set { couleur = value; } }
         private ZonePion position;
         public ZonePion Position {
             get { return position; }
@@ -34,6 +37,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
             : base(org, nom)
         {
             position = zone;
+            couleur = Color.White;
         }
 
         public PionBlanc(Organisation org, String nom)
@@ -43,21 +47,21 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
         }
 
 
-        public void Avancer(int x)
+        new public void Avancer(int x)
         {
             if (StatusCourant == new PionNonDouble() && x > 1)
             {
                 x = 1;
-                avancer.Avance(this, x);
+                this.avancer.Avance(this, x);
             }
-            else if (statusCourant == new PionDouble())
+            else if (StatusCourant == new PionDouble())
             {
-                avancer.Avance(this, x);
+                this.avancer.Avance(this, x);
             }
         }
 
 
-        public void Reculer(int x)
+        new public void Reculer(int x)
         {
             if (StatusCourant == new PionNonDouble() && x > 1)
             {

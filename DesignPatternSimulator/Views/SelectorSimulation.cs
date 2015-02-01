@@ -30,7 +30,7 @@ namespace DesignPatternSimulator.Views
 
         private void nouvellePartieToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Damier.WinsdowDamier fm = new Damier.WinsdowDamier();//.Damier();
+            Damier.Damier fm = new Damier.Damier();//.Damier();
             fm.MdiParent = this;
             fm.Show();
         }

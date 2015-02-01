@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="designpattern\environnement\EnvironnementDame.cs" />
     <Compile Include="designpattern\environnement\parent\EnvironnementDeJeu.cs" />
+    <Compile Include="designpattern\environnement\PlateauDeJeuDame.cs" />
     <Compile Include="designpattern\environnement\style\Position.cs" />
     <Compile Include="designpattern\environnement\style\rocher.cs" />
     <Compile Include="designpattern\environnement\style\ZonePion.cs" />

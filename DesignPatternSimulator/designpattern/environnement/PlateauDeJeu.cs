@@ -50,14 +50,15 @@ namespace DesignPatternSimulator.designpattern.environnement
             return accesZones;
 		}
 
-        public IEnumerable<AbstractZone> setZoneFree(IEnumerable<AbstractZone> acces) {
+        public void  setZoneFree(IEnumerable<AbstractZone> acces) {
             //accesZones = acces;
             IEnumerable<AbstractZone> t = accesZones;
             t = acces;
-            return t;
+            
 
         }
 
+        
         public IEnumerable<AbstractZone> getZoneFree()
         {
             IEnumerable<AbstractZone> t = accesZones;

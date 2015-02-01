@@ -17,12 +17,14 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 {
     public class FabriqueManagerDame
     {
-        EnvironnementDeJeu EspaceDeJeu;
+        EnvironnementDame EspaceDeJeu;
         FactoryPersonnage LesPersonnages;
 
-        public List<Personnage> LesPersonnes {get;set;}
+        private List<Personnage> lesPersonnes;
+        public List<Personnage> LesPersonnes { get { return lesPersonnes; } set { lesPersonnes = value; } }
+   
         public Organisation EtatMajor { get; set; }
-        public EnvironnementDeJeu Organisme { get; set; }
+        public EnvironnementDame Organisme { get; set; }
 
         TableLayoutPanel carre;
         int longueur;
@@ -32,11 +34,11 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 	
         public FabriqueManagerDame()
         {
-            LesPersonnes = new List<Personnage>();
+            lesPersonnes = new List<Personnage>();
             EtatMajor = new Organisation();
         }
         
-		public FabriqueManagerDame(EnvironnementDeJeu monde, FactoryPersonnage persos)
+		public FabriqueManagerDame(EnvironnementDame monde, FactoryPersonnage persos)
 		//public FabriqueManager(AbstractFabriqueDeJeu jeu, FactoryPersonnage persos)
         {
             EspaceDeJeu = monde;
@@ -45,7 +47,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 
             carre = new TableLayoutPanel();
 
-			LesPersonnes = new List<Personnage>();
+			lesPersonnes = new List<Personnage>();
 			EtatMajor = new Organisation();
 		}
 
@@ -53,15 +55,15 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 		public void CreatePersonnagesDuJeu(FactoryPersonnage caserne)
         {
             //Creer pion blanc
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
-                LesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.PionBlanc, EtatMajor, (i+1).ToString()+"B"));
+                lesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.PionBlanc, EtatMajor, (i+1).ToString()+"B"));
             }
 
             //Creer pion noir
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
-                LesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.PionNoir, EtatMajor, (i + 1).ToString() + "N"));
+                lesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.PionNoir, EtatMajor, (i + 1).ToString() + "N"));
             }
 				Organisme = new EnvironnementDame();
 				Organisme.CreerPlateauDeJeu(new FactoryDame());
@@ -119,12 +121,13 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
         public string ShowAllPersonnage()
         {
             string text = "";
-            foreach (Personnage p in LesPersonnes)
+            foreach (Pion p in LesPersonnes)
             {
+                this.toString(p);
                 //System.out.println(p.toString());
-                Console.WriteLine(p.ToString());
-                text += p.ToString();
-                text += "\n";
+                //Console.WriteLine(p.ToString());
+                //text += p.ToString();
+                //text += "\n";
 			}
             return text;
 		}
@@ -282,6 +285,12 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 
                 }
             }
+        }
+
+
+        public void   toString(Pion p)
+        {
+             Console.WriteLine("Postion x {0} y {1} occupe {2}",p.Position.X,p.Position.Y,p.Position.Occupe);
         }
 
     }

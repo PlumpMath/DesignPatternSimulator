@@ -28,25 +28,28 @@ namespace DesignPatternSimulator.Views.Damier
 
         private void launcher_Click(object sender, EventArgs e)
         {
-            //consoleBox.AppendText("\n");
-            consoleBox.Text += "\n";
-
-            SimulationDeJeuDame sdj = new SimulationDeJeuDame();
-            sdj.CreatePersonnagesDuJeu(new FactoryPersonnageDame());
-            //sdj.CreatePersonnagesDuJeu(new FactoryPersonnageGuerreDuGolf());
-            //sdj.FaireCrierToutLeMonde();
-            Console.WriteLine("--------");
-            consoleBox.Text += sdj.ShowAllPersonnage();
-            consoleBox.Text += "\n";
-            Console.WriteLine("--------");
-            //sdj.PartirAuCombat();
-            consoleBox.Text += sdj.AfficherLesUploads();
-            consoleBox.Text += "\n";
-            Console.WriteLine("--------");
-            sdj.ChangeEtat(eMode.AVANCER);
-            consoleBox.Text += sdj.AfficherLesUploadsObservateur();
-            consoleBox.Text += "\n";
-            Console.WriteLine("--------");
+            FabriqueManagerDame fm = new FabriqueManagerDame();
+            fm.CreatePersonnagesDuJeu(new FactoryPersonnageDame());
+            
+            fm.Organisme.PlacerLesPionsSurDamier(fm.LesPersonnes, fm.Organisme.Plateau);
+            var p = fm.Organisme.Plateau;
+            //var perso = fm.
+            //SimulationDeJeuDame sdj = new SimulationDeJeuDame();
+            //sdj.CreatePersonnagesDuJeu(new FactoryPersonnageDame());
+            ////sdj.CreatePersonnagesDuJeu(new FactoryPersonnageGuerreDuGolf());
+            ////sdj.FaireCrierToutLeMonde();
+            //Console.WriteLine("--------");
+            //consoleBox.Text += sdj.ShowAllPersonnage();
+            //consoleBox.Text += "\n";
+            //Console.WriteLine("--------");
+            ////sdj.PartirAuCombat();
+            //consoleBox.Text += sdj.AfficherLesUploads();
+            //consoleBox.Text += "\n";
+            //Console.WriteLine("--------");
+            //sdj.ChangeEtat(eMode.AVANCER);
+            //consoleBox.Text += sdj.AfficherLesUploadsObservateur();
+            //consoleBox.Text += "\n";
+            //Console.WriteLine("--------");
 
             //List<AbstractZone> lesZones = sdj.usa.GetPlateauDeJeu().getZonesAcces();
 
@@ -54,87 +57,15 @@ namespace DesignPatternSimulator.Views.Damier
             //this.Hide();
             //f2.ShowDialog();
 
-            this.Controls.Clear();
-            EnvironnementDame env = new EnvironnementDame();
-            FactoryPersonnage per = new FactoryPersonnageDame();
-            FabriqueManagerDame fm = new FabriqueManagerDame(env, per);
+            //this.Controls.Clear();
+            //EnvironnementDame env = new EnvironnementDame();
+            //FactoryPersonnage per = new FactoryPersonnageDame();
+            //FabriqueManagerDame fm = new FabriqueManagerDame(env, per);
 
-            TableLayoutPanel pan = fm.InitTableLayout(10, 10);
-            /*
-            TableLayoutPanel pan = new TableLayoutPanel();
-            pan.Dock = DockStyle.Fill;
-
-            // Create TableLayoutPanel
-            TableLayoutPanel tlp = new TableLayoutPanel();
-
-            // Grid has two columns
-            tlp.ColumnCount = 10;
-
-            // Grid has two rows
-            tlp.RowCount = 10;
-
-            float percentRow = 100 / tlp.RowCount;
-            float percentColumn = 100 / tlp.ColumnCount;
-
-            int maxCount = 0;
-            if(tlp.RowCount == tlp.ColumnCount)
-            {
-                maxCount = tlp.RowCount;
-            }
-            else
-            {
-                if (tlp.RowCount > tlp.ColumnCount)
-                {
-                    maxCount = tlp.RowCount;
-                }
-                else
-                {
-                    maxCount = tlp.ColumnCount;
-                }
-            }
-
-            for (int i = 0; i < maxCount; i++)
-            {
-                if(tlp.RowCount <= maxCount)
-                {
-                    tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percentRow));
-                }
-                if(tlp.ColumnCount <= maxCount)
-                {
-                    tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percentColumn));
-                }
-            }
-
-            // Set the BorderStyle to Inset
-            tlp.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
-
-            // If grid is full add extra cells by adding column
-            tlp.GrowStyle = TableLayoutPanelGrowStyle.AddColumns;
-
-            // Padding (pixels)within each cell (left, top, right, bottom)
-            tlp.Padding = new Padding(1, 1, 1, 1);
-
-            tlp.Dock = DockStyle.Fill;
-
-            // Add TableLayoutPanel to the Forms controls
-            this.Controls.Add(tlp);
-
-            TextBox text = new TextBox();
-            text.Enabled = false;
-            TextBox text2 = new TextBox();
-            text2.Enabled = false;
-            text.Text = "début";
-            tlp.Controls.Add(text, 2, 1);
-            text2.Text = "fin";
-            tlp.Controls.Add(text2, 0, 3);
+            //TableLayoutPanel pan = fm.InitTableLayout(10, 10);
             
-            PictureBox pic = new PictureBox();
-            pic.ImageLocation = "C:\\Users\\Mamadou\\GitHub\\DesignPatternSimulator\\DesignPatternSimulator\\designpattern\\strategie\\personnage\\pictures\\eliwood_critique45.png";
-            pic.SizeMode = PictureBoxSizeMode.StretchImage;
-            tlp.Controls.Add(pic, 0, 3);
-            */
 
-            this.Controls.Add(pan);
+            //this.Controls.Add(pan);
         }
 
 
