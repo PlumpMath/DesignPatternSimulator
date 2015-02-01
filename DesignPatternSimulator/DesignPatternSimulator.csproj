@@ -82,6 +82,7 @@
     <Compile Include="designpattern\strategie\comportement\guerre\pointdevie\AbstractPointDeVie.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\protection\Armure.cs" />
     <Compile Include="designpattern\strategie\comportement\guerre\protection\parent\AbstractProtection.cs" />
+    <Compile Include="designpattern\strategie\personnage\Pion.cs" />
     <Compile Include="designpattern\strategie\personnage\PionBlanc.cs" />
     <Compile Include="designpattern\strategie\personnage\PionNoir.cs" />
     <Compile Include="Form1.cs">
@@ -117,6 +118,12 @@
     </Compile>
     <Compile Include="Views\Damier\TestDamier.Designer.cs">
       <DependentUpon>TestDamier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Damier\TestDamierPincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Damier\TestDamierPincipal.Designer.cs">
+      <DependentUpon>TestDamierPincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Damier\WinsdowDamier.cs">
       <SubType>Form</SubType>
@@ -154,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Damier\TestDamier.resx">
       <DependentUpon>TestDamier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Damier\TestDamierPincipal.resx">
+      <DependentUpon>TestDamierPincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Damier\WinsdowDamier.resx">
       <DependentUpon>WinsdowDamier.cs</DependentUpon>

@@ -17,7 +17,6 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 {
     public class FabriqueManagerDame
     {
-        //AbstractFabriqueDeJeu EspaceDeJeu;
         EnvironnementDeJeu EspaceDeJeu;
         FactoryPersonnage LesPersonnages;
 
@@ -53,31 +52,22 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
       
 		public void CreatePersonnagesDuJeu(FactoryPersonnage caserne)
         {
-            int b = 20;
             //Creer pion blanc
-            for (int i = 0; i < b; i++)
+            for (int i = 0; i < 10; i++)
             {
                 LesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.PionBlanc, EtatMajor, (i+1).ToString()+"B"));
             }
 
-
             //Creer pion noir
-            for (int i = 0; i < b; i++)
+            for (int i = 0; i < 10; i++)
             {
                 LesPersonnes.Add(caserne.CreatePersonnage(eTypePersonnage.PionNoir, EtatMajor, (i + 1).ToString() + "N"));
             }
-			
 				Organisme = new EnvironnementDame();
 				Organisme.CreerPlateauDeJeu(new FactoryDame());
 			
 		}
 	
-		public void FaireCrierToutLeMonde() {
-
-			foreach(Personnage p in LesPersonnes) {
-				p.EmettreUnSon();
-			}
-		}
 
         public void PartirAuCombat()
         {
@@ -251,10 +241,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
                 {
                     //pion noir placé en bas
                     if (j > 5 && (j%2==0) && (i%2!=0))
-                    {
-                        //LesPersonnes.ElementAt(po).Position.setPositionY(i + 1);
-                        //LesPersonnes.ElementAt(po).Position.setPositionX(j + 1);
- 
+                    { 
                         pic = new PictureBox();
                         pic.ImageLocation = @"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png";
                         pic.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -265,9 +252,6 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
                     //pion noir placé en bas
                     else if (j > 5 && (j % 2 != 0) && (i % 2 == 0))
                     {
-                        //LesPersonnes.ElementAt(po).Position.setPositionY(i + 1);
-                        //LesPersonnes.ElementAt(po).Position.setPositionX(j + 1);
-
                         pic = new PictureBox();
                         pic.ImageLocation = @"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png";
                         pic.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -279,9 +263,6 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
                     //pion blanc placé en haut
                     else if(j < 4 && (j % 2 != 0) && (i % 2 == 0))
                     {
-                        //LesPersonnes.ElementAt(po).Position.setPositionY(i+1);
-                        //LesPersonnes.ElementAt(po).Position.setPositionX(j+1);
-
                         pic = new PictureBox();
                         pic.ImageLocation = @"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png";
                         pic.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -292,9 +273,6 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
                     //pion blanc placé en haut
                     else if (j < 4 && (j % 2 == 0) && (i % 2 != 0))
                     {
-                        //LesPersonnes.ElementAt(po).Position.setPositionY(i + 1);
-                        //LesPersonnes.ElementAt(po).Position.setPositionX(j + 1);
-
                         pic = new PictureBox();
                         pic.ImageLocation = @"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png";
                         pic.SizeMode = PictureBoxSizeMode.StretchImage;

@@ -18,7 +18,7 @@ namespace DesignPatternSimulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SelectorSimulation());
             //Application.Run(new Damier());
         }
     }

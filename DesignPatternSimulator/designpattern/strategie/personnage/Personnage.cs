@@ -9,7 +9,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 {
 	public abstract class Personnage : ObservateurAbstrait {
 
-
+        /*
         //*[0] Rating in his position
         protected int rate;
         //*[1] Speed
@@ -36,7 +36,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
         protected int defending;
         //*[12] Left/Right Foot (0 is right, 1 is left, 2 is both
         protected int foot;
-
+        */
 
 
 		private string nom;

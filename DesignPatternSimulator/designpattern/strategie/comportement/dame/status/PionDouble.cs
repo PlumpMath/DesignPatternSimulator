@@ -9,9 +9,20 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.dame.statu
 {
     public class PionDouble : StatusAbstrait
     {
-        public override void ModifierEtat(Personnage personnage)
+        //public override void ModifierEtat(Pion personnage)
+        //{
+        //    personnage.StatusCourant = new PionDouble();
+        //}
+
+        public PionDouble(Pion pion)
         {
-            //personnage.EtatCourant = new PionDouble();
+            
         }
+
+        public PionDouble()
+        {
+
+        }
+
     }
 }

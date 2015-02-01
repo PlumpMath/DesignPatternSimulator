@@ -21,20 +21,12 @@ namespace DesignPatternSimulator.simulation
 
         public SimulationDeJeuDame()
         {
-            lesPersonnes = new List<Personnage>();
-            etatMajor = new Organisation();
+            //lesPersonnes = new List<Personnage>();
+            //etatMajor = new Organisation();
         }
 
         public void CreatePersonnagesDuJeu(FactoryPersonnage caserne)
         {
-            //if(caserne.GetType().Name.Equals("FactoryPersonnageMoyenAge")) {
-            //lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Archer, etatMajor, "mehdi"));
-            //lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Archer, etatMajor, "legolas"));
-            //lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Chevalier, etatMajor, "aragorn"));
-            //lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Chevalier, etatMajor, "frodon"));
-            //lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Fantassin, etatMajor, "york"));
-            //lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Fantassin, etatMajor, "naruto"));
-            //lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.Princesse, null, "fiona"));
 
 
             int b = 20;
@@ -50,12 +42,6 @@ namespace DesignPatternSimulator.simulation
             {
                 lesPersonnes.Add(caserne.CreatePersonnage(DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage.PionNoir, etatMajor, (i + 1).ToString() + "N"));
             }
-
-            //Organisme = new EnvironnementDame();
-            //Organisme.CreerPlateauDeJeu(new FactoryDame());
-
-
-
     
 
             usa = new EnvironnementDame();
