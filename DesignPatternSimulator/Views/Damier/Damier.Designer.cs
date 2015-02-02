@@ -64,6 +64,7 @@
             this.Controls.Add(this.launcher);
             this.Name = "Damier";
             this.Text = "Damier";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Damier_Paint);
             this.ResumeLayout(false);
 
         }

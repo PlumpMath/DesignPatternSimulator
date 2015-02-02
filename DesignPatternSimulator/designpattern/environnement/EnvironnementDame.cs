@@ -37,6 +37,10 @@ namespace DesignPatternSimulator.designpattern.environnement
             return plateau;
         }
 
+        public PlateauDeJeuDame GetPlateauDeJeuDame()
+        {
+            return Plateau;
+        }
 
         public void PlacerLesPions(List<Personnage> perso, TableLayoutPanel pa)
         {
