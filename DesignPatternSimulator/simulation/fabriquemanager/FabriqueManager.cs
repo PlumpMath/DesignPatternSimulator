@@ -230,8 +230,10 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
                     carre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percentColumn));
                 }
             }
-            for (int i = 0 ; i < 20 ; i++) {
-                for (int j = 0 ; j < 20; j++) {
+            for (int i = 0; i < carre.ColumnCount; i++)
+            {
+                for (int j = 0; j < carre.RowCount; j++)
+                {
                     AbstractZone zon;
                 
                     /*if ((i == 8 && j == 6) || (i == 8 && j == 14)) {
