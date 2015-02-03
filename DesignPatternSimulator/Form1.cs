@@ -67,7 +67,7 @@ namespace DesignPatternSimulator
             FactoryPersonnage per = new FactoryPersonnageMoyenAge();
             fm = new FabriqueManager(env, per);
 
-            pan = fm.InitTableLayout(10, 10);
+            pan = fm.InitTableLayout(30, 30);
             /*
             TableLayoutPanel pan = new TableLayoutPanel();
             pan.Dock = DockStyle.Fill;
