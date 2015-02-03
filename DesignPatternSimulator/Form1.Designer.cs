@@ -40,7 +40,7 @@
             this.launcher.Name = "launcher";
             this.launcher.Size = new System.Drawing.Size(119, 23);
             this.launcher.TabIndex = 0;
-            this.launcher.Text = "Launch";
+            this.launcher.Text = "Launching";
             this.launcher.UseVisualStyleBackColor = true;
             this.launcher.Click += new System.EventHandler(this.launcher_Click);
             // 
