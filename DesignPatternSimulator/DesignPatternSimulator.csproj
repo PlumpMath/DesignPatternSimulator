@@ -108,6 +108,12 @@
     <Compile Include="Views\Damier\Damier.Designer.cs">
       <DependentUpon>Damier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Damier\LabyrinthGraphix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Damier\LabyrinthGraphix.Designer.cs">
+      <DependentUpon>LabyrinthGraphix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Damier\Painter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     </Compile>
     <Compile Include="Views\Damier\WinsdowDamier.Designer.cs">
       <DependentUpon>WinsdowDamier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Labyrinthe\Labyrinthe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Labyrinthe\Labyrinthe.Designer.cs">
+      <DependentUpon>Labyrinthe.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectorSimulation.cs">
       <SubType>Form</SubType>
@@ -157,6 +169,9 @@
     <EmbeddedResource Include="Views\Damier\Damier.resx">
       <DependentUpon>Damier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Damier\LabyrinthGraphix.resx">
+      <DependentUpon>LabyrinthGraphix.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Damier\Painter.resx">
       <DependentUpon>Painter.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Damier\WinsdowDamier.resx">
       <DependentUpon>WinsdowDamier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Labyrinthe\Labyrinthe.resx">
+      <DependentUpon>Labyrinthe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SelectorSimulation.resx">
       <DependentUpon>SelectorSimulation.cs</DependentUpon>
@@ -285,7 +303,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Guerre\" />
-    <Folder Include="Views\Labyrinthe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

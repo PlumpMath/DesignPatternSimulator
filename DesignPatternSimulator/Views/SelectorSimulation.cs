@@ -41,5 +41,14 @@ namespace DesignPatternSimulator.Views
             fm.MdiParent = this;
             fm.Show();
         }
+
+
+        //Labyrinthe
+        private void nouvellePartieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Labyrinthe.Labyrinthe fm = new Labyrinthe.Labyrinthe();
+            fm.MdiParent = this;
+            fm.Show();
+        }
     }
 }

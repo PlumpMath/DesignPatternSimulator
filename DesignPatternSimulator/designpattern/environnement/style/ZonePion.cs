@@ -16,8 +16,10 @@ namespace DesignPatternSimulator.designpattern.environnement.style
         private int x;
         private int y;
         private Color color;
+        private Pion pionPosseder;
+        public Pion PionPosseder { get { return pionPosseder; } set { pionPosseder = value; } }
 
-        public bool Occupe { get; set; }
+        public bool Occupe { get { return occupe; } set { occupe = value;} }
         public int X { get; set; }
         public int Y {get;set;}
 
