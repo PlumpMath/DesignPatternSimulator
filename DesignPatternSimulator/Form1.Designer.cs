@@ -36,7 +36,7 @@
             // 
             this.launcher.AccessibleName = "";
             this.launcher.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.launcher.Location = new System.Drawing.Point(83, 13);
+            this.launcher.Location = new System.Drawing.Point(433, 13);
             this.launcher.Name = "launcher";
             this.launcher.Size = new System.Drawing.Size(119, 23);
             this.launcher.TabIndex = 0;
@@ -51,7 +51,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.consoleBox.Location = new System.Drawing.Point(13, 59);
             this.consoleBox.Name = "consoleBox";
-            this.consoleBox.Size = new System.Drawing.Size(259, 191);
+            this.consoleBox.ShowSelectionMargin = true;
+            this.consoleBox.Size = new System.Drawing.Size(959, 391);
             this.consoleBox.TabIndex = 1;
             this.consoleBox.Text = "";
             // 
@@ -59,10 +60,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(984, 462);
             this.Controls.Add(this.consoleBox);
             this.Controls.Add(this.launcher);
             this.Name = "Form1";
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.ResumeLayout(false);
 
