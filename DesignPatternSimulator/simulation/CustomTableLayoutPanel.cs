@@ -29,5 +29,13 @@ namespace DesignPatternSimulator.simulation
         {
             return LesRochers;
         }
+
+        public void deplacerPersonnage()
+        {
+            //carre.Controls.Add(pic, 0, 3);
+            Control c = this.GetControlFromPosition(2, 1);
+            SetCellPosition(c, new TableLayoutPanelCellPosition(0, 3));
+            Console.Out.WriteLine("marche");
+        } 
     }
 }

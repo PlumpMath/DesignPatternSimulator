@@ -183,6 +183,10 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 
         public CustomTableLayoutPanel InitTableLayout(int h, int l)
         {
+            PictureBox pics = new PictureBox();
+            pics.ImageLocation = "C:\\Users\\Mamadou\\GitHub\\DesignPatternSimulator\\DesignPatternSimulator\\designpattern\\strategie\\personnage\\pictures\\white.png";
+            pics.SizeMode = PictureBoxSizeMode.StretchImage;
+            
             carre.ColumnCount = l;
             carre.RowCount = h;
 
@@ -219,17 +223,17 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             }
 
             
-            for (int i = 0; i < maxCount; i++)
+            //for (int i = 0; i < maxCount; i++)
+            //{
+            for (int i = 0; i < carre.RowCount; i++)
             {
-                if (carre.RowCount <= maxCount)
-                {
-                    carre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percentRow));
-                }
-                if (carre.ColumnCount <= maxCount)
-                {
-                    carre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percentColumn));
-                }
+                carre.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, percentRow));
             }
+            for (int i = 0; i < carre.ColumnCount; i++)
+            {
+                carre.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, percentColumn));
+            }
+
             for (int i = 0; i < carre.ColumnCount; i++)
             {
                 for (int j = 0; j < carre.RowCount; j++)
@@ -243,8 +247,8 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
                         zon = EspaceDeJeu.CreateZone(i,j)
                         //z = creerZone(CaseTypes.plaine, new Position(i, j));
                     }*/
-
                     zon = EspaceDeJeu.GetPlateauDeJeu().CreerZone(i, j);
+                    //carre.Controls.Add(pics, i, j);
                     EspaceDeJeu.GetPlateauDeJeu().AjouterZone(zon);
                 }
             }
@@ -277,7 +281,17 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             return carre;
         }
 
-        public TableLayoutPanel deplacerPersonnage(TableLayoutPanel pan)
+        /*public TableLayoutPanel deplacerPersonnage(TableLayoutPanel pan)
+        {
+            //carre.Controls.Add(pic, 0, 3);
+            Control c = pan.GetControlFromPosition(0, 3);
+            pan.SetCellPosition(c, new TableLayoutPanelCellPosition(2, 3));
+            Console.Out.WriteLine("marche");
+
+            return pan;
+        }*/
+
+        public CustomTableLayoutPanel deplacerPersonnage(CustomTableLayoutPanel pan)
         {
             //carre.Controls.Add(pic, 0, 3);
             Control c = pan.GetControlFromPosition(0, 3);

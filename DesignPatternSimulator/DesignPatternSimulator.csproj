@@ -108,29 +108,17 @@
     <Compile Include="Views\Damier\Damier.Designer.cs">
       <DependentUpon>Damier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Damier\LabyrinthGraphix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Damier\LabyrinthGraphix.Designer.cs">
+      <DependentUpon>LabyrinthGraphix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Damier\Painter.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Damier\Painter.Designer.cs">
       <DependentUpon>Painter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Damier\TestDamier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Damier\TestDamier.Designer.cs">
-      <DependentUpon>TestDamier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Damier\TestDamierPincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Damier\TestDamierPincipal.Designer.cs">
-      <DependentUpon>TestDamierPincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Damier\WinsdowDamier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Damier\WinsdowDamier.Designer.cs">
-      <DependentUpon>WinsdowDamier.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectorSimulation.cs">
       <SubType>Form</SubType>
@@ -157,17 +145,11 @@
     <EmbeddedResource Include="Views\Damier\Damier.resx">
       <DependentUpon>Damier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Damier\LabyrinthGraphix.resx">
+      <DependentUpon>LabyrinthGraphix.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Damier\Painter.resx">
       <DependentUpon>Painter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Damier\TestDamier.resx">
-      <DependentUpon>TestDamier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Damier\TestDamierPincipal.resx">
-      <DependentUpon>TestDamierPincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Damier\WinsdowDamier.resx">
-      <DependentUpon>WinsdowDamier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SelectorSimulation.resx">
       <DependentUpon>SelectorSimulation.cs</DependentUpon>
