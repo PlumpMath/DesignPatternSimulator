@@ -64,6 +64,7 @@ namespace DesignPatternSimulator.designpattern.environnement
                     {
                         if (z.Y < 4 && (z.Y % 2 != 0) && (z.X % 2 == 0))
                         {
+                            
                             p.Position = z;
                             z.Occupe = true;
                         }

@@ -43,6 +43,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
         public PionNoir(Organisation org, String nom)
             : base(org, nom)
         {
+            pic = new PictureBox();
         }
 
         new  public void Avancer(int x)

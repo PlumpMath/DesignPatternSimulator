@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fermerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.simulationsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouvellePartieToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +36,11 @@
             this.guerreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nouvellePartieToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.chargerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fermerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labyrintheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouvellePartieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chargerToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,26 +55,12 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fermerToolStripMenuItem});
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            // 
-            // fermerToolStripMenuItem
-            // 
-            this.fermerToolStripMenuItem.Name = "fermerToolStripMenuItem";
-            this.fermerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fermerToolStripMenuItem.Text = "Fermer";
-            this.fermerToolStripMenuItem.Click += new System.EventHandler(this.fermerToolStripMenuItem_Click);
-            // 
             // simulationsToolStripMenuItem1
             // 
             this.simulationsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dameToolStripMenuItem,
-            this.guerreToolStripMenuItem1});
+            this.guerreToolStripMenuItem1,
+            this.labyrintheToolStripMenuItem});
             this.simulationsToolStripMenuItem1.Name = "simulationsToolStripMenuItem1";
             this.simulationsToolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
             this.simulationsToolStripMenuItem1.Text = "Simulations";
@@ -120,6 +109,43 @@
             this.chargerToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.chargerToolStripMenuItem1.Text = "Charger";
             // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fermerToolStripMenuItem});
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            // 
+            // fermerToolStripMenuItem
+            // 
+            this.fermerToolStripMenuItem.Name = "fermerToolStripMenuItem";
+            this.fermerToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.fermerToolStripMenuItem.Text = "Fermer";
+            this.fermerToolStripMenuItem.Click += new System.EventHandler(this.fermerToolStripMenuItem_Click);
+            // 
+            // labyrintheToolStripMenuItem
+            // 
+            this.labyrintheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouvellePartieToolStripMenuItem,
+            this.chargerToolStripMenuItem2});
+            this.labyrintheToolStripMenuItem.Name = "labyrintheToolStripMenuItem";
+            this.labyrintheToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.labyrintheToolStripMenuItem.Text = "Labyrinthe";
+            // 
+            // nouvellePartieToolStripMenuItem
+            // 
+            this.nouvellePartieToolStripMenuItem.Name = "nouvellePartieToolStripMenuItem";
+            this.nouvellePartieToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.nouvellePartieToolStripMenuItem.Text = "Nouvelle Partie";
+            this.nouvellePartieToolStripMenuItem.Click += new System.EventHandler(this.nouvellePartieToolStripMenuItem_Click);
+            // 
+            // chargerToolStripMenuItem2
+            // 
+            this.chargerToolStripMenuItem2.Name = "chargerToolStripMenuItem2";
+            this.chargerToolStripMenuItem2.Size = new System.Drawing.Size(154, 22);
+            this.chargerToolStripMenuItem2.Text = "Charger";
+            // 
             // SelectorSimulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,5 +175,8 @@
         private System.Windows.Forms.ToolStripMenuItem guerreToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem chargerToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem labyrintheToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chargerToolStripMenuItem2;
     }
 }

@@ -43,7 +43,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
         public PionBlanc(Organisation org, String nom)
             : base(org, nom)
         {
-            
+            pic = new PictureBox();
         }
 
 

@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "LabyrinthGraphix";
-            this.Size = new System.Drawing.Size(894, 360);
+            this.Size = new System.Drawing.Size(894, 450);
             this.Load += new System.EventHandler(this.LabyrinthGraphix_Load);
             this.ResumeLayout(false);
 

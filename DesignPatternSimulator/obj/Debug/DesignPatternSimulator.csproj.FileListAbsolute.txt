@@ -15,3 +15,4 @@ C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.SelectorSimulation.resources
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.LabyrinthGraphix.resources
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.csprojResolveAssemblyReference.cache
+C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Labyrinthe.Labyrinthe.resources

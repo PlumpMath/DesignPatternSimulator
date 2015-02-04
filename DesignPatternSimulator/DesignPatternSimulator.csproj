@@ -101,6 +101,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="simulation\fabriquemanager\FabriqueManagerDame.cs" />
+    <Compile Include="simulation\fabriquemanager\FabriqueManagerLabyrinth.cs" />
     <Compile Include="simulation\SimulationJeuDame.cs" />
     <Compile Include="Views\Damier\Damier.cs">
       <SubType>Form</SubType>
@@ -108,10 +109,10 @@
     <Compile Include="Views\Damier\Damier.Designer.cs">
       <DependentUpon>Damier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Damier\LabyrinthGraphix.cs">
+    <Compile Include="Views\Labyrinthe\LabyrinthGraphix.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Damier\LabyrinthGraphix.Designer.cs">
+    <Compile Include="Views\Labyrinthe\LabyrinthGraphix.Designer.cs">
       <DependentUpon>LabyrinthGraphix.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Damier\Painter.cs">
@@ -119,6 +120,12 @@
     </Compile>
     <Compile Include="Views\Damier\Painter.Designer.cs">
       <DependentUpon>Painter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Labyrinthe\Labyrinthe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Labyrinthe\Labyrinthe.Designer.cs">
+      <DependentUpon>Labyrinthe.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectorSimulation.cs">
       <SubType>Form</SubType>
@@ -145,11 +152,14 @@
     <EmbeddedResource Include="Views\Damier\Damier.resx">
       <DependentUpon>Damier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Damier\LabyrinthGraphix.resx">
+    <EmbeddedResource Include="Views\Labyrinthe\LabyrinthGraphix.resx">
       <DependentUpon>LabyrinthGraphix.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Damier\Painter.resx">
       <DependentUpon>Painter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Labyrinthe\Labyrinthe.resx">
+      <DependentUpon>Labyrinthe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SelectorSimulation.resx">
       <DependentUpon>SelectorSimulation.cs</DependentUpon>
@@ -240,6 +250,9 @@
     <Content Include="designpattern\strategie\personnage\pictures\black.png" />
     <Content Include="designpattern\strategie\personnage\pictures\combattant_ennemie_distance_critique1.png" />
     <Content Include="designpattern\strategie\personnage\pictures\eliwood_critique45.png" />
+    <Content Include="designpattern\strategie\personnage\pictures\gain.jpg" />
+    <Content Include="designpattern\strategie\personnage\pictures\p1.jpg" />
+    <Content Include="designpattern\strategie\personnage\pictures\roc.jpg" />
     <Content Include="designpattern\strategie\personnage\pictures\white.png" />
   </ItemGroup>
   <ItemGroup>
@@ -267,7 +280,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Guerre\" />
-    <Folder Include="Views\Labyrinthe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
