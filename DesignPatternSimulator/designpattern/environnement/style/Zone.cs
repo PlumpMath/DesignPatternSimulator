@@ -12,7 +12,9 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 
 	    private string name;
         private int x;
+        public int X { get; set; }
         private int y;
+        public int Y {get;set;}
         private Color color;
 
         public Zone()

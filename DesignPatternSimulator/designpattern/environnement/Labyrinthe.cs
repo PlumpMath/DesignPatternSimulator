@@ -34,15 +34,14 @@ namespace DesignPatternSimulator.designpattern.environnement
 		//public override void setZonesAcces(List<Acces> acces) {
         public override void setZonesAcces(List<AbstractZone> acces)
         {
-			// TODO Auto-generated method stub
-		
+            accesZones = acces;
 		}
         
 		//public override List<Acces> getZonesAcces() {
         public override List<AbstractZone> getZonesAcces()
         {
 			// TODO Auto-generated method stub
-			return null;
+            return accesZones;
 		}
 
 	}

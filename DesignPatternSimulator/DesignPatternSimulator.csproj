@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="designpattern\environnement\EnvironnementDame.cs" />
+    <Compile Include="designpattern\environnement\EnvironnementLabyrinth.cs" />
     <Compile Include="designpattern\environnement\parent\EnvironnementDeJeu.cs" />
     <Compile Include="designpattern\environnement\PlateauDeJeuDame.cs" />
     <Compile Include="designpattern\environnement\style\Position.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="designpattern\fabrique\plateaudejeu\dame\FactoryDame.cs" />
     <Compile Include="designpattern\fabrique\plateaudejeu\dame\FactoryZone.cs" />
     <Compile Include="designpattern\fabrique\plateaudejeu\football\FactoryDeRencontre.cs" />
+    <Compile Include="designpattern\fabrique\plateaudejeu\labyrinth\FactoryLabyrinth.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\deplacement\Avancer.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\deplacement\AvancerAbstract.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\StatusAbstrait.cs" />
