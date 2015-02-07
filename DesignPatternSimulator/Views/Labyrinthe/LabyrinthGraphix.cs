@@ -22,7 +22,7 @@ namespace DesignPatternSimulator.Views.Damier
         public List<Rectangle> listRec = new List<Rectangle>();
         Graphics g = null;
         Graphics gx;
-        Image hamtaro = Image.FromFile(@"C:\Users\"+Environment.UserName+@"\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\p1.jpg");
+        Image hamtaro = Image.FromFile(@"C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\p1.jpg");
         Size hamtaroLocation = new Size(2, 0); //personnage
         Size hamtaroOldLocation = new Size(2,0);
         //Image tresor = Image.FromFile(@"");
