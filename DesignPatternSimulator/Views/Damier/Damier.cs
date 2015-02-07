@@ -46,96 +46,6 @@ namespace DesignPatternSimulator.Views.Damier
             fm.Organisme.PlacerLesPionsSurDamier(fm.LesPersonnes, fm.Organisme.Plateau);
             var plateau = fm.Organisme.Plateau.getZoneForFree().Count;
 
-            //Graphics checkBoard = Graphics.FromImage(checkerBoardBitmap);
-
-        //    SolidBrush fillColourBrush = new SolidBrush(Color.Red);
-        //    checkBoard.Clear(this.consoleBox.BackColor);
-
-        //    //var sim = simulation.usa.GetPlateauDeJeuDame();
-
-        //    var dimensionPlateau = Math.Sqrt(plateau);
-
-        //    List<Rectangle> listeRectangle = new List<Rectangle>();
-
-        //    //using (Rectangle p = new Rectangle())
-        //    //{
-        //    Rectangle p = new Rectangle();
-        //    foreach (var zone in fm.Organisme.Plateau.getZoneForFree())
-        //    {
-        //        p.X = zone.X;
-        //        p.Y = zone.Y;
-        //        p.Height = 4;
-        //        p.Width = 4;
-
-        //        listeRectangle.Add(p);
-        //    }
-
-        //    Pen pen = new Pen(Color.White, 10);
-
-            
-        //        foreach (var item in listeRectangle)
-        //        {
-        //            Brush brush = (item.X % 2 == 0 && item.Y % 2 == 0) || (item.X % 2 != 0 && item.Y % 2 != 0) ? Brushes.Black : Brushes.White;
-        //            checkBoard.DrawRectangle(pen, item);
-        //            checkBoard.FillRectangle(brush, item);
-
-        //            //graph.DrawRectangle(brush, item);
-        //        }
-        //        //BackgroundImage = image;
-            
-        //    // code needs to be inserted here
-        //    //.
-        //    //.
-        //    //.
-        //    consoleBox.Refresh();
-        //    consoleBox.Dispose();
-        //    fillColourBrush.Dispose();
-
-
-
-        //    /*
-
-        //    FabriqueManagerDame fm = new FabriqueManagerDame();
-        //    fm.CreatePersonnagesDuJeu(new FactoryPersonnageDame());
-            
-        //    fm.Organisme.PlacerLesPionsSurDamier(fm.LesPersonnes, fm.Organisme.Plateau);
-        //    var p = fm.Organisme.Plateau;
-            
-        //     */
-
-        //      //var perso = fm.
-        //    //SimulationDeJeuDame sdj = new SimulationDeJeuDame();
-        //    //sdj.CreatePersonnagesDuJeu(new FactoryPersonnageDame());
-        //    ////sdj.CreatePersonnagesDuJeu(new FactoryPersonnageGuerreDuGolf());
-        //    ////sdj.FaireCrierToutLeMonde();
-        //    //Console.WriteLine("--------");
-        //    //consoleBox.Text += sdj.ShowAllPersonnage();
-        //    //consoleBox.Text += "\n";
-        //    //Console.WriteLine("--------");
-        //    ////sdj.PartirAuCombat();
-        //    //consoleBox.Text += sdj.AfficherLesUploads();
-        //    //consoleBox.Text += "\n";
-        //    //Console.WriteLine("--------");
-        //    //sdj.ChangeEtat(eMode.AVANCER);
-        //    //consoleBox.Text += sdj.AfficherLesUploadsObservateur();
-        //    //consoleBox.Text += "\n";
-        //    //Console.WriteLine("--------");
-
-        //    //List<AbstractZone> lesZones = sdj.usa.GetPlateauDeJeu().getZonesAcces();
-
-        //    //var f2 = new Form2();
-        //    //this.Hide();
-        //    //f2.ShowDialog();
-
-        //    //this.Controls.Clear();
-        //    //EnvironnementDame env = new EnvironnementDame();
-        //    //FactoryPersonnage per = new FactoryPersonnageDame();
-        //    //FabriqueManagerDame fm = new FabriqueManagerDame(env, per);
-
-        //    //TableLayoutPanel pan = fm.InitTableLayout(10, 10);
-            
-
-        //    //this.Controls.Add(pan);
         }
 
 
@@ -194,79 +104,7 @@ namespace DesignPatternSimulator.Views.Damier
         //private void Damier_Paint(object sender, PaintEventArgs e) { }
 
 
-        private Panel[,] boardPanels;
-        //private void Damier_Load(object sender, EventArgs e)
-        //{
-        //    //FabriqueManagerDame fm = new FabriqueManagerDame();
-        //    //fm.CreatePersonnagesDuJeu(new FactoryPersonnageDame());
-
-        //    //fm.Organisme.PlacerLesPionsSurDamier(fm.LesPersonnes, fm.Organisme.Plateau);
-        //    //var listeDesZone = fm.Organisme.Plateau.getZoneForFree();
-        //    //var plateau = fm.Organisme.Plateau.getZoneForFree().Count;
-
-
-        //    //const int tileSize = 60;
-        //    //const int gridSize = 10;
-        //    //var clr1 = Color.DarkGray;
-        //    //var clr2 = Color.White;
-
-        //    ////initialiser le board
-        //    //boardPanels = new Panel[gridSize, gridSize];
-
-        //    //List<Pion> pipo = new List<Pion>();
-        //    //foreach (Pion ez in fm.LesPersonnes)
-        //    //{
-        //    //    pipo.Add(ez);
-        //    //}
-        //    //// double for loop to handle all rows and columns
-        //    //for (var n = 0; n < gridSize; n++)
-        //    //{
-        //    //    for (var m = 0; m < gridSize; m++)
-        //    //    {
-        //    //        // create new Panel control which will be one 
-        //    //        // chess board tile
-
-
-
-        //    //        //foreach(Pion uneZone in fm.LesPersonnes){
-        //    //        //    if (uneZone.Position.X == n && uneZone.Position.Y == m)
-        //    //        //    {
-        //    //                // create new Panel control which will be one 
-        //    //                // chess board tile
-        //    //                var newPanel = new Panel
-        //    //                {
-        //    //                    Size = new Size(tileSize, tileSize),
-        //    //                    Location = new Point(tileSize * n, tileSize * m),
-        //    //                    //BackgroundImage = Image.FromFile(locationImage)
-        //    //                };
-
-        //    //                // add to Form's Controls so that they show up
-                            
-        //    //        Controls.Add(newPanel);
-
-        //    //                // add to our 2d array of panels for future use
-        //    //                boardPanels[n, m] = newPanel;
-
-        //    //                // color the backgrounds
-        //    //                if (n % 2 == 0)
-        //    //                {
-        //    //                    newPanel.BackColor = m % 2 != 0 ? clr1 : clr2;
-        //    //                    //newPanel.BackgroundImage = Image.FromFile(PlacerImageDansPanel(pipo,n,m));
-                                
-                                
-        //    //                }
-        //    //                else
-        //    //                {
-        //    //                    newPanel.BackColor = m % 2 != 0 ? clr2 : clr1;
-        //    //                    //newPanel.BackgroundImage = Image.FromFile(PlacerImageDansPanel(pipo, n, m));
-                                
-        //    //                }
-        //    //    //        }
-        //    //    //}
-        //    //    }
-        //    //}
-
-        //}
+      
 
         public string PlacerImageDansPanel(List<Pion> listePion, int n, int m)
         {
@@ -392,14 +230,14 @@ namespace DesignPatternSimulator.Views.Damier
 
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
                         }
                         else
                         {
                             Brush brush = Brushes.Turquoise;
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
 
                         }
 
@@ -412,14 +250,14 @@ namespace DesignPatternSimulator.Views.Damier
                             Brush balck = Brushes.Black;
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
                         }
                         else
                         {
                             Brush brush = Brushes.White;
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
                         }
                     }
 
