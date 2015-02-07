@@ -331,6 +331,7 @@ namespace DesignPatternSimulator.Views.Damier
 
         //}
 
+        public Dictionary<Color, Rectangle> listeTriangle = new Dictionary<Color, Rectangle>();
 
         private void Damier_Load(object sender, EventArgs e)
         {
@@ -349,12 +350,8 @@ namespace DesignPatternSimulator.Views.Damier
             Rectangle rec = new Rectangle();
             foreach (var zone in fm.Organisme.Plateau.getZoneForFree())
             {
-                //p.X = zone.X;
-                //p.Y = zone.Y;
-                //p.Height = 4;
-                //p.Width = 4;
-                rec.Height = 5;
-                rec.Width = 5;
+                rec.Height = 25;
+                rec.Width = 25;
                 rec.X = zone.X * rec.Height;
                 rec.Y = zone.Y * rec.Width;
 
@@ -362,11 +359,73 @@ namespace DesignPatternSimulator.Views.Damier
             }
 
             Pen pen = new Pen(Color.Red, 2);
-            using (Graphics g = this.painter1.CreateGraphics())
+            //using(Graphics graphics = this.painter1.CreateGraphics())
+            //{
+            //    for (int i = 0; i <= 9; i++)
+            //    {
+            //        for (int j = 0; j <= 9; j++)
+            //        {
+            //            Brush brush = (i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0) ? Brushes.Green : Brushes.White;
+            //            graphics.FillRectangle(brush, new Rectangle(i * 45, j * 45, 45, 45));
+            //        }
+            //    }
+            //}
+
+            //using (Graphics g = this.painter1.CreateGraphics())
+            //{
+            //    g.DrawRectangles(pen, listeRectanges.ToArray());
+            //    // this.Invalidate();
+            //}
+            Pen peno = new Pen(Color.Black, 1);
+            Label newlabel = new Label();
+            using (Graphics g = this.painter1.CreateGraphics()) 
             {
-                g.DrawRectangles(pen, listeRectanges.ToArray());
-               // this.Invalidate();
+                //g.DrawRectangles(peno, listeRectanges.ToArray());
+                foreach (var item in listeRectanges.ToArray())
+                {
+                    
+                    if (item.X % 2 == 0)
+                    {
+                        if (item.Y % 2 == 0)
+                        {
+                            Brush brush = Brushes.White;
+
+                            g.DrawRectangle(peno, item);
+                            g.FillRectangle(brush, item);
+                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                        }
+                        else
+                        {
+                            Brush brush = Brushes.Turquoise;
+                            g.DrawRectangle(peno, item);
+                            g.FillRectangle(brush, item);
+                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+
+                        }
+
+                    }
+                    else
+                    {
+                        if (item.Y % 2 == 0)
+                        {
+                            Brush brush = Brushes.Turquoise;
+                            Brush balck = Brushes.Black;
+                            g.DrawRectangle(peno, item);
+                            g.FillRectangle(brush, item);
+                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                        }
+                        else
+                        {
+                            Brush brush = Brushes.White;
+                            g.DrawRectangle(peno, item);
+                            g.FillRectangle(brush, item);
+                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                        }
+                    }
+
+                }
             }
+
         }
 
     }

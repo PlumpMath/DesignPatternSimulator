@@ -33,6 +33,8 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
+
+
         public PionBlanc(Organisation org, String nom, ZonePion zone)
             : base(org, nom)
         {

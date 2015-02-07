@@ -12,13 +12,14 @@ namespace DesignPatternSimulator.designpattern.environnement.style
     public class ZonePion : AbstractZone
     {
         private bool occupe;
+        //private ZonePion typeOccupation;
 	    private string name;
         private int x;
         private int y;
         private Color color;
-        private Pion pionPosseder;
-        public Pion PionPosseder { get { return pionPosseder; } set { pionPosseder = value; } }
-
+        private String pionPosseder;
+        public String PionPosseder { get { return pionPosseder; } set { pionPosseder = value; } }
+        //public ZonePion TypeOccupation { get { return typeOccupation; } set { typeOccupation = value; } }
         public bool Occupe { get { return occupe; } set { occupe = value;} }
         public int X { get; set; }
         public int Y {get;set;}
@@ -28,13 +29,15 @@ namespace DesignPatternSimulator.designpattern.environnement.style
             this.X = 0;
             this.Y = 0;
             this.Occupe = false;
+            this.PionPosseder = null;
         }
 
         public ZonePion(int x, int y)
         {
             this.X = x;
             this.Y = y;
-//            this.Occupe = false;
+            this.Occupe = false;
+            this.PionPosseder = null;
         }
 	
 	    public ZonePion(string nom, int x, int y) {
@@ -42,6 +45,7 @@ namespace DesignPatternSimulator.designpattern.environnement.style
             this.X = x;
             this.Y = y;
             this.Occupe = false;
+            this.PionPosseder = null;
         }
 
         public ZonePion(Position p)

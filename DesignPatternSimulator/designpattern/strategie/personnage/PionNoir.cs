@@ -33,6 +33,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
+
         public PionNoir(Organisation org, String nom, ZonePion zone)
             : base(org, nom)
         {

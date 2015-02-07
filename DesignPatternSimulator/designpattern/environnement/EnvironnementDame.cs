@@ -67,11 +67,13 @@ namespace DesignPatternSimulator.designpattern.environnement
                             
                             p.Position = z;
                             z.Occupe = true;
+                            z.PionPosseder = "PionBlanc";
                         }
                         else if (z.Y < 4 && (z.Y % 2 == 0) && (z.X % 2 != 0))
                         {
                             p.Position = z;
                             z.Occupe = true;
+                            z.PionPosseder = "PionBlanc";
                         }
                     }
                     else if (p.GetType().Equals(typeof(PionNoir)))
@@ -80,11 +82,13 @@ namespace DesignPatternSimulator.designpattern.environnement
                         {
                             p.Position = z;
                             z.Occupe = true;
+                            z.PionPosseder = "PionNoir";
                         }
                         else if (z.Y > 5 && (z.Y % 2 != 0) && (z.X % 2 == 0))
                         {
                             p.Position = z;
                             z.Occupe = true;
+                            z.PionPosseder = "PionNoir";
                         }
                     }
                 }
@@ -100,9 +104,12 @@ namespace DesignPatternSimulator.designpattern.environnement
         /// <returns></returns>
         public Boolean PionADeplacer(Pion pion, PlateauDeJeuDame plateau)
         {
+            //récupérer toutes les zones autour du pion
             var zoneEnvironnantDuPion = pion.Position.GetList(pion, plateau.getZoneForFree());
 
+            //récupérer les zones non occupé
             var zoneFree = zoneEnvironnantDuPion.Where(c=>c.Occupe == false).ToList<ZonePion>();
+
 
             int nbreZoneFree = zoneFree.Count;
             //var zoneOfPlateau = plateau.getZoneForFree();
@@ -130,21 +137,12 @@ namespace DesignPatternSimulator.designpattern.environnement
             List<Pion> listPionBlanc = new List<Pion>();
             foreach (var pionPerso in perso)
             {
-                if (pionPerso.Color == Color.White)
-                {
-                    listPionBlanc.Add(pionPerso);
-                }
-                else
-                {
-                    listPionNoir.Add(pionPerso);
-                }
+                if (pionPerso.Color == Color.White){listPionBlanc.Add(pionPerso);}
+                else{listPionNoir.Add(pionPerso);}
             }
-
-
             int tour = 100;
-            
-            Pion pionBlanc; //= new PionBlanc();
-            Pion pionNoir ;//= new PionNoir();
+            Pion pionBlanc;
+            Pion pionNoir ;
             for(int i = 0;  i <= tour; i++){
                 if (i % 2 == 0)
                 {
@@ -152,9 +150,12 @@ namespace DesignPatternSimulator.designpattern.environnement
 
                     do
                     {
-                        testB = PionADeplacer(listPionBlanc.ElementAt(hasard.Next(listPionBlanc.Count)),damier);
-                        pionBlanc = listPionBlanc.ElementAt(hasard.Next(listPionBlanc.Count));
+                        int varialeB = hasard.Next(0,listPionBlanc.Count);
+                        testB = PionADeplacer(listPionBlanc.ElementAt(varialeB),damier);
+                        pionBlanc = listPionBlanc.ElementAt(varialeB);
                     } while (testB == true);
+
+                    //(PionBlanc)pionBlanc.SeDeplacer();
                 }
                 else
                 {
@@ -162,8 +163,9 @@ namespace DesignPatternSimulator.designpattern.environnement
 
                     do
                     {
-                        testN = PionADeplacer(listPionNoir.ElementAt(hasard.Next(0, listPionNoir.Count)), damier);
-                        pionNoir = listPionNoir.ElementAt(hasard.Next(0, listPionNoir.Count));
+                        int variableN = hasard.Next(0, listPionNoir.Count);
+                        testN = PionADeplacer(listPionNoir.ElementAt(variableN), damier);
+                        pionNoir = listPionNoir.ElementAt(variableN);
                     } while (testN == true);
 
                 }
