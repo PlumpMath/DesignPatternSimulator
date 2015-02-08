@@ -198,7 +198,6 @@ namespace DesignPatternSimulator.Views.Damier
         //private void Damier_Paint(object sender, PaintEventArgs e) { }
 
 
-        private Panel[,] boardPanels;
         //private void Damier_Load(object sender, EventArgs e)
         //{
         //    //FabriqueManagerDame fm = new FabriqueManagerDame();
@@ -344,6 +343,7 @@ namespace DesignPatternSimulator.Views.Damier
 
         private void Damier_Paint(object sender, PaintEventArgs e)
         {
+
             FabriqueManagerDame fm = new FabriqueManagerDame();
             fm.CreatePersonnagesDuJeu(new FactoryPersonnageDame());
 
@@ -352,6 +352,9 @@ namespace DesignPatternSimulator.Views.Damier
             fm.Organisme.PlacerLesPionsSurDamier(fm.LesPersonnes, fm.Organisme.Plateau);
             var p = fm.Organisme.Plateau;
             Rectangle rec = new Rectangle();
+            var listeDesZones = fm.Organisme.Plateau.getZoneForFree();
+            var nbrePionBlanc = fm.Organisme.Plateau.getZoneForFree().Where(c => c.PionPosseder == "PionBlanc").Count();
+            var nbrePionNoir = fm.Organisme.Plateau.getZoneForFree().Where(c => c.PionPosseder == "PionNoir").Count();
             foreach (var zone in fm.Organisme.Plateau.getZoneForFree())
             {
                 rec.Height = 25;
@@ -359,75 +362,60 @@ namespace DesignPatternSimulator.Views.Damier
                 rec.X = zone.X * rec.Height;
                 rec.Y = zone.Y * rec.Width;
 
-                listeRectanges.Add(rec);
-            }
-
-            Pen pen = new Pen(Color.Red, 2);
-            //using(Graphics graphics = this.painter1.CreateGraphics())
-            //{
-            //    for (int i = 0; i <= 9; i++)
-            //    {
-            //        for (int j = 0; j <= 9; j++)
-            //        {
-            //            Brush brush = (i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0) ? Brushes.Green : Brushes.White;
-            //            graphics.FillRectangle(brush, new Rectangle(i * 45, j * 45, 45, 45));
-            //        }
-            //    }
-            //}
-
-            //using (Graphics g = this.painter1.CreateGraphics())
-            //{
-            //    g.DrawRectangles(pen, listeRectanges.ToArray());
-            //    // this.Invalidate();
-            //}
-            Pen peno = new Pen(Color.Black, 1);
-            Label newlabel = new Label();
-            using (Graphics g = this.painter1.CreateGraphics()) 
-            {
-                //g.DrawRectangles(peno, listeRectanges.ToArray());
-                foreach (var item in listeRectanges.ToArray())
+                Pen peno = new Pen(Color.Black);
+                using (Graphics g = this.painter1.CreateGraphics())
                 {
-                    Size imsize = new Size(item.X, item.Y);
-                    if (item.X % 2 == 0)
+                    if (rec.X % 2 == 0)
                     {
-                        if (item.Y % 2 == 0)
+                        if (rec.Y % 2 == 0)
                         {
                             Brush brush = Brushes.White;
 
-                            g.DrawRectangle(peno, item);
-                            g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), item);
+                            g.DrawRectangle(peno, rec);
+                            g.FillRectangle(brush, rec);
+                            if(zone.Occupe == true && zone.PionPosseder.Equals("PionBlanc"))
+                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), rec);
+                            else if(zone.Occupe == true && zone.PionPosseder.Equals("PionNoir"))
+                                g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
                         }
                         else
                         {
                             Brush brush = Brushes.Turquoise;
-                            g.DrawRectangle(peno, item);
-                            g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), item);
-
+                            g.DrawRectangle(peno, rec);
+                            g.FillRectangle(brush, rec);
+                            if (zone.Occupe == true && zone.PionPosseder.Equals("PionNoir"))
+                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            else if(zone.Occupe == true && zone.PionPosseder.Equals("PionBlanc"))
+                                g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), rec);
                         }
 
                     }
                     else
                     {
-                        if (item.Y % 2 == 0)
+                        if (rec.Y % 2 == 0)
                         {
                             Brush brush = Brushes.Turquoise;
                             Brush balck = Brushes.Black;
-                            g.DrawRectangle(peno, item);
-                            g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), item);
+                            g.DrawRectangle(peno, rec);
+                            g.FillRectangle(brush, rec);
+                            if (zone.Occupe == true && zone.PionPosseder.Equals("PionNoir"))
+                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            else if(zone.Occupe == true && zone.PionPosseder.Equals("PionBlanc"))
+                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), rec);
                         }
                         else
                         {
                             Brush brush = Brushes.White;
-                            g.DrawRectangle(peno, item);
-                            g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), item);
+                            g.DrawRectangle(peno, rec);
+                            g.FillRectangle(brush, rec);
+                            if (zone.Occupe == true && zone.PionPosseder.Equals("PionBlanc"))
+                                g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), rec);
+                            else if (zone.Occupe == true && zone.PionPosseder.Equals("PionNoir"))
+                                g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
                         }
                     }
-
                 }
+
             }
 
         }
