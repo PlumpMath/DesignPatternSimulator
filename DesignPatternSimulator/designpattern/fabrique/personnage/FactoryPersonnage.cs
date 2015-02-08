@@ -1,4 +1,3 @@
-using DesignPatternSimulator.designpattern.fabrique.personnage.football;
 using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.strategie.personnage;

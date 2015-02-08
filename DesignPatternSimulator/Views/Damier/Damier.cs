@@ -35,6 +35,10 @@ namespace DesignPatternSimulator.Views.Damier
          
         }
 
+        public static int WEIGHT = 50;
+        public static int IMG_SIZE = 40;
+        public static int IMG_PADDING = 5;
+
         Rectangle rec;
         PlateauDeJeuDame plateau;
         Bitmap checkerBoardBitmap = new Bitmap(400, 400);
@@ -274,11 +278,11 @@ namespace DesignPatternSimulator.Views.Damier
 
             if (pion.GetType().Equals(typeof(PionBlanc)))
             {
-                return @"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png";
+                return @"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png";
             }
             else
             {
-                return @"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png";
+                return @"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png";
             }
 
         }
@@ -331,8 +335,8 @@ namespace DesignPatternSimulator.Views.Damier
 
         //}
 
-        public Dictionary<Color, Rectangle> listeTriangle = new Dictionary<Color, Rectangle>();
-
+        public Dictionary<Color, Rectangle> listeTriangleithColor = new Dictionary<Color, Rectangle>();
+        public Dictionary<bool,Rectangle> listeRectangleWithOccupied = new Dictionary<bool,Rectangle>();
         private void Damier_Load(object sender, EventArgs e)
         {
 
@@ -383,7 +387,7 @@ namespace DesignPatternSimulator.Views.Damier
                 //g.DrawRectangles(peno, listeRectanges.ToArray());
                 foreach (var item in listeRectanges.ToArray())
                 {
-                    
+                    Size imsize = new Size(item.X, item.Y);
                     if (item.X % 2 == 0)
                     {
                         if (item.Y % 2 == 0)
@@ -392,14 +396,14 @@ namespace DesignPatternSimulator.Views.Damier
 
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\"+Environment.UserName+@"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), item);
                         }
                         else
                         {
                             Brush brush = Brushes.Turquoise;
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), item);
 
                         }
 
@@ -412,14 +416,14 @@ namespace DesignPatternSimulator.Views.Damier
                             Brush balck = Brushes.Black;
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\white.png"), item);
                         }
                         else
                         {
                             Brush brush = Brushes.White;
                             g.DrawRectangle(peno, item);
                             g.FillRectangle(brush, item);
-                            g.DrawImage(Image.FromFile(@"C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), rec);
+                            g.DrawImage(Image.FromFile(@"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\black.png"), item);
                         }
                     }
 

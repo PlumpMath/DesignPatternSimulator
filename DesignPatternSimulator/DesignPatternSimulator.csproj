@@ -113,48 +113,6 @@
     <Compile Include="Lineage2_PVP\Fabrique\Concrete\FabriqueTyrrWarrior.cs" />
     <Compile Include="Lineage2_PVP\Fabrique\Concrete\FabriqueWynnSummoner.cs" />
     <Compile Include="Lineage2_PVP\Fabrique\Concrete\FabriqueYulArcher.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Adaptateur\Adaptateur.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Adaptateur\Adapte.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Adaptateur\Cible.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Enum\EnumArmes.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Enum\EnumArmure.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Enum\EnumBijou.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Abstraite\FabriqueAbstraite.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueAeoreHealer.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueFeohWizard.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueIssEnchanter.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueOthellRogue.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueSigelKnight.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueTyrrWarrior.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueWynnSummoner.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Fabrique\Concrete\FabriqueYulArcher.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Program.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armes\Abstraite\ArmeAbstraite.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armes\Concrete\Arc.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armes\Concrete\Dague.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armes\Concrete\Dual.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armes\Concrete\Epee.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armes\Concrete\Sceptre.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armes\Concrete\Zariche.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armure\Abstraite\ArmureAbstraite.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armure\Concrete\ArmureLegere.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armure\Concrete\ArmureLourde.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Armure\Concrete\Robe.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Bijou\Abstrait\BijouAbstrait.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Bijou\Concret\Bague.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Bijou\Concret\BoucleOreille.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Bijou\Concret\Collier.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Abstrait\PersonnageAbstrait.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Abstrait\PersonnageFighterAbstrait.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Abstrait\PersonnageMysticAbstrait.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\AeoreHealer.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\FeohWizard.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\IssEnchanter.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\OthellRogue.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\SigelKnight.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\TyrrWarrior.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\WynnSummoner.cs" />
-    <Compile Include="Lineage2_PVP\Lineage2_PVP\Strategie\Personnage\Concret\YulArcher.cs" />
     <Compile Include="Lineage2_PVP\Program.cs" />
     <Compile Include="Lineage2_PVP\Strategie\Armes\Abstraite\ArmeAbstraite.cs" />
     <Compile Include="Lineage2_PVP\Strategie\Armes\Concrete\Arc.cs" />
@@ -363,12 +321,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Lineage2_PVP\Lineage2_PVP\Composite\" />
-    <Folder Include="Lineage2_PVP\Lineage2_PVP\Decorateur\" />
-    <Folder Include="Lineage2_PVP\Lineage2_PVP\Etat\" />
-    <Folder Include="Lineage2_PVP\Lineage2_PVP\FabriqueAbstraite\" />
-    <Folder Include="Lineage2_PVP\Lineage2_PVP\Observateur\" />
-    <Folder Include="Lineage2_PVP\Lineage2_PVP\Singleton\" />
     <Folder Include="Views\Guerre\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
