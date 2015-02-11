@@ -72,6 +72,8 @@
     <Compile Include="designpattern\fabrique\plateaudejeu\labyrinth\FactoryLabyrinth.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\deplacement\Avancer.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\deplacement\AvancerAbstract.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\manger\Manger.cs" />
+    <Compile Include="designpattern\strategie\comportement\dame\manger\MangerAbstract.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\StatusAbstrait.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\status\PionDouble.cs" />
     <Compile Include="designpattern\strategie\comportement\dame\status\PionNonDouble.cs" />

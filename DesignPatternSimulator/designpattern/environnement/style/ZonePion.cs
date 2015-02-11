@@ -76,16 +76,38 @@ namespace DesignPatternSimulator.designpattern.environnement.style
         public List<ZonePion> GetList(Pion p, List<ZonePion> ep){
 
             List<ZonePion> zoneautour = new List<ZonePion>();
-           
 
-            var co1 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1)).Single();
-            var co2 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y)).Single();
-            var co3 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y + 1)).Single();
-            var co4 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1)).Single();
-            var co5 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y + 1)).Single();
-            var co6 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1)).Single();
-            var co7 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1)).Single();
-            var co8 = ep.Where(c => c.X == (p.Position.X + 1) && c.Y == (p.Position.Y - 1)).Single();
+
+
+            //var co1 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1)).Single();
+            //var co2 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y)).Single();
+            //var co3 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y + 1)).Single();
+            //var co4 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1)).Single();
+            //var co5 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y + 1)).Single();
+            //var co6 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1)).Single();
+            //var co7 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1)).Single();
+            //var co8 = ep.Where(c => c.X == (p.Position.X + 1) && c.Y == (p.Position.Y - 1)).Single();
+
+
+
+            var co1 = ep.Single(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1));
+            var co2 = ep.Single(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y));
+            var co3 = ep.Single(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y + 1));
+            var co4 = ep.Single(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1));
+            var co5 = ep.Single(c => c.X == (p.Position.X) && c.Y == (p.Position.Y + 1));
+            var co6 = ep.Single(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1));
+            var co7 = ep.Single(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1));
+
+            try
+            {
+                var co8 = ep.Single(c => c.X == (p.Position.X + 1) && c.Y == (p.Position.Y - 1));
+                if (co8 != null)
+                {
+                    zoneautour.Add(co8);
+                }
+            }
+            catch (Exception e) { }
+
             zoneautour.Add(co1);
             zoneautour.Add(co2);
             zoneautour.Add(co3);
@@ -93,7 +115,7 @@ namespace DesignPatternSimulator.designpattern.environnement.style
             zoneautour.Add(co5);
             zoneautour.Add(co6);
             zoneautour.Add(co7);
-            zoneautour.Add(co8);
+
             return zoneautour;
         }
 

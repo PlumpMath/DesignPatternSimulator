@@ -1,6 +1,7 @@
 ﻿using DesignPatternSimulator.designpattern.environnement.parent;
 using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
+using DesignPatternSimulator.designpattern.fabrique.personnage;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu.dame;
 using DesignPatternSimulator.designpattern.strategie.personnage;
@@ -42,10 +43,6 @@ namespace DesignPatternSimulator.designpattern.environnement
             return Plateau;
         }
 
-        public void PlacerLesPions(List<Personnage> perso, TableLayoutPanel pa)
-        {
-
-        }
 
         /// <summary>
         /// Placer les pions sur un damier constitué de zone
@@ -55,9 +52,9 @@ namespace DesignPatternSimulator.designpattern.environnement
         public void PlacerLesPionsSurDamier(List<Personnage> perso, PlateauDeJeuDame damier)
         {
             var listezone = damier.getZoneForFree();// damier.getZonesAcces();
-            foreach (ZonePion z in listezone)
+            foreach (var z in listezone)
             {
-                foreach (Pion p in perso)
+                foreach (var p in perso)
                 {
 
                     if (p.GetType().Equals(typeof(PionBlanc)))
@@ -122,7 +119,30 @@ namespace DesignPatternSimulator.designpattern.environnement
         }
 
 
+        public List<ZonePion> ListePionsEnvironnants(Pion pion, List<ZonePion> listeDesZoneAuxAlentours)
+        {
+            
+            List<ZonePion> listePionZoneEnvironnants = new List<ZonePion>();
+            if(pion.GetType().Equals(typeof(PionBlanc)))
+            {
+                foreach (var item in listeDesZoneAuxAlentours)
+                {
+                    if(item.Occupe.Equals(true) && item.PionPosseder.Equals("PionNoir"))
+                        listePionZoneEnvironnants.Add(item);
+                }
+                return listePionZoneEnvironnants;
+            }
+            else
+            {
+                foreach (var item in listeDesZoneAuxAlentours)
+                {
+                    if(item.Occupe.Equals(true) && item.PionPosseder.Equals("PionBlanc"))
+                        listePionZoneEnvironnants.Add(item);
+                }
 
+            return listePionZoneEnvironnants;
+            }
+        }
 
 
         /// <summary>
@@ -130,69 +150,93 @@ namespace DesignPatternSimulator.designpattern.environnement
         /// </summary>
         /// <param name="perso"></param>
         /// <param name="damier"></param>
-        public void Execution(List<Pion> perso, PlateauDeJeuDame damier)
+        public void Execution(List<Personnage> perso, PlateauDeJeuDame damier)
         {
             Random hasard = new Random();
             List<Pion> listPionNoir = new List<Pion>();
             List<Pion> listPionBlanc = new List<Pion>();
-            foreach (var pionPerso in perso)
+            foreach (Pion pionPerso in perso)
             {
-                if (pionPerso.Color == Color.White){listPionBlanc.Add(pionPerso);}
-                else{listPionNoir.Add(pionPerso);}
+                if (pionPerso.GetType().Equals(typeof(PionBlanc))) { listPionBlanc.Add(pionPerso); } else { listPionNoir.Add(pionPerso); }
+
             }
             int tour = 100;
-            Pion pionBlanc;
-            Pion pionNoir ;
+            Pion pionBlanc = null;
+            Pion pionBlancAdverse = null;
+            Pion pionNoir = null ;
+            Pion pionNoirAdverse = null;
             for(int i = 0;  i <= tour; i++){
                 if (i % 2 == 0)
                 {
-                    bool testB ;
-
-                    do
-                    {
-                        int varialeB = hasard.Next(0,listPionBlanc.Count);
+                    bool testB = false ;
+                    int varialeB;
+                    while(testB == false){
+                        varialeB = hasard.Next(1,listPionBlanc.Count);
                         testB = PionADeplacer(listPionBlanc.ElementAt(varialeB),damier);
                         pionBlanc = listPionBlanc.ElementAt(varialeB);
-                    } while (testB == true);
-
-                    //(PionBlanc)pionBlanc.SeDeplacer();
+                    }
+                    //public List<ZonePion> ListePionsEnvironnants(Pion pion, List<ZonePion> listeDesZoneAuxAlentours)
+                    var listeDesPionsContrairesAlentours = this.ListePionsEnvironnants(pionBlanc, pionBlanc.Position.GetList(pionBlanc, plateau.getZoneForFree().ToList()));
+                    if (listeDesPionsContrairesAlentours == null) 
+                    {   pionBlanc.Avancer(1);}
+                    else
+                    {
+                        if (listeDesPionsContrairesAlentours.Count != 0) { 
+                        int  itemPionAdverse = hasard.Next(1,listeDesPionsContrairesAlentours.Count);
+                        //Choisir un pion adverse au hasard à manger
+                        foreach (Pion item in perso)
+                        {
+                            if( item.Position.X == listeDesPionsContrairesAlentours.ElementAt(itemPionAdverse).X && item.Position.Y == listeDesPionsContrairesAlentours.ElementAt(itemPionAdverse).Y
+                                )
+                            {
+                                pionBlancAdverse = item;
+                                continue;
+                            }
+                        }
+                        pionBlanc.ComportementManger.MangerPion(pionBlanc, pionBlancAdverse,this);
+                        }
+                    }
                 }
                 else
                 {
-                    bool testN;
-
-                    do
+                    bool testN = false;
+                    int variableN;
+                    while(testN == false)
                     {
-                        int variableN = hasard.Next(0, listPionNoir.Count);
+                        variableN = hasard.Next(1, listPionNoir.Count);
                         testN = PionADeplacer(listPionNoir.ElementAt(variableN), damier);
                         pionNoir = listPionNoir.ElementAt(variableN);
-                    } while (testN == true);
+                    }
 
-                }
-            }
-
-
-            /*
-            foreach (Pion i in perso)
-            {
-                var ip = i.Position.GetList(i, damier.getZoneForFree());
-                int taille = ip.Count;
-
-
-
-                foreach (var item in ip)
-                {
-                    int numhasard = hasard.Next(0, 20);
-                    if (item.Occupe == false)
+                    var listeDesPionsContrairesAlentours = this.ListePionsEnvironnants(pionNoir, pionNoir.Position.GetList(pionNoir, plateau.getZoneForFree().ToList()));
+                    if (listeDesPionsContrairesAlentours == null)
+                    { pionNoir.Avancer(1); }
+                    else
                     {
-                        i.ZoneVersZone(item);
-                        return;
+                        if (listeDesPionsContrairesAlentours.Count != 0) 
+                        { 
+                        int itemPionAdverse = hasard.Next(1, listeDesPionsContrairesAlentours.Count);
+                        //Choisir un pion adverse au hasard à manger
+                        foreach (Pion item in perso)
+                        {
+                            if (item.Position.X == listeDesPionsContrairesAlentours.ElementAt(itemPionAdverse).X && item.Position.Y == listeDesPionsContrairesAlentours.ElementAt(itemPionAdverse).Y
+                                )
+                            {
+                                pionNoirAdverse = item;
+                                continue;
+                            }
+                        }
+                        pionNoir.ComportementManger.MangerPion(pionBlanc, pionBlancAdverse,this);
+                        }
                     }
                 }
             }
-             */
 
         }
+
+
+
+
 
     }
 }

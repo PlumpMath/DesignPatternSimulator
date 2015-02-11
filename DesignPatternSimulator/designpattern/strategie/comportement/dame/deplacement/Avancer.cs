@@ -17,6 +17,8 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.dame.depla
 
 
 
+        
+
         public override ZonePion Avance(int i)
         {
             position.X = position.X + i;
@@ -35,6 +37,20 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.dame.depla
             //pos.setPositionX(pos.getPositionY() - i);
 
             return position;
+        }
+
+        public override ZonePion AvancerManuel(int x, int y)
+        {
+            position.X = position.X + x;
+            position.Y = position.Y + y;
+            return position;
+        }
+
+        public override void AvancerManuel(Pion pion, int x, int y)
+        {
+            pion.Position.Occupe = false;
+            pion.Position = this.AvancerManuel(x, y);
+            pion.Position.Occupe = true;
         }
 
         public override void Recule(Pion pion, int i)

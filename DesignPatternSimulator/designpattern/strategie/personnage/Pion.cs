@@ -2,6 +2,7 @@
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.strategie.comportement.dame;
 using DesignPatternSimulator.designpattern.strategie.comportement.dame.deplacement;
+using DesignPatternSimulator.designpattern.strategie.comportement.dame.manger;
 using DesignPatternSimulator.designpattern.strategie.comportement.dame.status;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,12 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
     public class Pion : Personnage
     {
         private Color color;
-
+        public int PionManger { get; set; }
         public Color Color { get { return color; } set { color = value; } }
 
         private ZonePion position;
-
+        public Manger comportementManger = null;
+        public Manger ComportementManger { get { return comportementManger; } set { comportementManger = value; } }
         private AvancerAbstract avancer = new Avancer();
 
         protected StatusAbstrait statusCourant;
@@ -31,6 +33,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
 
         public Pion(Organisation org, String nom,ZonePion zone) : base(org,nom)
         {
+            comportementManger = null;
             avancer = new Avancer();
             this.position = zone;
             statusCourant = new PionNonDouble();
@@ -39,6 +42,7 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
         public Pion(Organisation org, String nom)
             : base(org, nom)
         {
+            comportementManger = null;
             statusCourant = new PionNonDouble();   
         }
 
@@ -59,6 +63,22 @@ namespace DesignPatternSimulator.designpattern.strategie.personnage
                 this.avancer.Avance(this, x);
             }
         }
+
+
+        public void AvancerManuellement(int x, int y)
+        {
+            if (StatusCourant == new PionNonDouble() && x > 1 && y > 1)
+            {
+                x = 1;
+                y = 1;
+                avancer.AvancerManuel(this, x, y);
+            }
+            else if (StatusCourant == new PionDouble())
+            {
+                this.avancer.AvancerManuel(this, x, y);
+            }
+        }
+
 
 
         public void Reculer(int x)

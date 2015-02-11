@@ -2,6 +2,7 @@
 using DesignPatternSimulator.designpattern.environnement.parent;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
 using DesignPatternSimulator.designpattern.fabrique.personnage;
+using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu.dame;
 using DesignPatternSimulator.designpattern.observateur;
 using DesignPatternSimulator.designpattern.observateur.parent;
@@ -38,7 +39,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
             EtatMajor = new Organisation();
         }
         
-		public FabriqueManagerDame(EnvironnementDame monde, FactoryPersonnage persos)
+		public FabriqueManagerDame(EnvironnementDame monde, FactoryPersonnageDame persos)
         {
             EspaceDeJeu = monde;
             monde.CreerPlateauDeJeu(new FactoryDame());
@@ -51,7 +52,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 		}
 
       
-		public void CreatePersonnagesDuJeu(FactoryPersonnage caserne)
+		public void CreatePersonnagesDuJeu(FactoryPersonnageDame caserne)
         {
             //Creer pion blanc
             for (int i = 0; i < 20; i++)
@@ -137,7 +138,7 @@ namespace DesignPatternSimulator.simulation.fabriquemanager
 
         public void   toString(Pion p)
         {
-             Console.WriteLine("Postion x {0} y {1} occupe {2}",p.Position.X,p.Position.Y,p.Position.Occupe);
+             Console.WriteLine("Position x {0} y {1} occupe {2}",p.Position.X,p.Position.Y,p.Position.Occupe);
         }
 
     }

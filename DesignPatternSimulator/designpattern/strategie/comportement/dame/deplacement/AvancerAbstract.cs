@@ -14,6 +14,10 @@ namespace DesignPatternSimulator.designpattern.strategie.comportement.dame.depla
         public abstract void Recule(Pion pion, int i);
         public abstract void Sauter(Pion pionA, Pion pionB);
 
+        public abstract void AvancerManuel(Pion pion, int x, int y);
+
+        public abstract ZonePion AvancerManuel(int x, int y);
+
         public abstract void ZoneVersZone(Pion pion, ZonePion zonePi);
         public abstract ZonePion Avance(int i);
         public abstract ZonePion Recule(int i);
