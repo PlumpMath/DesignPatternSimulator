@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
 using System.Drawing;
+using DesignPatternSimulator.designpattern.strategie.personnage;
 
 namespace DesignPatternSimulator.designpattern.environnement.style
 {
@@ -15,7 +16,9 @@ namespace DesignPatternSimulator.designpattern.environnement.style
         public int X { get; set; }
         private int y;
         public int Y {get;set;}
+        private Personnage personnage;
         private Color color;
+        private bool stat = false;
 
         public Zone()
         {
@@ -25,8 +28,8 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 
         public Zone(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
 	
 	    public Zone(string nom, int x, int y) {
@@ -52,6 +55,29 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 	    public string getName() {
 		    return name;
 	    }
+
+        public Personnage GetPersonnage()
+        {
+            return personnage;
+        }
+
+        public void SetPersonnage(Personnage p)
+        {
+            personnage = p;
+            stat = true;
+            //personnage.SetZone(this);
+        }
+
+        public void PersonnageMoved()
+        {
+            personnage = null;
+            stat = false;
+        }
+
+        public bool GetZoneStatus()
+        {
+            return stat;
+        }
 
     }
 }
