@@ -30,7 +30,7 @@ namespace DesignPatternSimulator.Views
 
         private void nouvellePartieToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Damier.Damier fm = new Damier.Damier();//.Damier();
+            Labyrinthe.Damier fm = new Labyrinthe.Damier();//.Damier();
             fm.MdiParent = this;
             fm.Show();
         }
@@ -46,8 +46,10 @@ namespace DesignPatternSimulator.Views
         //Labyrinthe
         private void nouvellePartieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Labyrinthe.Labyrinthe fm = new Labyrinthe.Labyrinthe();
+            Labyrinthe.NewGameLab fm = new Labyrinthe.NewGameLab(this);
             fm.MdiParent = this;
+            //fm.Dock = DockStyle.Fill;
+            fm.StartPosition = FormStartPosition.CenterScreen;
             fm.Show();
         }
     }

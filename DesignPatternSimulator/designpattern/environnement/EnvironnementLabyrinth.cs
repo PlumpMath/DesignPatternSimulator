@@ -1,4 +1,5 @@
 ﻿using DesignPatternSimulator.designpattern.environnement.parent;
+using DesignPatternSimulator.designpattern.environnement.style;
 using DesignPatternSimulator.designpattern.environnement.style.parent;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu;
 using DesignPatternSimulator.designpattern.fabrique.plateaudejeu.labyrinth;
@@ -13,8 +14,13 @@ namespace DesignPatternSimulator.designpattern.environnement
 {
     class EnvironnementLabyrinth : EnvironnementDeJeu
     {
-        private PlateauDeJeuDame plateau;
-        public PlateauDeJeuDame Plateau {
+        Labyrinthe monLabyrinth;
+        Personnage hamster;
+        List<Zone> terrain;
+
+        private Labyrinthe plateau;
+        public Labyrinthe Plateau
+        {
             get { 
                 return plateau;
             }
@@ -23,14 +29,21 @@ namespace DesignPatternSimulator.designpattern.environnement
             }
         }
 
+        public EnvironnementLabyrinth(Hamtaro p)
+        {
+            hamster = p;
+        }
+        
+        //public override AbstractPlateauDeJeu CreerPlateauDeJeu()
         public override AbstractPlateauDeJeu CreerPlateauDeJeu(AbstractFabriqueDeJeu fabrique)
         {
-            PlateauDeJeuDame monLabyrinth = new PlateauDeJeuDame();
-            FactoryLabyrinth factory = new FactoryLabyrinth();
+            monLabyrinth = new Labyrinthe();
+            //FactoryLabyrinth factory = new FactoryLabyrinth();
+            FactoryLabyrinth factory = (FactoryLabyrinth)fabrique;
 
-            List<AbstractZone> terrain = new List<AbstractZone>();
+            terrain = new List<Zone>();
             terrain = factory.CreateLabyrinthSpace17x8();
-            monLabyrinth.setZonesAcces(terrain);
+            monLabyrinth.setZones(terrain);
 
             plateau = monLabyrinth;
             return plateau;
@@ -41,14 +54,50 @@ namespace DesignPatternSimulator.designpattern.environnement
             return plateau;
         }
 
-        public void PlacerLesObjectsDansLabyrinth17x8(List<Personnage> perso, Labyrinthe laby)
+        public List<Zone> GetTerrain()
         {
-            var listezone = laby.getZonesAcces();// damier.getZonesAcces();
+            return terrain;
+        }
+
+        /*public void CreerLabyrinth17x8()
+        {
+            for(int i = 0; i < 17; i++)
+            {
+                for(int j = 0; j < 8; j++)
+                {
+                    monLabyrinth.AjouterZone(new Zone(i, j));
+                }
+            }
+        }*/
+
+        public List<Zone> PlacerLesObjectsDansLabyrinth17x8()
+        {
+            var listezone = monLabyrinth.getZones();
+            var random = new Random();
             
-            foreach (AbstractZone z in listezone)
+            /*foreach (AbstractZone z in listezone)
             {
                 
-            }
+            }*/
+            Zone zona;
+            Rocher r = new Rocher();
+            Rocher r2 = new Rocher();
+
+            zona = (Zone)listezone.ElementAt(2);
+            r.X = zona.X;
+            r.Y = zona.Y;
+            listezone.Insert(2, r);
+
+            zona = (Zone)listezone.ElementAt(30);
+            r2.X = zona.X;
+            r2.Y = zona.Y;
+            listezone.Insert(30, r2);
+
+            zona = (Zone)listezone.ElementAt(11);
+            zona.SetPersonnage(hamster);
+            listezone.Insert(11, zona);
+
+            return listezone;
         }
     }
 }

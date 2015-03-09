@@ -31,17 +31,16 @@ namespace DesignPatternSimulator.designpattern.fabrique.plateaudejeu.labyrinth
             return new Acces(z1, z2);
         }
 
-        public List<AbstractZone> CreateLabyrinthSpace17x8()
+        public List<Zone> CreateLabyrinthSpace17x8()
         {
-            AbstractZone p = new ZonePion();
-            List<AbstractZone> zones = new List<AbstractZone>();
+            List<Zone> zones = new List<Zone>();
             
             for (int i = 0; i < 17; i++)
             {
                 for (int j = 0; j < 8 ; j++)
                 {
                     //zones = new List<ZonePion>();
-                    zones.Add((ZonePion)(p.CreerZone(null, i, j)));
+                    zones.Add(new Zone(i, j));
                 }
             }
 

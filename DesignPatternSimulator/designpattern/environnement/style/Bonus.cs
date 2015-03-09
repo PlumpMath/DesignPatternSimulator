@@ -1,5 +1,4 @@
-﻿using DesignPatternSimulator.designpattern.environnement.style.parent;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -8,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace DesignPatternSimulator.designpattern.environnement.style
 {
-    public class Rocher : Zone
+    public class Bonus : Zone
     {
-        public static string image = @"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\roc.jpg";
+        public static string image = @"C:\Users\" + Environment.UserName + @"\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\designpattern\strategie\personnage\pictures\grain.jpg";
         public static int IMG_SIZE = 40;
 
-        public Rocher(int x, int y)
+        public Bonus(int x, int y)
             : base(x, y)
         {
-            
+
         }
 
-        public Rocher()
+        public Bonus()
         {
             // TODO: Complete member initialization
         }

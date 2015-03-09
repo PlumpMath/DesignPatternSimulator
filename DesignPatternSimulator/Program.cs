@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DesignPatternSimulator.Views;
-using DesignPatternSimulator.Views.Damier;
+using DesignPatternSimulator.Views.Labyrinthe;
 
 namespace DesignPatternSimulator
 {

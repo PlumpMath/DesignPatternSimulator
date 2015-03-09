@@ -1,4 +1,4 @@
-﻿namespace DesignPatternSimulator.Views.Damier
+﻿namespace DesignPatternSimulator.Views.Labyrinthe
 {
     partial class Damier
     {
@@ -30,7 +30,7 @@
         {
             this.consoleBox = new System.Windows.Forms.RichTextBox();
             this.launcher = new System.Windows.Forms.Button();
-            this.painter1 = new DesignPatternSimulator.Views.Damier.Painter();
+            this.painter1 = new DesignPatternSimulator.Views.Labyrinthe.Painter();
             this.SuspendLayout();
             // 
             // consoleBox
