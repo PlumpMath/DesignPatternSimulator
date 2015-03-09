@@ -28,30 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.painter1 = new DesignPatternSimulator.Views.Damier.Painter();
+            this.infoGame = new System.Windows.Forms.Panel();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.lblNBcoupsValue = new System.Windows.Forms.Label();
+            this.lblNBcoups = new System.Windows.Forms.Label();
+            this.Labyr = new System.Windows.Forms.Panel();
+            this.infoGame.SuspendLayout();
             this.SuspendLayout();
             // 
-            // painter1
+            // infoGame
             // 
-            this.painter1.Location = new System.Drawing.Point(12, 12);
-            this.painter1.Name = "painter1";
-            this.painter1.Size = new System.Drawing.Size(838, 380);
-            this.painter1.TabIndex = 0;
+            this.infoGame.Controls.Add(this.btnPause);
+            this.infoGame.Controls.Add(this.lblNBcoupsValue);
+            this.infoGame.Controls.Add(this.lblNBcoups);
+            this.infoGame.Location = new System.Drawing.Point(12, 12);
+            this.infoGame.Name = "infoGame";
+            this.infoGame.Size = new System.Drawing.Size(862, 53);
+            this.infoGame.TabIndex = 0;
+            // 
+            // btnPause
+            // 
+            this.btnPause.Location = new System.Drawing.Point(555, 17);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(129, 23);
+            this.btnPause.TabIndex = 2;
+            this.btnPause.Text = "Pause / Start";
+            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPause_MouseClick);
+            // 
+            // lblNBcoupsValue
+            // 
+            this.lblNBcoupsValue.AutoSize = true;
+            this.lblNBcoupsValue.Location = new System.Drawing.Point(313, 22);
+            this.lblNBcoupsValue.Name = "lblNBcoupsValue";
+            this.lblNBcoupsValue.Size = new System.Drawing.Size(35, 13);
+            this.lblNBcoupsValue.TabIndex = 1;
+            this.lblNBcoupsValue.Text = "label1";
+            // 
+            // lblNBcoups
+            // 
+            this.lblNBcoups.AutoSize = true;
+            this.lblNBcoups.Location = new System.Drawing.Point(171, 22);
+            this.lblNBcoups.Name = "lblNBcoups";
+            this.lblNBcoups.Size = new System.Drawing.Size(135, 13);
+            this.lblNBcoups.TabIndex = 0;
+            this.lblNBcoups.Text = "Nombre de coups restant : ";
+            // 
+            // Labyr
+            // 
+            this.Labyr.Location = new System.Drawing.Point(12, 71);
+            this.Labyr.Name = "Labyr";
+            this.Labyr.Size = new System.Drawing.Size(862, 401);
+            this.Labyr.TabIndex = 1;
             // 
             // Labyrinthe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 404);
-            this.Controls.Add(this.painter1);
+            this.ClientSize = new System.Drawing.Size(886, 484);
+            this.Controls.Add(this.Labyr);
+            this.Controls.Add(this.infoGame);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Labyrinthe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Labyrinthe";
+            this.infoGame.ResumeLayout(false);
+            this.infoGame.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Damier.Painter painter1;
+        private System.Windows.Forms.Panel infoGame;
+        private System.Windows.Forms.Panel Labyr;
+        private System.Windows.Forms.Label lblNBcoups;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Label lblNBcoupsValue;
+
+        //private Labyrinthe.Painter painter1;
     }
 }

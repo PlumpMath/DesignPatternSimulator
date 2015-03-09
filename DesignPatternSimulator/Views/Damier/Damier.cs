@@ -19,7 +19,7 @@ using DesignPatternSimulator.designpattern.strategie.personnage;
 using DesignPatternSimulator.designpattern.environnement.style;
 
 
-namespace DesignPatternSimulator.Views.Damier
+namespace DesignPatternSimulator.Views.Labyrinthe
 {
     public partial class Damier : Form
     {

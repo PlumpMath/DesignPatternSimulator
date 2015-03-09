@@ -11,7 +11,7 @@ namespace DesignPatternSimulator.designpattern.environnement
 {
 	public class Labyrinthe : AbstractPlateauDeJeu {
 
-        List<AbstractZone> accesZones;
+        List<Zone> accesZones;
 
 		public override AbstractZone CreerZone() {
 			return new Case();
@@ -24,7 +24,7 @@ namespace DesignPatternSimulator.designpattern.environnement
 
         public override void AjouterZone(AbstractZone z)
         {
-            accesZones.Add(z);
+            accesZones.Add((Zone)z);
         }
 
 		public override AbstractAcces CreerAcces() {
@@ -32,17 +32,32 @@ namespace DesignPatternSimulator.designpattern.environnement
 		}
         
 		//public override void setZonesAcces(List<Acces> acces) {
-        public override void setZonesAcces(List<AbstractZone> acces)
+        public void setZones(List<Zone> acces)
         {
             accesZones = acces;
 		}
         
 		//public override List<Acces> getZonesAcces() {
-        public override List<AbstractZone> getZonesAcces()
+        public List<Zone> getZones()
         {
 			// TODO Auto-generated method stub
             return accesZones;
 		}
 
-	}
+        public Rocher CreerRocher(int x, int y)
+        {
+            return new Rocher(x, y);
+        }
+
+
+        public override void setZonesAcces(List<AbstractZone> acces)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<AbstractZone> getZonesAcces()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

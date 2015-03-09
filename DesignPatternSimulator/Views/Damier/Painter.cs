@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DesignPatternSimulator.Views.Damier
+namespace DesignPatternSimulator.Views.Labyrinthe
 {
     public partial class Painter : UserControl
     {

@@ -1,4 +1,4 @@
-﻿namespace DesignPatternSimulator.Views.Damier
+﻿namespace DesignPatternSimulator.Views.Labyrinthe
 {
     partial class Painter
     {

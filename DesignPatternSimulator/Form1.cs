@@ -18,7 +18,7 @@ using DesignPatternSimulator.simulation.fabriquemanager;
 using DesignPatternSimulator.designpattern.environnement;
 using DesignPatternSimulator.designpattern.fabrique.personnage;
 using DesignPatternSimulator.simulation;
-using DesignPatternSimulator.Views.Damier;
+using DesignPatternSimulator.Views.Labyrinthe;
 
 namespace DesignPatternSimulator
 {
@@ -36,8 +36,8 @@ namespace DesignPatternSimulator
         private void launcher_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            LabyrinthGraphix lab = new LabyrinthGraphix();
-            this.Controls.Add(lab);
+            //LabyrinthGraphix lab = new LabyrinthGraphix();
+            //this.Controls.Add(lab);
         }
             /*
             //consoleBox.AppendText("\n");
