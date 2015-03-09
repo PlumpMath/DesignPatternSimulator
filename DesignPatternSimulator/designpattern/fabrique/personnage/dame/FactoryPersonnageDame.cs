@@ -31,6 +31,11 @@ namespace DesignPatternSimulator.designpattern.fabrique.personnage.guerre
         }
 
 
-  
+
+
+        public override Personnage CreateObject(string type, string nom)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

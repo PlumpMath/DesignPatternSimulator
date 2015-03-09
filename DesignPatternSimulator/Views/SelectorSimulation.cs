@@ -46,11 +46,11 @@ namespace DesignPatternSimulator.Views
         //Labyrinthe
         private void nouvellePartieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Labyrinthe.NewGameLab fm = new Labyrinthe.NewGameLab(this);
-            fm.MdiParent = this;
-            //fm.Dock = DockStyle.Fill;
-            fm.StartPosition = FormStartPosition.CenterScreen;
-            fm.Show();
+            //Labyrinthe.NewGameLab fm = new Labyrinthe.NewGameLab(this);
+            //fm.MdiParent = this;
+            ////fm.Dock = DockStyle.Fill;
+            //fm.StartPosition = FormStartPosition.CenterScreen;
+            //fm.Show();
         }
     }
 }

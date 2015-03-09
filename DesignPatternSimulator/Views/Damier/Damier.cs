@@ -168,7 +168,7 @@ namespace DesignPatternSimulator.Views.Labyrinthe
             var listeDesZones = fm.Organisme.Plateau.getZoneForFree();
             var nbrePionBlanc = fm.Organisme.Plateau.getZoneForFree().Where(c => c.PionPosseder == "PionBlanc").Count();
             var nbrePionNoir = fm.Organisme.Plateau.getZoneForFree().Where(c => c.PionPosseder == "PionNoir").Count();
-            DrawDamierInital(this.painter1, fm.Organisme.Plateau.getZoneForFree());
+            this.DrawDamierInital(this.painter1, fm.Organisme.Plateau.getZoneForFree());
 
             //fm.Organisme.Execution(fm.LesPersonnes, fm.Organisme.Plateau);
 

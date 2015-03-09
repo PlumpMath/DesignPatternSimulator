@@ -21,19 +21,21 @@ namespace DesignPatternSimulator.designpattern.environnement
         private Labyrinthe plateau;
         public Labyrinthe Plateau
         {
-            get { 
+            get
+            {
                 return plateau;
             }
-            set { 
+            set
+            {
                 plateau = value;
             }
         }
 
-        public EnvironnementLabyrinth(Hamtaro p)
-        {
-            hamster = p;
-        }
-        
+        //public EnvironnementLabyrinth(Hamtaro p)
+        //{
+        //    hamster = p;
+        //}
+
         //public override AbstractPlateauDeJeu CreerPlateauDeJeu()
         public override AbstractPlateauDeJeu CreerPlateauDeJeu(AbstractFabriqueDeJeu fabrique)
         {
@@ -74,7 +76,7 @@ namespace DesignPatternSimulator.designpattern.environnement
         {
             var listezone = monLabyrinth.getZones();
             var random = new Random();
-            
+
             /*foreach (AbstractZone z in listezone)
             {
                 

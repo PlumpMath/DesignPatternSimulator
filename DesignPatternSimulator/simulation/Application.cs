@@ -15,21 +15,21 @@ namespace DesignPatternSimulator.designpattern.strategie.main
 
 		public static void main(String[] args)
 		{
-			SimulationDeJeu sdj = new SimulationDeJeu();
-			sdj.CreatePersonnagesDuJeu(new FactoryPersonnageMoyenAge());
-			//sdj.CreatePersonnagesDuJeu(new FactoryPersonnageGuerreDuGolf());
-			//sdj.FaireCrierToutLeMonde();
-			Console.WriteLine("--------");
-			sdj.ShowAllPersonnage();
-			Console.WriteLine("--------");
-			//sdj.PartirAuCombat();
-			sdj.AfficherLesUploads();
-			Console.WriteLine("--------");
-			sdj.ChangeEtat(eMode.EN_GUERRE);
-			sdj.AfficherLesUploadsObservateur();
-            Console.WriteLine("--------");
-            sdj.ChangeEtat(eMode.EN_PAIX);
-			sdj.AfficherLesUploadsObservateur();
+            //SimulationDeJeu sdj = new SimulationDeJeu();
+            //sdj.CreatePersonnagesDuJeu(new FactoryPersonnageMoyenAge());
+            ////sdj.CreatePersonnagesDuJeu(new FactoryPersonnageGuerreDuGolf());
+            ////sdj.FaireCrierToutLeMonde();
+            //Console.WriteLine("--------");
+            //sdj.ShowAllPersonnage();
+            //Console.WriteLine("--------");
+            ////sdj.PartirAuCombat();
+            //sdj.AfficherLesUploads();
+            //Console.WriteLine("--------");
+            //sdj.ChangeEtat(eMode.EN_GUERRE);
+            //sdj.AfficherLesUploadsObservateur();
+            //Console.WriteLine("--------");
+            //sdj.ChangeEtat(eMode.EN_PAIX);
+            //sdj.AfficherLesUploadsObservateur();
 		
 		}
 

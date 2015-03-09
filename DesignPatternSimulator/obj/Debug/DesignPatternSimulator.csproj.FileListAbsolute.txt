@@ -6,9 +6,6 @@ C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.exe
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.pdb
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Form1.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\DesignPatternSimulator.exe.config
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.exe
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.pdb
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Form2.resources
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.Damier.resources
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.Painter.resources
@@ -16,18 +13,6 @@ C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.LabyrinthGraphix.resources
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.csprojResolveAssemblyReference.cache
 C:\Users\Mamadou\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Labyrinthe.Labyrinthe.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\DesignPatternSimulator.exe
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\DesignPatternSimulator.pdb
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.csprojResolveAssemblyReference.cache
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Form1.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Form2.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Properties.Resources.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.Damier.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.LabyrinthGraphix.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.Painter.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Labyrinthe.Labyrinthe.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.SelectorSimulation.resources
-C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.csproj.GenerateResource.Cache
 C:\Users\David\Documents\GitHub\Design Pattern\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\DesignPatternSimulator.exe.config
 C:\Users\David\Documents\GitHub\Design Pattern\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.exe
 C:\Users\David\Documents\GitHub\Design Pattern\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.pdb
@@ -43,3 +28,11 @@ C:\Users\David\Documents\GitHub\Design Pattern\DesignPatternSimulator\DesignPatt
 C:\Users\David\Documents\GitHub\Design Pattern\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Labyrinthe.Labyrinthe.resources
 C:\Users\David\Documents\GitHub\Design Pattern\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.SelectorSimulation.resources
 C:\Users\David\Documents\GitHub\Design Pattern\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.csproj.GenerateResource.Cache
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Form1.resources
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Form2.resources
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Properties.Resources.resources
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Labyrinthe.Damier.resources
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.Damier.Painter.resources
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.Views.SelectorSimulation.resources
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\obj\Debug\DesignPatternSimulator.csproj.GenerateResource.Cache
+C:\Users\SI\Documents\GitHub\DesignPatternSimulator\DesignPatternSimulator\bin\Debug\DesignPatternSimulator.exe.config
