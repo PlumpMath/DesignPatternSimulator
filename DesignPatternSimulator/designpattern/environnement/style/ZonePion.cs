@@ -77,19 +77,6 @@ namespace DesignPatternSimulator.designpattern.environnement.style
 
             List<ZonePion> zoneautour = new List<ZonePion>();
 
-
-
-            //var co1 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1)).Single();
-            //var co2 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y)).Single();
-            //var co3 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y + 1)).Single();
-            //var co4 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1)).Single();
-            //var co5 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y + 1)).Single();
-            //var co6 = ep.Where(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1)).Single();
-            //var co7 = ep.Where(c => c.X == (p.Position.X) && c.Y == (p.Position.Y - 1)).Single();
-            //var co8 = ep.Where(c => c.X == (p.Position.X + 1) && c.Y == (p.Position.Y - 1)).Single();
-
-
-
             var co1 = ep.Single(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y - 1));
             var co2 = ep.Single(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y));
             var co3 = ep.Single(c => c.X == (p.Position.X - 1) && c.Y == (p.Position.Y + 1));
@@ -106,7 +93,9 @@ namespace DesignPatternSimulator.designpattern.environnement.style
                     zoneautour.Add(co8);
                 }
             }
-            catch (Exception e) { }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
 
             zoneautour.Add(co1);
             zoneautour.Add(co2);

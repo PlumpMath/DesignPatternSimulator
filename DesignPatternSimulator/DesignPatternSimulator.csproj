@@ -208,6 +208,7 @@
     <EmbeddedResource Include="Views\SelectorSimulation.resx">
       <DependentUpon>SelectorSimulation.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Diagramme de classe Projet.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

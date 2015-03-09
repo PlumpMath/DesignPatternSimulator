@@ -101,23 +101,34 @@ namespace DesignPatternSimulator.designpattern.environnement
         /// <returns></returns>
         public Boolean PionADeplacer(Pion pion, PlateauDeJeuDame plateau)
         {
-            //récupérer toutes les zones autour du pion
-            var zoneEnvironnantDuPion = pion.Position.GetList(pion, plateau.getZoneForFree());
+                
+                //récupérer toutes les zones autour du pion
+                var zoneEnvironnantDuPion = pion.Position.GetList(pion, plateau.getZoneForFree());
 
-            //récupérer les zones non occupé
-            var zoneFree = zoneEnvironnantDuPion.Where(c=>c.Occupe == false).ToList<ZonePion>();
+                //récupérer les zones non occupé
+                var zoneFree = zoneEnvironnantDuPion.Where(c => c.Occupe == false).ToList<ZonePion>();
 
 
-            int nbreZoneFree = zoneFree.Count;
-            //var zoneOfPlateau = plateau.getZoneForFree();
-            if(zoneFree != null && zoneFree.Count >= 2){
-                return true;
-            }
-            else{
-                return false;
-            }
+                int nbreZoneFree = zoneFree.Count;
+
+                //var zoneOfPlateau = plateau.getZoneForFree();
+                if (zoneFree != null && zoneFree.Count >= 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            
         }
 
+        /// <summary>
+        /// Liste des pions environnants not used
+        /// </summary>
+        /// <param name="pion"></param>
+        /// <param name="listeDesZoneAuxAlentours"></param>
+        /// <returns></returns>
 
         public List<ZonePion> ListePionsEnvironnants(Pion pion, List<ZonePion> listeDesZoneAuxAlentours)
         {

@@ -1,0 +1,878 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternSimulator.designpattern.environnement.EnvironnementDame" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAIAgAEAEAAgABAAAAAAAAAABAAAAIAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\EnvironnementDame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.EnvironnementDeJeuMoyenAge" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAgABAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\EnvironnementDeJeuMoyenAge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.EnvironnementLabyrinth" Collapsed="true">
+    <Position X="25.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAEAAgABAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\EnvironnementLabyrinth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.Frontiere" Collapsed="true">
+    <Position X="13.5" Y="24.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\Frontiere.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.Labyrinthe" Collapsed="true">
+    <Position X="5.75" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAYEAABAgAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\Labyrinthe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.PlateauDeJeu" Collapsed="true">
+    <Position X="8" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAIAAAAAAAAEYEAABAgAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\PlateauDeJeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.PlateauDeJeuDame" Collapsed="true">
+    <Position X="10.25" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAIAAAAAAAAEYEAABEgAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\PlateauDeJeuDame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.parent.AbstractPlateauDeJeu" Collapsed="true">
+    <Position X="8" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAIEAABAgAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\parent\AbstractPlateauDeJeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.parent.EnvironnementDeJeu" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\parent\EnvironnementDeJeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.Acces" Collapsed="true">
+    <Position X="13.5" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAIAAAAgAAAAAAAAAAAAAAAAABAI=</HashCode>
+      <FileName>designpattern\environnement\style\Acces.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.Adjacent" Collapsed="true">
+    <Position X="15.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\style\Adjacent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.Case" Collapsed="true">
+    <Position X="21.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\style\Case.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.Position" Collapsed="true">
+    <Position X="31.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIAAAAAAAAAAAAAAAIAACAAAAAAAAEAABAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\style\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.Rocher" Collapsed="true">
+    <Position X="16.75" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\style\rocher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.Zone" Collapsed="true">
+    <Position X="16.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAMAACAAABkAAAAYAA=</HashCode>
+      <FileName>designpattern\environnement\style\Zone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.ZonePion" Collapsed="true">
+    <Position X="19" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAQgAAAMAACAAABkAAAAYAI=</HashCode>
+      <FileName>designpattern\environnement\style\ZonePion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.parent.AbstractAcces" Collapsed="true">
+    <Position X="14.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\style\parent\AbstractAcces.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.environnement.style.parent.AbstractZone" Collapsed="true">
+    <Position X="19" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\environnement\style\parent\AbstractZone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.personnage.guerre.FactoryPersonnageDame">
+    <Position X="0.5" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\fabrique\personnage\dame\FactoryPersonnageDame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.personnage.guerre.FactoryPersonnageMoyenAge">
+    <Position X="2.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\fabrique\personnage\guerre\FactoryPersonnageMoyenAge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.personnage.FactoryPersonnage">
+    <Position X="1.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\fabrique\personnage\FactoryPersonnage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.plateaudejeu.AbstractFabriqueDeJeu" Collapsed="true">
+    <Position X="11" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>designpattern\fabrique\plateaudejeu\AbstractFabriqueDeJeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.plateaudejeu.dame.FactoryDame" Collapsed="true">
+    <Position X="13.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAIAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>designpattern\fabrique\plateaudejeu\dame\FactoryDame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.plateaudejeu.dame.FactoryZone" Collapsed="true">
+    <Position X="29.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\fabrique\plateaudejeu\dame\FactoryZone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.plateaudejeu.guerre.FactoryDeJeuGuerre" Collapsed="true">
+    <Position X="8.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAIAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>designpattern\fabrique\plateaudejeu\guerre\FactoryDeJeuGuerre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.fabrique.plateaudejeu.labyrinth.FactoryLabyrinth" Collapsed="true">
+    <Position X="11" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAEAAACAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>designpattern\fabrique\plateaudejeu\labyrinth\FactoryLabyrinth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.observateur.Organisation" Collapsed="true">
+    <Position X="5.5" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>designpattern\observateur\Organisation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.observateur.parent.ObservateurAbstrait" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>designpattern\observateur\parent\ObservateurAbstrait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.observateur.parent.SujetObserveAbstrait" Collapsed="true">
+    <Position X="5.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\observateur\parent\SujetObserveAbstrait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.deplacement.Avancer" Collapsed="true">
+    <Position X="23.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAIIQAAEQAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\deplacement\Avancer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.deplacement.AvancerAbstract" Collapsed="true">
+    <Position X="23.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAQAAEQAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\deplacement\AvancerAbstract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.manger.Manger" Collapsed="true">
+    <Position X="21.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\manger\Manger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.manger.MangerAbstract" Collapsed="true">
+    <Position X="21.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\manger\MangerAbstract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.status.PionDouble" Collapsed="true">
+    <Position X="21.75" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\status\PionDouble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.status.PionNonDouble" Collapsed="true">
+    <Position X="19.5" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\status\PionNonDouble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.StatusAbstrait" Collapsed="true">
+    <Position X="20.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\StatusAbstrait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.football.EtatAttaque" Collapsed="true">
+    <Position X="29.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\football\EtatAttaque.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.football.EtatDefense" Collapsed="true">
+    <Position X="31.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\football\EtatDefense.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.designpattern.strategie.comportement.guerre.arme.afeu.Colt45" Collapsed="true">
+    <Position X="0.75" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\arme\afeu\Colt45.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.arme.afeu.parent.ArmeAFeu" Collapsed="true">
+    <Position X="1.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\arme\afeu\parent\ArmeAFeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.arme.afeu.parent.Pistolet" Collapsed="true">
+    <Position X="3" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\arme\afeu\parent\Pistolet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.arme.Arme" Collapsed="true">
+    <Position X="3" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\arme\Arme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.arme.blanche.Couteau" Collapsed="true">
+    <Position X="5.25" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\arme\blanche\Couteau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.combat.ComportementDeArcher" Collapsed="true">
+    <Position X="18" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\combat\ComportementDeArcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.combat.ComportementDeChevalier" Collapsed="true">
+    <Position X="20.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\combat\ComportementDeChevalier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.combat.ComportementDeFantassin" Collapsed="true">
+    <Position X="15.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\combat\ComportementDeFantassin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.combat.parent.ComportementDeCombat" Collapsed="true">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\combat\parent\ComportementDeCombat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.pointdevie.AbstractPointDeVie" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\pointdevie\AbstractPointDeVie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.protection.Armure" Collapsed="true">
+    <Position X="0.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\protection\Armure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.protection.parent.AbstractProtection" Collapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\protection\parent\AbstractProtection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.son.EmettreSonAuSecour" Collapsed="true">
+    <Position X="0.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\son\EmettreSonAuSecour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.son.EmettreSonCrier" Collapsed="true">
+    <Position X="3" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\son\EmettreSonCrier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.son.EmettreSonEtendard" Collapsed="true">
+    <Position X="5.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\son\EmettreSonEtendard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.son.EmettreSonMotiver" Collapsed="true">
+    <Position X="7.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\son\EmettreSonMotiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.comportement.guerre.son.parent.ComportementEmettreSon" Collapsed="true">
+    <Position X="4" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\guerre\son\parent\ComportementEmettreSon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.Archer" Collapsed="true">
+    <Position X="10" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>designpattern\strategie\personnage\Archer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.Chevalier" Collapsed="true">
+    <Position X="12.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>designpattern\strategie\personnage\Chevalier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.Fantassin" Collapsed="true">
+    <Position X="1" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>designpattern\strategie\personnage\Fantassin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.Personnage" Collapsed="true">
+    <Position X="6.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEoEAgAAAAAAAgoAAAYAECAAAACgAAAAAAAwgEAAQ=</HashCode>
+      <FileName>designpattern\strategie\personnage\Personnage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.Pion" Collapsed="true">
+    <Position X="4.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAIgBAAgAAAAoAAAEAEAEQCAAAEAgAIAAAA=</HashCode>
+      <FileName>designpattern\strategie\personnage\Pion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.PionBlanc" Collapsed="true">
+    <Position X="3.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAIgAAACIAAAEAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\personnage\PionBlanc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.PionNoir" Collapsed="true">
+    <Position X="5.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIgAAACIAAAEAAAAQCAAAEAgAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\personnage\PionNoir.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.personnage.Princesse" Collapsed="true">
+    <Position X="7.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>designpattern\strategie\personnage\Princesse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Form1" Collapsed="true">
+    <Position X="31.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAKACAQACAAAACAAAAKAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Form2" Collapsed="true">
+    <Position X="33" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Form2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Adaptateur" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Adaptateur\Adaptateur.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPatternSimulator.Adapte" Collapsed="true">
+    <Position X="31.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Lineage2_PVP\Adaptateur\Adapte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueAbstraite" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Abstraite\FabriqueAbstraite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueAeoreHealer" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueAeoreHealer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueFeohWizard" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueFeohWizard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueIssEnchanter" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueIssEnchanter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueOthellRogue" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueOthellRogue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueSigelKnight" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueSigelKnight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueTyrrWarrior" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueTyrrWarrior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueWynnSummoner" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueWynnSummoner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FabriqueYulArcher" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Fabrique\Concrete\FabriqueYulArcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.ArmeAbstraite" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armes\Abstraite\ArmeAbstraite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Arc" Collapsed="true">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armes\Concrete\Arc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Dague" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armes\Concrete\Dague.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Dual" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armes\Concrete\Dual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Epee" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armes\Concrete\Epee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Sceptre" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armes\Concrete\Sceptre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Zariche" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armes\Concrete\Zariche.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.ArmureAbstraite" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armure\Abstraite\ArmureAbstraite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.ArmureLegere" Collapsed="true">
+    <Position X="15.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armure\Concrete\ArmureLegere.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.ArmureLourde" Collapsed="true">
+    <Position X="18" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armure\Concrete\ArmureLourde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Robe" Collapsed="true">
+    <Position X="20.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Armure\Concrete\Robe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.BijouAbstrait" Collapsed="true">
+    <Position X="13" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Bijou\Abstrait\BijouAbstrait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Bague" Collapsed="true">
+    <Position X="15.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Bijou\Concret\Bague.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.BoucleOreille" Collapsed="true">
+    <Position X="10.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Bijou\Concret\BoucleOreille.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Collier" Collapsed="true">
+    <Position X="13" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Bijou\Concret\Collier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.PersonnageAbstrait" Collapsed="true">
+    <Position X="17" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CFQAIAAAQAAAAwAABIAAEAACQCIAINAAYAQwKAQggJE=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Abstrait\PersonnageAbstrait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.PersonnageFighterAbstrait" Collapsed="true">
+    <Position X="12.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAIgAAQACAAAAABABAAAAAAAAAANAAQAAkIAAAgQE=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Abstrait\PersonnageFighterAbstrait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.PersonnageMysticAbstrait" Collapsed="true">
+    <Position X="21.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAgAAAAQACAJAAABAAAAAAAAAAAQNAAQAAgIAAAgQE=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Abstrait\PersonnageMysticAbstrait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.AeoreHealer" Collapsed="true">
+    <Position X="18.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAAAAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\AeoreHealer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.FeohWizard" Collapsed="true">
+    <Position X="20.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAAAAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\FeohWizard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.IssEnchanter" Collapsed="true">
+    <Position X="22.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAAAAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\IssEnchanter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.OthellRogue" Collapsed="true">
+    <Position X="11.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAAAAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\OthellRogue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.SigelKnight" Collapsed="true">
+    <Position X="13.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAAAAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\SigelKnight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.TyrrWarrior" Collapsed="true">
+    <Position X="16" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAAAAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\TyrrWarrior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.WynnSummoner" Collapsed="true">
+    <Position X="25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAACAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\WynnSummoner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.YulArcher" Collapsed="true">
+    <Position X="9.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAIAAAAAAAAgAABIAAAAAAAAIAAAAAYAAAAAQggJA=</HashCode>
+      <FileName>Lineage2_PVP\Strategie\Personnage\Concret\YulArcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Program" Collapsed="true">
+    <Position X="33" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Properties.Resources" Collapsed="true">
+    <Position X="34.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Properties.Settings" Collapsed="true">
+    <Position X="29.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.main.Application" Collapsed="true">
+    <Position X="33" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>simulation\Application.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.designpattern.strategie.main.SimulationDeJeu" Collapsed="true">
+    <Position X="31.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAkgAAAAAAAgAAAAgAQhAAAAAABAAIAAgAAAA=</HashCode>
+      <FileName>simulation\SimulationDeJeu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.simulation.CustomTableLayoutPanel" Collapsed="true">
+    <Position X="34.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQAAEAAQAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>simulation\CustomTableLayoutPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.simulation.SimulationDeJeuDame" Collapsed="true">
+    <Position X="33" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAkgAAAAAAAgAAAAgAQhAAAAAABAAIAAgAAAA=</HashCode>
+      <FileName>simulation\SimulationJeuDame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.simulation.fabriquemanager.FabriqueManager" Collapsed="true">
+    <Position X="33" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAsgAAAAAAAgAAAAgAQBCAAACAmAAIEAAAAhA=</HashCode>
+      <FileName>simulation\fabriquemanager\FabriqueManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.simulation.fabriquemanager.FabriqueManagerDame" Collapsed="true">
+    <Position X="34.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAggAAAAAAAgAABAgAQhCAAACAmAAIAAAAAhA=</HashCode>
+      <FileName>simulation\fabriquemanager\FabriqueManagerDame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.simulation.fabriquemanager.FabriqueManagerLabyrinth" Collapsed="true">
+    <Position X="27.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>simulation\fabriquemanager\FabriqueManagerLabyrinth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.simulation.fabriquemanager.WinFormManager" Collapsed="true">
+    <Position X="34.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>simulation\fabriquemanager\WinFormManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Views.Damier.Damier" Collapsed="true">
+    <Position X="27.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wIAAgAABECAQACgiAEKBABACEABAAEAEAAAAQQAAAAA=</HashCode>
+      <FileName>Views\Damier\Damier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Views.Damier.Painter" Collapsed="true">
+    <Position X="29.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Damier\Painter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Views.Damier.LabyrinthGraphix" Collapsed="true">
+    <Position X="27.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEIAAEADILAAIIAACAAAASIAADAAAIQBAEgACACAA=</HashCode>
+      <FileName>Views\Labyrinthe\LabyrinthGraphix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Views.Labyrinthe.Labyrinthe" Collapsed="true">
+    <Position X="34.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAECAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Labyrinthe\Labyrinthe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternSimulator.Views.SelectorSimulation" Collapsed="true">
+    <Position X="27.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIACICkABgBAAACAAAADAAAAUAgAAAASAAAAAAg=</HashCode>
+      <FileName>Views\SelectorSimulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DesignPatternSimulator.Cible" Collapsed="true">
+    <Position X="27.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Adaptateur\Cible.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DesignPatternSimulator.designpattern.fabrique.personnage.eTypePersonnage" Collapsed="true">
+    <Position X="34.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAABAAAAAAMAABAAAAIAABCAAAAAQAAQAAggAE=</HashCode>
+      <FileName>designpattern\fabrique\personnage\eTypePersonnage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DesignPatternSimulator.designpattern.observateur.eMode" Collapsed="true">
+    <Position X="27.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQAEAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>designpattern\observateur\eMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DesignPatternSimulator.designpattern.strategie.comportement.dame.status.typeEtat" Collapsed="true">
+    <Position X="27.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>designpattern\strategie\comportement\dame\status\typeEtat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DesignPatternSimulator.EnumArme" Collapsed="true">
+    <Position X="29.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAIBEAAAIAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Enum\EnumArmes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DesignPatternSimulator.EnumArmure" Collapsed="true">
+    <Position X="31.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAABAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Enum\EnumArmure.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DesignPatternSimulator.EnumBijou" Collapsed="true">
+    <Position X="33" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Lineage2_PVP\Enum\EnumBijou.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

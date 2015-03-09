@@ -11,7 +11,6 @@ namespace DesignPatternSimulator.designpattern.environnement
 {
     public class PlateauDeJeuDame : AbstractPlateauDeJeu
     {
-              //private List<Acces> accesZones = null;
         private List<ZonePion> accesZones = new List<ZonePion>();
 
         public PlateauDeJeuDame() { }    
@@ -61,6 +60,8 @@ namespace DesignPatternSimulator.designpattern.environnement
         {
             return accesZones;
         }
+
+
 
         public IEnumerable<AbstractZone> getZoneFree()
         {
