@@ -15,7 +15,7 @@ namespace DesignPatternSimulator.designpattern.environnement.style
         private int x;
         public int X { get; set; }
         private int y;
-        public int Y {get;set;}
+        public int Y { get; set; }
         private Personnage personnage;
         private Color color;
         private bool stat = false;

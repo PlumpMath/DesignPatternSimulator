@@ -4,10 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DesignPatternSimulator.Views;
-using DesignPatternSimulator.Views.Damier;
-using DesignPatternSimulator.simulation.fabriquemanager;
-using DesignPatternSimulator.designpattern.fabrique.personnage.guerre;
-using DesignPatternSimulator.designpattern.strategie.personnage;
+using DesignPatternSimulator.Views.Labyrinthe;
 
 namespace DesignPatternSimulator
 {
@@ -16,16 +13,14 @@ namespace DesignPatternSimulator
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
-        //[STAThread]
-        static void Main( string [] args)
+        [STAThread]
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SelectorSimulation());
             //Application.Run(new TestDamier());
             //Application.Run(new Damier());
-
-
         }
     }
 }
